@@ -98,3 +98,7 @@ body {
     background-color: #ffffff;
 }
 
+.imgClass{
+    height: 100%;
+    width: 100%;
+}
