@@ -16,7 +16,7 @@ let imagesArray = [
     "/Alphabet-Art/images/l.png",
     "/Alphabet-Art/images/m.png",
     "/Alphabet-Art/images/n.png",
-    "/Alphabet-Art/images/0.png",
+    "/Alphabet-Art/images/o.png",
     "/Alphabet-Art/images/p.png",
     "/Alphabet-Art/images/q.png",
     "/Alphabet-Art/images/r.png",
