@@ -1,2 +1,0 @@
-# Alphabet-Art
-Alphabet Art
