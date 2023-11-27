@@ -16,4 +16,9 @@ for (let i = 65; i < 91; i++) {
 	let box = document.createElement("div");
 	box.classList.add("backCard");
 	newparent.appendChild(box);
+
+	newparent.addEventListener('click', ()=>{
+		newparent.classList.toggle("flipled")
+	})
+
 }
