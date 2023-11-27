@@ -11,6 +11,12 @@ body {
     gap: 20px;
 }
 
+.card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
 .box {
     position: absolute;
     backface-visibility: hidden;
@@ -32,10 +38,15 @@ body {
     }
 }
 
-.backbox{
+.backbox {
     height: 150px;
     width: 150px;
     background-color: crimson;
+    transform: rotateY(180deg);
     backface-visibility: hidden;
     border: 2px solid black;
+}
+
+.card.flipled {
+    transform: rotateY(180deg);
 }

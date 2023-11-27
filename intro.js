@@ -8,14 +8,20 @@ for (let i = 65; i < 91; i++) {
     let nextCell = document.createElement("div")
 
     cell.setAttribute("class", "box")
-    card.setAttribute("class","card")
+    card.setAttribute("class", "card")
     nextCell.setAttribute("class", "backbox")
 
     card.appendChild(cell)
     card.appendChild(nextCell)
     container.appendChild(card)
 
+
+
     cell.innerHTML = boxNames
+
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipled")
+    })
 }
 
 
