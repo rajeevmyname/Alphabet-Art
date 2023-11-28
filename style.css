@@ -10,10 +10,31 @@
 }
 
 .front-div {
-  background-color: aqua;
+  background-color: rgb(200, 225, 225);
   border: 2px solid black;
   height: 200px;
   width: 200px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back-div {
+  background-color: rgb(235, 214, 218);
+  border: solid black;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.flip-div {
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-div.flipped {
+  transform: rotateY(180deg);
 }
 
 @media (max-width: 650px) {
