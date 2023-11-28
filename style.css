@@ -48,7 +48,6 @@
   .container {
     grid-template-columns: repeat(2, 200px);
   }
-
 }
 
 @media (max-width: 375px) {
@@ -56,6 +55,7 @@
     grid-template-columns: repeat(1, 200px);
   }
 }
+
 .print1 {
   background: radial-gradient(#4f46e4 15%, transparent 16%, transparent 49%, #4f46e4 50%, transparent 51%), radial-gradient(circle at top left, #4f46e4 10%, transparent 10%, transparent 39%, #4f46e4 40%, transparent 41%), radial-gradient(circle at top right, #4f46e4 10%, transparent 10%, transparent 39%, #4f46e4 40%, transparent 41%), radial-gradient(circle at bottom left, #4f46e4 10%, transparent 10%, transparent 39%, #4f46e4 40%, transparent 41%), radial-gradient(circle at bottom right, #4f46e4 10%, transparent 10%, transparent 39%, #4f46e4 40%, transparent 41%);
   background-size: 1em 1em;
@@ -90,4 +90,9 @@
   background: linear-gradient(45deg, #4f46e4 10%, transparent 11%, transparent 89%, #4f46e4 90%), linear-gradient(135deg, #4f46e4 10%, transparent 11%, transparent 89%, #4f46e4 90%), radial-gradient(circle, transparent 25%, #ffffff 26%), linear-gradient(0deg, transparent 44%, #4f46e4 45%, #4f46e4 55%, transparent 56%), linear-gradient(90deg, transparent 44%, #4f46e4 45%, #4f46e4 55%, transparent 56%);
   background-size: 1em 1em;
   background-color: #ffffff;
+}
+
+.imgClass {
+  height: 100%;
+  width: 100%;
 }
