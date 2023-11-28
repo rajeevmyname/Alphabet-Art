@@ -17,7 +17,7 @@ for (let i = 65; i <= 90; i++) {
   flipContainer.appendChild(backDivs)
 
   flipContainer.addEventListener("click", () => {
-    flipContainer.classList.toggle("flipped")
+    flipContainer.classList.toggle("filpped")
   })
 
 }
