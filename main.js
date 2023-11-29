@@ -12,14 +12,14 @@ let imgArray = [
     "images/v.png", "images/w.png", "images/x.png", "images/y.png", "images/z.png"]
 
 // Make a pattern array in which store classes for background styling in front-div
-let pattern = ["print1", "print2", "print3", "print4", "print5", "print6",]
+let pattern = ["print1", "print2", "print3", "print4", "print5", "print6", "print7", "print8", "print9"]
 
 
 //This "For loop" used to making alphabet divs, and changing background design with alphabet divs, and changeing image
 // i var for make alphabets 
 // j variable for pattern array
 for (let i = 65, j = 0; i <= 90; i++, j++) {
-    if (j > 6)
+    if (j > 8)
         j = 0
 
     // Number 65-90 to make alphabet a to z
@@ -33,10 +33,16 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
     // Creat divs who will make by loop 
     let frontDiv = document.createElement("div");
     frontDiv.classList.add("front-div")
-    frontDiv.innerHTML = alphabet;
+    // frontDiv.innerHTML = alphabet;
 
     // Add classes in the pattern array in front-div
     frontDiv.classList.add(pattern[j])
+
+    // make a paragraph tag for style alphabet etxt
+    let text = document.createElement("p")
+    text.classList.add("text")
+    text.innerHTML = alphabet
+    frontDiv.appendChild(text)
 
     let backDivs = document.createElement("div");
     backDivs.classList.add("back-div");
