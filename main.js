@@ -1,33 +1,5 @@
 let container = document.querySelector(".container")
 let alphabet;        // this variavle to make store the A-Z alphabet
-let backgroundImage = [      //this backgroundImage variable has created to store the all background images path
-	"Images/a.png",
-	"Images/b.png",
-	"Images/c.png",
-	"Images/d.png",
-	"Images/e.png",
-	"Images/f.png",
-	"Images/g.png",
-	"Images/h.png",
-	"Images/i.png",
-	"Images/j.png",
-	"Images/k.png",
-	"Images/l.png",
-	"Images/m.png",
-	"Images/n.png",
-	"Images/o.png",
-	"Images/p.png",
-	"Images/q.png",
-	"Images/r.png",
-	"Images/s.png",
-	"Images/t.png",
-	"Images/u.png",
-	"Images/v.png",
-	"Images/w.png",
-	"Images/x.png",
-	"Images/y.png",
-	"Images/z.png"
-]
 
 //  this pattern variable has created to store the card desgin
 let pattern = ["cardDesign1", "cardDesign2", "cardDesign3", "cardDesign4", "cardDesign5", "cardDesign6"];
@@ -37,9 +9,9 @@ for (let i = 65, j = 0; i < 91; i++, j++) {      //this loop making div and alph
 		j = 0;
 	alphabet = String.fromCharCode(i);
 
-	let backImage = document.createElement("img")      
+	let backImage = document.createElement("img")
 	backImage.classList.add("image")
-	backImage.setAttribute("src", backgroundImage[i - 65])
+	backImage.setAttribute("src", `images/${alphabet.toLowerCase()}.png`);
 
 	let text = document.createElement("p")
 	text.classList.add("text");
