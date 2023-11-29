@@ -1,37 +1,45 @@
-let container = document.querySelector(".container");
+// all alphabet card store in cardContainer
+let cardContainer = document.querySelector(".card-container");
 let alphabet;
-let imgArray = [
-  "image/a.png", "image/b.png", "image/c.png", "image/d.png", "image/e.png", "image/f.png", "image/g.png",
-  "image/h.png", "image/i.png", "image/j.png", "image/k.png", "image/l.png", "image/m.png", "image/n.png",
-  "image/0.png", "image/p.png", "image/q.png", "image/r.png", "image/s.png", "image/t.png", "image/u.png",
-  "image/v.png", "image/w.png", "image/x.png", "image/y.png", "image/z.png"]
-
+// 6 card different digining are being stored in the pattern
 let pattern = ["print1", "print2", "print3", "print4", "print5", "print6",]
-
+// Alphabet letters are stored in variable i
+// Different 6  disignin pattern are stored in variable j
+// this for loop use make to alphabet card
 for (let i = 65, j = 0; i <= 90; i++, j++) {
-  if (j > 6)
-    j = 0
+  if (j > 5)
+    j = 0;
+  // this is use for make alphabet
   alphabet = String.fromCharCode(i);
+  // The entire display of the frint card is being stored in the frontDiv
   let frontDiv = document.createElement("div");
-  frontDiv.classList.add("front-div");
-  container.appendChild(frontDiv);
-  frontDiv.classList.add(pattern[j])
-  frontDiv.innerHTML = alphabet;
+  // the entire back disigning of the back card is the being stored in the backDiv
   let backDivs = document.createElement("div");
+  // the entire all fliping item stored in the flipcontainer
+  let flipcontainer = document.createElement("div")
+
+  let text = document.createElement("p")
+  text.classList.add("text")
+  text.innerHTML = alphabet;
+  frontDiv.appendChild(text)
+
+  frontDiv.classList.add("front-div");
   backDivs.classList.add("back-div");
+  flipcontainer.classList.add("flip-div")
+  cardContainer.appendChild(frontDiv);
 
-  let flipContainer = document.createElement("div")
-  flipContainer.classList.add("flip-div")
-  container.appendChild(flipContainer)
-
-  flipContainer.appendChild(frontDiv);
-  flipContainer.appendChild(backDivs)
-
-  flipContainer.addEventListener("click", () => {
-    flipContainer.classList.toggle("flipped")
+  // this is used to set class and frontcard
+  frontDiv.classList.add(pattern[j])
+  cardContainer.appendChild(flipcontainer)
+  flipcontainer.appendChild(frontDiv);
+  flipcontainer.appendChild(backDivs)
+  // this is for when click on the front card the card will flip and the back card show
+  flipcontainer.addEventListener("click", () => {
+    flipcontainer.classList.toggle("filpped")
   })
   let images = document.createElement("img")
-  images.setAttribute("src", imgArray[i - 65])
+  // imageArray[i -65] this is use for change value of i
+  images.setAttribute("src", `images/${alphabet.toLocaleLowerCase()}.png`)
   images.setAttribute("class", "imgClass")
-  backDivs.appendChild(images)
+  backDivs.appendChild(images);
 }
