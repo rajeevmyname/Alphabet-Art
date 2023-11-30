@@ -15,9 +15,7 @@ for (let i = 65, j = 0; i < 91; i++, j++) {      //this loop making div and alph
 
 	let text = document.createElement("p")
 	text.classList.add("text");
-	text.innerHTML = alphabet;
-
-
+	
 	let newContainer = document.createElement("div")
 	newContainer.classList.add("card");
 	container.appendChild(newContainer);
@@ -28,7 +26,7 @@ for (let i = 65, j = 0; i < 91; i++, j++) {      //this loop making div and alph
 	frontCard.appendChild(text);
 
 	frontCard.classList.add(pattern[j])
-
+	text.innerHTML = alphabet;
 
 	let backCard = document.createElement("div");
 	backCard.classList.add("backCard");
