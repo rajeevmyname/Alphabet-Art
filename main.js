@@ -11,7 +11,7 @@ for (let i = 65, j = 0; i < 91; i++, j++) {      //this loop making div and alph
 
 	let backImage = document.createElement("img")
 	backImage.classList.add("image")
-	backImage.setAttribute("src", `images/${alphabet.toLowerCase()}.png`);
+	backImage.setAttribute("src", `backCardsImages/${alphabet.toLowerCase()}.png`);
 
 	let text = document.createElement("p")
 	text.classList.add("text");
