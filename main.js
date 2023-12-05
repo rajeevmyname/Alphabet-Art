@@ -25,7 +25,6 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
     // Creat divs who will make by loop 
     let frontDiv = document.createElement("div");
     frontDiv.classList.add("front-div")
-    // frontDiv.innerHTML = alphabet;
 
     // Add classes in the pattern array in front-div
     frontDiv.classList.add(pattern[j])
@@ -52,7 +51,20 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
     let images = document.createElement("img")
 
     // Add imges in the back-div of the cards and we added images by using link from images folder 
-    images.setAttribute("src", `images/${alphabet.toLocaleLowerCase()}.png`)
+    images.setAttribute("src", `images/alphabetImges/${alphabet.toLocaleLowerCase()}.png`)
     images.setAttribute("class", "imgClass")
     backDivs.appendChild(images)
 }
+
+// this  carouselImg array for carousel images
+let carouselImgArr = ["images/carouselimges/img-1.jpeg", "images/carouselimges/img-2.jpeg", "images/carouselimges/img-3.jpeg"]
+let carouselImg = document.querySelector(".carousel-img")
+let i = 0;
+autoplay = setInterval(function () {      //this autoplay for carousel images 
+    i++;
+    if (i > 2)
+        i = 0;
+    carouselImg.setAttribute("src", carouselImgArr[i]);
+    // carouselImg.style.width = "100%";
+    // carouselImg.style.height = "250px"
+}, 1200);

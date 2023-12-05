@@ -2,15 +2,67 @@ body {
     margin: 0;
 }
 
+.img-logo {
+    width: 400px;
+}
+
+.logoImg-div{
+    text-align: center;
+}
+.nav-bar {
+    display: inline-flex;
+    width: 100%;
+    height: 120px;
+    background-color: #1375E4;
+    justify-content: space-around;
+}
+
+.nav-img-div {
+    height: 70px;
+    width: 70px;
+    margin: 10px 18px 0px 18px;
+
+}
+
+.nav-text {
+    font-family: 'Mochiy Pop One';
+    color: #ffff;
+    /* font-size: 13px; */
+    margin-top: 6px;
+    font-size: 0.9em;
+    text-align: center;
+
+}
+
+.nav-divs:hover {
+    border: 1.5px solid #3990f4;
+    /* background-color: #004CA1; */
+}
+
+.nav-divs:hover .nav-img-div {
+    border: 1.5px dotted #3990f4;
+}
+
+.nav-divs:hover .nav-text {
+    border: 1.5px dotted #3990f4;
+}
+
+.nav-img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+
 .container {
-    background-color: rgb(240, 234, 235);
+    background-color: rgb(240, 187, 196);
     display: grid;
     grid-template-columns: repeat(3, 165px);
     /* for 3 make columns in container  */
     grid-template-rows: repeat(9, 200px);
     /*  for make rows  */
-    gap: 19px;
-    padding: 20px 0px 0px 0px;
+    gap: 10px;
+    padding: 20px;
     justify-content: center;
 }
 
@@ -21,7 +73,8 @@ body {
     transform-style: preserve-3d;
     /* for showing back-face */
     border-radius: 24px;
-    box-shadow: 0px 8px 4px 0px #080d1333;
+    box-shadow: 0px 5px 6px 0px;
+    cursor: pointer;
 }
 
 .text {
@@ -50,11 +103,14 @@ body {
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
 }
-
-@media (max-width: 425px) {
+/* this media query for mobile and tablet view */
+@media (max-width: 600px) {
     .container {
         grid-template-columns: repeat(2, 165px);
-        gap: 15px;
+    }
+
+    .img-logo {
+        width: 300px;
     }
 }
 
@@ -79,25 +135,26 @@ body {
 }
 
 .print3 {
-    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);;
+    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
+    ;
     background-size: 4em 4em;
     color: #016de9;
 }
 
 .print4 {
     background: radial-gradient(circle at center, #e59de0, #e59de0 10%, transparent 10%, transparent 20%, #e59de0 20%, #e59de0 30%, transparent 30%, transparent 40%, #e59de0 40%, #e59de0 50%, transparent 50%, transparent 60%, #e59de0 60%, #e59de0 70%, transparent 70%, transparent 80%, #e59de0 80%, #e59de0 90%, transparent 90%);
-    background-size: 15em 15em;
+    background-size: 19em 19em;
     background-color: rgb(240, 140, 171);
     color: #DA2D65;
 }
 
 .print5 {
-    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);;
+    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
+    ;
     background-size: 3em 3em;
     background-color: #f37f51;
     color: #D83400;
 }
-
 
 .print6 {
     background: linear-gradient(45deg, #4fd7b7 25%, transparent 25%), linear-gradient(315deg, #4fd7b7 25%, transparent 25%), linear-gradient(45deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%), linear-gradient(315deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%);
@@ -110,4 +167,76 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 24px;
+}
+
+.footer-container {
+    background-color: #1375E4;
+    height: 500px;
+}
+
+.follow-us {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.003em;
+    color: #ffff;
+    margin-left: 40px;
+    font-size: 20px;
+    /* top  right  bottom  left */
+    /* margin: 0px 0px 0px 40px; */
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.fa {
+    padding: 7px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: blue;
+    border-radius: 10px;
+    margin: 0px 7px 0px 0px;
+}
+
+.footer-icons-div {
+    margin-left: 40px;
+}
+
+.footer-text-div {
+    margin-top: 50px;
+}
+
+.fa:hover {
+    opacity: 0.6;
+}
+
+.footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.003em;
+    color: #ffff;
+    margin-left: 40px;
+}
+
+.sajhe-logo {
+    border-radius: 50%;
+    /* top  right  bottom  left */
+    margin: 15px 0px 15px 37px;
+}
+
+.sajhe-web {
+    text-decoration: none;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.sajhe-web-divs {
+    margin-left: 37px;
+}
+
+.sajhe-web:hover {
+    opacity: 0.9;
+    color: blue;
 }
