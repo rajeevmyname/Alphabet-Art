@@ -1,10 +1,64 @@
 body {
   margin: 0;
+
+}
+
+.imgClass {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.nav-var {
+  background: #1375E4;
+  height: 150px;
+  width: 99.5%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.nav-img-div {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.nav-text {
+  font-family: 'Mochiy Pop One';
+  color: #ffffff;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.img-logo {
+  max-width: 350px;
+}
+
+.nav-div:hover {
+  border: 5px solid #3990f4;
+  background-color: #004CA1;
+}
+
+.nav-div:hover .nav-text {
+  border: 1px dotted #3990f4;
+}
+
+.nav-div:hover .nav-img-div {
+  border: 1px dotted #3990f4;
+}
+
+.nav-var:hover {
+  border: 1px solid #3990f4;
+}
+
+.nav-images {
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
 }
 
 .card-container {
-  background-color: rgb(234, 205, 170);
-  width: 100%;
+  background-color: #ffffff;
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(3, 170px);
@@ -13,6 +67,7 @@ body {
   /* for 9 make rows  in cardContainer */
   justify-content: center;
   text-align: center;
+  padding: 10px;
 }
 
 .front-div {
@@ -24,8 +79,7 @@ body {
   background-color: #ffffff;
   font-size: 160px;
   font-weight: bold;
-  border-radius: 15px;
-
+  border-radius: 24.63px;
 }
 
 .back-div {
@@ -34,33 +88,29 @@ body {
   height: 200px;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  border-radius: 15px;
-
-
+  border-radius: 24.63px;
 }
 
 .flip-div {
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
-  box-shadow: 0px 8px 10px 0px #1375E433;
-
+  box-shadow: 0px 8px 10px 0px;
+  border-radius: 24.63px;
 }
 
-.flip-div.filpped {
+.filpped {
   transform: rotateY(180deg);
 }
 
 /* use for responsive layout */
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .card-container {
     grid-template-columns: repeat(2, 170px);
   }
-}
 
-@media (max-width: 425px) {
-  .card-container {
-    grid-template-columns: repeat(2, 170px);
+  .img-logo {
+    width: 300px;
   }
 }
 
@@ -114,8 +164,54 @@ body {
   color: #007352;
 }
 
-.imgClass {
-  height: 100%;
+.footer-container {
+  background-color: #1375E4;
+  height: 550px;
   width: 100%;
-  border-radius: 15px;
+}
+
+.footer-text-div {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  color: #ffffff;
+  margin-left: 25px;
+}
+
+.fa {
+  background-color: #ffffff;
+  font-size:25px;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 25px;
+}
+
+.footer-p {
+  color: #ffffff;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.footer-logo-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  margin-left: 25px;
+}
+
+.footer-logo-div {
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  margin-left: 25px;
+}
+
+.footer-sajhe-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  margin-left: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }

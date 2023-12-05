@@ -32,14 +32,29 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
   frontDiv.classList.add(pattern[j])
   cardContainer.appendChild(flipcontainer)
   flipcontainer.appendChild(frontDiv);
-  flipcontainer.appendChild(backDivs)
+  flipcontainer.appendChild(backDivs);
   // this is for when click on the front card the card will flip and the back card show
   flipcontainer.addEventListener("click", () => {
     flipcontainer.classList.toggle("filpped")
   })
   let images = document.createElement("img")
   // imageArray[i -65] this is use for change value of i
-  images.setAttribute("src", `images/${alphabet.toLocaleLowerCase()}.png`)
+  images.setAttribute("src", `images/Alphabetimages/${alphabet.toLocaleLowerCase()}.png`)
   images.setAttribute("class", "imgClass")
   backDivs.appendChild(images);
 }
+let crouselImg = document.querySelector(".crousel-img");
+let i = 0;
+let crouselArray = [
+  "images/crouselimages/children1.jpg",
+  "images/crouselimages/children2.jpg",
+  "images/crouselimages/children3.jpg"
+
+]
+autoplay = setInterval(function () {
+  i++;
+  if (i > 2)
+    i = 0;
+  crouselImg.setAttribute("src", crouselArray[i])
+}, 1200);
+
