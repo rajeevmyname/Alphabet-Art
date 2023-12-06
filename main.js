@@ -7,10 +7,15 @@ let alphabet;
 // Make a pattern array in which store classes for background styling in front-div
 let pattern = ["print1", "print2", "print3", "print4", "print5", "print6"]
 
+let soundArry = ["Apple", "Ball", "Cat", "Dog", "Elephant", "Fish", "Giraffe", "Horse", "Igloo", "Joker", "King",
+    "Lion", "Monkey", "Nose", "Octopus", "Pen", "Queen", "Rabbit", "Snak", "Tiger", "Umbrella", "Van", "Watermelon", "X-ray",
+    "Yak", "Zebra"]
+
 //This "For loop" used to making alphabet divs, and changing background design with alphabet divs, and changeing image
 // i var for make alphabets 
 // j variable for pattern array
-for (let i = 65, j = 0; i <= 90; i++, j++) {
+for (let i = 65, k = 0, j = 0; i <= 90; k++, i++, j++) {
+
     if (j > 5)
         j = 0
 
@@ -35,6 +40,7 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
     text.innerHTML = alphabet
     frontDiv.appendChild(text)
 
+
     let backDivs = document.createElement("div");
     backDivs.classList.add("back-div");
 
@@ -44,7 +50,16 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
 
     //When we will click any abphabet then show back side of the card
     flipContainer.addEventListener("click", () => {
-        flipContainer.classList.toggle("flipped")
+        flipContainer.classList.toggle("flipped");
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = soundArry[k];
+        window.speechSynthesis.speak(msg);
+
+        // when wi will click then ring words sound
+        let backImgText = document.createElement("p")
+        backImgText.classList.add("back-img-text")
+        backImgText.innerHTML = soundArry[k]
+        backDivs.appendChild(backImgText)  
     })
 
     // when we will click any alphabet then flip cell and show back image
@@ -68,3 +83,4 @@ autoplay = setInterval(function () {      //this autoplay for carousel images
     // carouselImg.style.width = "100%";
     // carouselImg.style.height = "250px"
 }, 1200);
+

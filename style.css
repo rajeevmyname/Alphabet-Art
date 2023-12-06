@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
+/* this link is for alphabet font weight  */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+ /* This link is for footer social media icons */
+
 body {
     margin: 0;
 }
 
 .img-logo {
-    width: 400px;
+    min-width: 320px;
 }
 
 .logoImg-div{
@@ -12,54 +18,38 @@ body {
 .nav-bar {
     display: inline-flex;
     width: 100%;
-    height: 120px;
+    min-width: 320px;
     background-color: #1375E4;
     justify-content: space-around;
 }
 
-.nav-img-div {
-    height: 70px;
-    width: 70px;
-    margin: 10px 18px 0px 18px;
-
-}
 
 .nav-text {
     font-family: 'Mochiy Pop One';
     color: #ffff;
-    /* font-size: 13px; */
-    margin-top: 6px;
+    margin-top: 0;
     font-size: 0.9em;
     text-align: center;
-
 }
 
 .nav-divs:hover {
-    border: 1.5px solid #3990f4;
-    /* background-color: #004CA1; */
+    background-color: #004CA1;
 }
-
-.nav-divs:hover .nav-img-div {
-    border: 1.5px dotted #3990f4;
-}
-
-.nav-divs:hover .nav-text {
-    border: 1.5px dotted #3990f4;
-}
-
+    /* top  right  bottom  left */                                              
 .nav-img {
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    margin: 10px 0 0 0;
 }
 
 
 .container {
-    background-color: rgb(240, 187, 196);
+    /* background-color: rgb(240, 187, 196); */
     display: grid;
     grid-template-columns: repeat(3, 165px);
     /* for 3 make columns in container  */
-    grid-template-rows: repeat(9, 200px);
+    grid-template-rows: repeat(9, 220px);
     /*  for make rows  */
     gap: 10px;
     padding: 20px;
@@ -78,7 +68,7 @@ body {
 }
 
 .text {
-    font-size: 120px;
+    font-size: 8em;
     margin-top: 4px;
     font-family: 'Mochiy Pop One';
 }
@@ -88,20 +78,21 @@ body {
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
     width: 165px;
-    height: 200px;
+    height: 220px;
     background-color: #ffffff;
     text-align: center;
     border: 0px 0px 6.18px 0px;
 }
 
 .back-div {
-    background-color: #ffc0cb;
+    background-color: #ffff;
     width: 165px;
-    height: 200px;
+    height: 220px;
     backface-visibility: hidden;
     transform: rotateY(180deg);
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
+    /* position: relative; */
 }
 /* this media query for mobile and tablet view */
 @media (max-width: 600px) {
@@ -116,6 +107,18 @@ body {
 
 .card.flipped {
     transform: rotateY(180deg);
+}
+
+.back-img-text{
+    position: absolute;
+    left: 6%;
+    bottom: -5%;
+    font-size: 1.3em;
+    /* color: #ffff; */
+    width: 80%;
+    text-align: center;
+    font-family: 'Mochiy Pop One';
+    letter-spacing: 0.03em;
 }
 
 /* this is used for diffrent background designin front card   */
@@ -135,8 +138,7 @@ body {
 }
 
 .print3 {
-    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
-    ;
+    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);;
     background-size: 4em 4em;
     color: #016de9;
 }
@@ -149,8 +151,7 @@ body {
 }
 
 .print5 {
-    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
-    ;
+    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);;
     background-size: 3em 3em;
     background-color: #f37f51;
     color: #D83400;
@@ -164,14 +165,14 @@ body {
 }
 
 .imgClass {
-    height: 100%;
+    height: 85%;
     width: 100%;
     border-radius: 24px;
 }
 
 .footer-container {
     background-color: #1375E4;
-    height: 500px;
+    height: auto;
 }
 
 .follow-us {
@@ -181,10 +182,8 @@ body {
     margin-left: 40px;
     font-size: 20px;
     /* top  right  bottom  left */
-    /* margin: 0px 0px 0px 40px; */
     margin-left: 40px;
     margin-top: 0px;
-    margin-bottom: 20px;
 }
 
 .fa {
@@ -202,10 +201,11 @@ body {
 
 .footer-icons-div {
     margin-left: 40px;
+    margin-bottom: 25px;
 }
 
-.footer-text-div {
-    margin-top: 50px;
+.footer-text-ul {
+    margin-top: 0px;
 }
 
 .fa:hover {
@@ -214,15 +214,16 @@ body {
 
 .footer-text {
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.003em;
+    letter-spacing: 0.05em;
     color: #ffff;
-    margin-left: 40px;
+    list-style: none;
+    padding: 5px;
 }
 
 .sajhe-logo {
     border-radius: 50%;
     /* top  right  bottom  left */
-    margin: 15px 0px 15px 37px;
+    margin: 10px 0px 15px 37px;
 }
 
 .sajhe-web {
