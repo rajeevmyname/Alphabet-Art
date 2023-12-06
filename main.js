@@ -1,5 +1,19 @@
 let container = document.querySelector(".main-container")
-let alphabet;
+let carouselImg = document.querySelector(".carousel-img")
+let i =0;
+ 
+let corousel = [
+    "images/carousel-img/img-A.PNG",
+    "images/carousel-img/img-B.PNG",
+    "images/carousel-img/img-C.PNG"
+]
+
+autoplay = setInterval(function(){
+    i++;
+    if(i>2)
+    i=0;
+carouselImg.setAttribute("src",corousel[i])
+},1200);
 
 // This is pattern array for store name of classes in a front-card.
 let patterns = ["pattern-1", "pattern-2", "pattern-3", "pattern-4", "pattern-5", "pattern-6"]        
@@ -29,7 +43,7 @@ for (let i = 65, j = 0; i < 91; i++, j++) {
     text.setAttribute("class" ,"text")
 
     //this is used for set images in the back-card.   
-    image.setAttribute("src", `images/${alphabet.toLowerCase()}.png`)
+    image.setAttribute("src", `images/Alphabet-img/${alphabet.toLowerCase()}.png`)
     image.setAttribute("class", "image")
 
     cardContainer.appendChild(frontCard)

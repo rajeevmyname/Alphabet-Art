@@ -1,14 +1,75 @@
 body {
     margin: 0;
+    /* text-align: center; */
+}
+
+/*this is for menu bar styling*/
+
+.logo{
+    width: 400px;
+    height: 100px;
+}
+
+.nav-bar{
+    display: flex;
+    background-color: #1375E4;
+    height: 150px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.carousel-img{
+    height:250px;
+    width:99%;
+}
+
+.nav-bar:hover{
+    border: 5px solid #3990f4;
+    width: 99.2%;
+}
+
+.nav-items:hover .img-box{
+    border: 2px dotted #3990f4;    
+}
+
+.nav-items:hover{
+    border: 5px solid #3990f4;
+}
+
+.img-box{
+    height: 70px;
+    width: 70px;
+    /* background-color: #ffff; */
+    margin: 10px;
+   background-color: #1375E4;
+    /* border-radius: 50px; */
+}
+
+
+.nav-text{
+    font-family: 'Mochiy Pop One';
+    color: #ffff;
+    margin: 3px;
+    text-align: center;
+}
+
+.nav-img{
+    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-items:hover .nav-text{
+    border: 2px dotted #3990f4;
 }
 
 .main-container {
     justify-content: center;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 163px);
+    grid-template-columns: repeat(3, 160px);
     /* This is used for make 3 Columns in main Container */
-    grid-template-rows: repeat(9, 180px);
+    grid-template-rows: repeat(9, 200px);
     /* This is used for make 9 rows in main container */
     gap: 10px;
 }
@@ -29,30 +90,15 @@ body {
     position: absolute;
     backface-visibility: hidden;
     border: 1px;
-    height: 180px;
-    width: 163px;
+    height: 200px;
+    width: 160px;
     border-radius: 20px;
 
 }
 
-@media(max-width:500px) {
-
-    /*This is used to make Responsive layout  */
-    .main-container {
-        grid-template-columns: repeat(2, 163px);
-    }
-}
-
-@media(max-width:320px) {
-    .main-container {
-        grid-template-columns: repeat(2, 163px);
-        height: 192px;
-    }
-}
-
 .back-card {
-    height: 180px;
-    width: 163px;
+    height: 200px;
+    width: 160px;
     transform: rotateY(180deg);
     /* This is used for Rotate in back-card right to left in (180 degree)*/
     backface-visibility: hidden;
@@ -73,11 +119,32 @@ body {
 
 }
 
-/*---------------- This is used to Background pattern design in front-card-----------------------*/
+/*This is used to make Responsive layout  */
+/* @media(max-width:775px) {
+    .main-container {
+        grid-template-columns: repeat(2, 175px);
+        grid-template-rows: repeat(9, 200px);
+        justify-content: center;
+    } */
+/* } */
+
+@media(max-width: 600px) {
+    .main-container {
+        grid-template-columns: repeat(2, 160px);
+    }
+    .logo{
+        width: 300px;
+        height: 70px;
+    }
+}
+
+
+/*---------------- This is used to Backgr
+ound pattern design in front-card-----------------------*/
 
 .pattern-1 {
     background: linear-gradient(45deg, #FFB800 25%, transparent 25%), linear-gradient(315deg, #FFB800 25%, transparent 25%), linear-gradient(45deg, transparent 24%, rgb(226, 226, 110) 25%, rgb(226, 226, 110) 45%, transparent 45%), linear-gradient(315deg, transparent 24%, rgb(226, 226, 110) 25%, rgb(226, 226, 110) 45%, transparent 45%);
-    background-size: 2.5em 2.5em;
+    background-size: 6em 6em;
     background-color: #FFB800;
     opacity: 2;
     color: #da790b;
@@ -85,7 +152,7 @@ body {
 
 .pattern-2 {
     background: repeating-linear-gradient(135deg, #8657b8 0, #8657b8 20%, transparent 0, transparent 50%);
-    background-size: 3em 3em;
+    background-size: 6em 6em;
     background-color: #A55FEF;
     color: #670fc5;
     opacity: 1
@@ -93,15 +160,15 @@ body {
 
 .pattern-3 {
     background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
-    background-size: 3em 3em;
+    background-size: 6em 6em;
     background-color: #76bafa;
     color: #1F7AE0;
     opacity: 1
 }
 
 .pattern-4 {
-    background: radial-gradient(circle at center, #e59de0, #e59de0 10%, transparent 10%, transparent 20%, #e59de0 20%, #e59de0 30%, transparent 30%, transparent 40%, #e59de0 40%, #e59de0 50%, transparent 50%, transparent 60%, #e59de0 60%, #e59de0 70%, transparent 70%, transparent 80%, #e59de0 80%, #e59de0 90%, transparent 90%);
-    background-size: 15em 15em;
+    background: radial-gradient(circle at center, #e59de0, #e59de0 0%, transparent 18%, transparent 20%, #e59de0 0.1%, #e59de0 30%, transparent 30%, transparent 40%, #e59de0 40%, #e59de0 50%, transparent 50%, transparent 60%, #e59de0 60%, #e59de0 70%, transparent 70%, transparent 80%, #e59de0 80%, #e59de0 90%, transparent 90%);
+    background-size: 35em 39em;
     background-color: rgb(235, 110, 149);
     color: #DA2D65;
 }
@@ -121,11 +188,10 @@ body {
     color: #014d37;
     opacity: 2;
 }
-
-
 /* this is used to font styling*/
 .text {
     font-family: 'Mochiy Pop One';
-    font-size: 100px;
-    margin-top: 4px;
+    font-size: 7em;
+    margin-top: 10%;
 }
+
