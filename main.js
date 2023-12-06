@@ -3,10 +3,11 @@ let cardContainer = document.querySelector(".card-container");
 let alphabet;
 // 6 card different digining are being stored in the pattern
 let pattern = ["print1", "print2", "print3", "print4", "print5", "print6",]
+let soundArray = ["Apple", "Ball", "Cat", "Dog", "Elephant", "Fish", "Giraffe", "Horse", "igloo", "Joker", "King", "lion", "Monkey", "Nose", "Octopus", "Pen", "Queen", "Rabbit", "Snack", "Tiger", "Umbrella", "Ven", "Bettermelon", "X-ray", "Yak", "Zebra"]
 // Alphabet letters are stored in variable i
 // Different 6  disignin pattern are stored in variable j
 // this for loop use make to alphabet card
-for (let i = 65, j = 0; i <= 90; i++, j++) {
+for (let i = 65, k = 0, j = 0; i <= 90; i++, j++, k++) {
   if (j > 5)
     j = 0;
   // this is use for make alphabet
@@ -36,6 +37,14 @@ for (let i = 65, j = 0; i <= 90; i++, j++) {
   // this is for when click on the front card the card will flip and the back card show
   flipcontainer.addEventListener("click", () => {
     flipcontainer.classList.toggle("filpped")
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = soundArray[k];
+    window.speechSynthesis.speak(msg);
+
+    let backImgtext = document.createElement("p")
+    backImgtext.classList.add("backImgtext")
+    backImgtext.innerHTML = soundArray[k]
+    backDivs.appendChild(backImgtext)
   })
   let images = document.createElement("img")
   // imageArray[i -65] this is use for change value of i
