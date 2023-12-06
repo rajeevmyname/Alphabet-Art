@@ -1,12 +1,73 @@
 body {
     margin: 0;
+
 }
+
+.headerLogo {
+    text-align: center;
+}
+
+.logo {
+    width: 400px;
+    height: 100px;
+}
+
+.navImage {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: #1375E4;
+    height: 160px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.img {
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    /* border-radius: 50px; */
+
+}
+
+.nav-text {
+    font-family: 'Mochiy Pop One';
+    color: #ffff;
+    margin-top: 18px;
+}
+
+/* .nav-items:hover .nav-text{
+    border: dotted 2px #3990f4;
+} */
+
+.nav-items:hover {
+    border: 5px solid #3990f4;
+
+}
+.nav-items:hover .img{
+    border: dotted #3990f4;
+}
+.nav-items:hover .nav-text{
+    border: dotted #3990f4;
+}
+
+/* .nav-items :hover .img{
+    border: dotted 2px #3990f4;
+}
+.nav-items:hover{
+   border: 2px dotted #3990f4;
+} */
+
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(9, 190px);
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
     padding: 20px;
     background-color: #f8f6f4;
@@ -19,7 +80,7 @@ body {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
-    box-shadow: 0px 8px 10px 0px #1375E433;
+    box-shadow: 0px 8px 10px 0px;
     border-radius: 24.74px;
 
 }
@@ -61,7 +122,31 @@ body {
     }
 }
 
-@media(max-width: 375px) {
+/* .footerContainer {
+        width: 100%;
+        height:328px;
+        gap: 32px
+    }
+     */
+
+
+/* .footerText {
+        /* Name: Mobile/Body/Medium; */
+/* font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.0025em;
+        text-align: left;
+        color: rgba(255, 255, 255, 1); */
+
+
+/* .logoImage{
+        height: 40px;
+        width: 40px;
+        border-radius: 30px;
+    } */
+
+@media(max-width: 360px) {
     .container {
         grid-template-columns: repeat(1, 150px);
     }
@@ -81,12 +166,12 @@ body {
 .cardDesign1 {
 
     /* radial-gradient  use to design card background*/
-    background: linear-gradient(45deg, #c0ba53 25%, transparent 25%),
-        linear-gradient(315deg, #c0ba53 25%, transparent 25%),
-        linear-gradient(45deg, transparent 24%, #FFB800 25%, #FFB800 45%, transparent 45%),
-        linear-gradient(315deg, transparent 24%, #FFB800 25%, #FFB800 45%, transparent 45%);
+    background: linear-gradient(45deg, rgb(247, 183, 66) 25%, transparent 25%),
+        linear-gradient(315deg, rgb(247, 183, 66) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%),
+        linear-gradient(315deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%);
     background-size: 3em 3em;
-    background-color: #c0ba53;
+    background-color: rgb(247, 183, 66);
     opacity: 1;
     color: #BF6800;
 
@@ -119,12 +204,12 @@ body {
 }
 
 .cardDesign5 {
-    background: linear-gradient(135deg, #ed9696 25%, transparent 25%),
-        linear-gradient(45deg, #ed9696 25%, transparent 25%),
-        linear-gradient(135deg, transparent 24%, #dd6882 25%, #dd6882 45%, transparent 45%),
-        linear-gradient(45deg, transparent 24%, #dd6882 25%, #dd6882 45%, transparent 45%);
+    background: linear-gradient(135deg, #f37f51 25%, transparent 25%),
+        linear-gradient(45deg, #f37f51 25%, transparent 25%),
+        linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%),
+        linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
     background-size: 3em 3em;
-    background-color: #ed9696;
+    background-color: #f37f51;
     opacity: 1;
     color: rgba(216, 52, 0, 1)
 }
@@ -140,4 +225,70 @@ body {
     background-color: #1BB486;
     opacity: 1;
     color: rgba(0, 115, 82, 1)
+}
+
+
+footer {
+    background: rgba(19, 117, 228, 1);
+    height: 600px;
+}
+
+.fa {
+    background: #ffff;
+    color: blue;
+    padding: 10px;
+    font-size: 1.5em;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 4px;
+    border-radius: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.footerContainer {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 400px;
+    height: Hug (432px);
+    gap: 10px;
+}
+
+.footerContainer1 {
+    margin-top: 20px;
+}
+
+.footerContainer2 {
+    margin-top: 48px;
+}
+
+.footerContainer3 {
+    margin-top: 50px;
+}
+
+
+
+.footerText {
+    /* Name: Mobile/Body/Medium; */
+    /* font-family: Roboto; */
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.logoImage {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
 }

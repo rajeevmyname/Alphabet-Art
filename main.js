@@ -1,4 +1,5 @@
 let container = document.querySelector(".container")
+let navItems = document.querySelector("nav-items");
 let alphabet;        // this variavle to make store the A-Z alphabet
 
 //  this pattern variable has created to store the card desgin
