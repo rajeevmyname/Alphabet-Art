@@ -2,25 +2,40 @@
 /* this link is for alphabet font weight  */
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
- /* This link is for footer social media icons */
+/* This link is for footer social media icons */
 
 body {
     margin: 0;
+    background-image: url('images/Background\ Pattern.png');
+    background-repeat: repeat;
+
+}
+
+header {
+    text-align: center;
 }
 
 .img-logo {
-    min-width: 320px;
+    max-height: 100px;
+    width: 60%;
 }
 
-.logoImg-div{
-    text-align: center;
-}
 .nav-bar {
-    display: inline-flex;
+    display: flex;
     width: 100%;
-    min-width: 320px;
     background-color: #1375E4;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.nav-divs:hover {
+    background-color: #004CA1;
+}
+
+/* top  right  bottom  left */
+.nav-img {
+    border-radius: 50%;
+    margin: 10px 0 0 0;
+    max-width: 60px;
 }
 
 
@@ -32,28 +47,48 @@ body {
     text-align: center;
 }
 
-.nav-divs:hover {
-    background-color: #004CA1;
+.carousel-div {
+    align-items: center;
 }
-    /* top  right  bottom  left */                                              
-.nav-img {
-    height: 70px;
-    width: 70px;
+
+.carousel-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+
+.dot-container {
+    text-align: center;
+    margin-top: -30px;
+}
+
+#dot-2 {
+    background-color: black;
+}
+
+
+.dot {
+    display: inline-block;
+    height: 7.7px;
+    width: 8px;
+    margin: 0 2px;
     border-radius: 50%;
-    margin: 10px 0 0 0;
+    border: 1px solid black;
+    background-color: #bbb2b2;
 }
 
-
-.container {
-    /* background-color: rgb(240, 187, 196); */
+.main-container {
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 165px);
+    justify-content: space-around;
+    grid-template-columns: repeat(2, minmax(150px, 350px));
     /* for 3 make columns in container  */
-    grid-template-rows: repeat(9, 220px);
+    grid-template-rows: repeat(2, 1fr);
     /*  for make rows  */
-    gap: 10px;
+    gap: 15px;
     padding: 20px;
-    justify-content: center;
+    width: 80%;
 }
 
 .card {
@@ -67,59 +102,108 @@ body {
     cursor: pointer;
 }
 
-.text {
-    font-size: 8em;
-    margin-top: 4px;
-    font-family: 'Mochiy Pop One';
-}
 
 .front-div {
     position: absolute;
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
-    width: 165px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
     text-align: center;
+    justify-content: center;
     border: 0px 0px 6.18px 0px;
+}
+
+
+.text {
+    font-size: 6em;
+    margin-top: 4px;
+    font-family: 'Mochiy Pop One';
+
 }
 
 .back-div {
     background-color: #ffff;
-    width: 165px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
     /* position: relative; */
 }
-/* this media query for mobile and tablet view */
-@media (max-width: 600px) {
-    .container {
-        grid-template-columns: repeat(2, 165px);
+
+
+
+@media only screen and (min-width: 768px) {
+    .main-container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
     }
 
-    .img-logo {
-        width: 300px;
+    .text {
+        font-size: 11em;
     }
+
+    .fa {
+        padding: 10px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #ffffff;
+        color: blue;
+        border-radius: 10px;
+        margin: 0px 7px 0px 0px;
+    }
+
+
 }
+
+/* @media only screen and (min-width: 1440px) {
+    .main-container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .text {
+        font-size: 17em;
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+    .main-container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .text {
+        font-size: 25em;
+    }
+
+} */
+
 
 .card.flipped {
     transform: rotateY(180deg);
 }
 
-.back-img-text{
+.back-img-text {
     position: absolute;
-    left: 6%;
-    bottom: -5%;
-    font-size: 1.3em;
-    /* color: #ffff; */
-    width: 80%;
-    text-align: center;
+    transform: translateX(-50%);
+    margin: 0;
+    left: 50%;
+    font-size: 1em;
     font-family: 'Mochiy Pop One';
     letter-spacing: 0.03em;
+    background-color: #ffff;
 }
+
+/* .like_img{
+    height: 3px;
+    width: 3px;
+} */
+
 
 /* this is used for diffrent background designin front card   */
 .print1 {
@@ -138,7 +222,8 @@ body {
 }
 
 .print3 {
-    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);;
+    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
+    ;
     background-size: 4em 4em;
     color: #016de9;
 }
@@ -151,7 +236,8 @@ body {
 }
 
 .print5 {
-    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);;
+    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
+    ;
     background-size: 3em 3em;
     background-color: #f37f51;
     color: #D83400;
@@ -165,7 +251,8 @@ body {
 }
 
 .imgClass {
-    height: 85%;
+    margin-top: 15px;
+    height: 80%;
     width: 100%;
     border-radius: 24px;
 }
@@ -179,29 +266,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.003em;
     color: #ffff;
-    margin-left: 40px;
     font-size: 20px;
     /* top  right  bottom  left */
     margin-left: 40px;
-    margin-top: 0px;
+    padding: 40px 0 0 0;
 }
 
 .fa {
-    padding: 7px;
-    font-size: 28px;
-    width: 30px;
-    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    width: 23px;
+    min-height: 23px;
     text-align: center;
     text-decoration: none;
     background-color: #ffffff;
     color: blue;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0px 7px 0px 0px;
 }
 
 .footer-icons-div {
-    margin-left: 40px;
+    margin-left: 43px;
     margin-bottom: 25px;
+    padding: 0;
 }
 
 .footer-text-ul {
@@ -234,7 +321,8 @@ body {
 }
 
 .sajhe-web-divs {
-    margin-left: 37px;
+    padding: 0 0 40px 0;
+    margin-left: 45px;
 }
 
 .sajhe-web:hover {
