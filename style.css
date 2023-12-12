@@ -6,6 +6,7 @@
 body {
   margin: 0;
   background-color: rgb(245, 232, 234);
+  /* text-align: center; */
 
 }
 
@@ -15,6 +16,7 @@ nav {
   width: 100%;
   height: auto;
   justify-content: space-evenly;
+  text-align: center;
 
 }
 
@@ -82,20 +84,32 @@ nav {
   margin-top: 20px;
 }
 
-.Gallery-button {
-  width: 80px;
-  height: 48px;
-  left: 295px;
-  padding: 16px, 8px, 16px, 8px;
-  border-radius: 12px;
-  border: 0px, 0px, 4px, 0px;
-  box-shadow: 0px 8px 0px 0px #569cec;
+button.button-Gellary {
   background-color: #59cdFF;
+  color: white;
   border: none;
+  padding: 5px;
   font-size: 1em;
-  color: #ffffff;
+  height: 64px;
+  width: 107px;
+  box-shadow: 0 3px 4px #569cec;
+  border-radius: 15px;
   font-family: 'Mochiy Pop One';
+}
 
+button.button-Gellary {
+  transition: all 0.03s linear;
+}
+
+button.button-Gellary:hover {
+  cursor: pointer;
+  background-color: #5b9ae1;
+  color: #484848;
+}
+
+button.button-Gellary:active {
+  box-shadow: 0 0 3px #1375E4;
+  transform: translateY(4px);
 }
 
 .card-container {
@@ -132,13 +146,13 @@ nav {
   transform: rotateY(180deg);
   border-radius: 24.63px;
   background-color: #ffffff;
+  box-shadow: 0px 8px 10px 0px;
 }
 
 .flip-div {
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
-  box-shadow: 0px 8px 10px 0px;
   border-radius: 24.63px;
 }
 
@@ -162,12 +176,50 @@ nav {
 
 @media only screen and (min-width: 768px) {
   .card-container {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .text {
+    font-size: 15em;
+  }
+
+  .button-Gellary {
+    min-height: 56px;
+    min-width: 110px;
+    margin-right: 8.5%;
+    font-size: 1.5;
+  }
+
+  button.button-submit {
+    min-height: 70px;
+    min-width: 286px;
+    font-size: 1.5;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .card-container {
     grid-template-columns: repeat(3, minmax(220px, 1fr));
   }
 
   .text {
     font-size: 15em;
   }
+
+  .button-Gellary {
+    min-height: 60px;
+    min-width: 120px;
+    margin-right: 8.5%;
+    font-size: 1.5;
+  }
+
+  button.button-submit {
+    min-height: 70px;
+    min-width: 286px;
+    font-size: 1.5;
+  }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -176,8 +228,22 @@ nav {
   }
 
   .text {
-    font-size: 25em;
+    font-size: 17em;
   }
+
+  .button-Gellary {
+    min-height: 70px;
+    min-width: 150px;
+    margin-right: 8.5%;
+    font-size: 1.5;
+  }
+
+  button.button-submit {
+    min-height: 70px;
+    min-width: 286px;
+    font-size: 1.5;
+  }
+
 }
 
 @media only screen and (min-width: 2560px) {
@@ -188,6 +254,20 @@ nav {
   .text {
     font-size: 35em;
   }
+
+  .button-Gellary {
+    min-height: 150px;
+    min-width: 340px;
+    font-size: 2em;
+    margin-right: 8.5%;
+  }
+
+  button.button-submit {
+    min-height: 100px;
+    min-width: 390px;
+    font-size: 2em;
+  }
+
 }
 
 .backImgtext {
@@ -200,7 +280,6 @@ nav {
   text-align: center;
   width: 80%;
   font-family: 'Mochiy Pop One';
-
 }
 
 /* this is used for deffrent background disignin front-card */
@@ -251,21 +330,33 @@ nav {
   text-align: center;
 }
 
-.submit-button {
-  width: 163px;
-  height: 40px;
-  padding: 17px, 10px, 17px, 10px;
-  border-radius: 12px;
-  border: 0px, 0px, 4px, 0px;
-  box-shadow: 0px 8px 0px 0px #649ad8;
+button.button-submit {
   background-color: #59cdFF;
-  font-family: 'Mochiy Pop One';
+  color: white;
   border: none;
-  color: #ffffff;
+  padding: 5px;
   font-size: 1em;
-
+  height: 56px;
+  width: 186px;
+  box-shadow: 0 3px 4px #569cec;
+  border-radius: 15px;
+  font-family: 'Mochiy Pop One';
 }
 
+button.button-submit {
+  transition: all 0.03s linear;
+}
+
+button.button-submit:hover {
+  cursor: pointer;
+  background-color: #5b9ae1;
+  color: #1375E4;
+}
+
+button.button-submit:active {
+  box-shadow: 0 0 3px #1375E4;
+  transform: translateY(4px);
+}
 
 footer {
   background-color: #1375E4;
@@ -279,7 +370,7 @@ footer {
   color: #ffffff;
   margin-left: 10px;
   list-style: none;
-  padding: 15px;
+  padding: 10px;
 
 }
 
@@ -287,9 +378,11 @@ footer {
   background-color: #ffffff;
   font-size: 1.8em;
   text-align: center;
-  padding: 5px;
+  padding: 3px;
   border-radius: 21%;
   margin-left: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 .follow-us {
@@ -319,6 +412,7 @@ footer {
   color: #ffffff;
   font-size: 1.2em;
   margin-left: 25px;
+  padding: 20px 0 0 0;
   font-family: Arial, Helvetica, sans-serif;
 
 }

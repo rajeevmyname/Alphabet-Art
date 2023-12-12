@@ -1,10 +1,23 @@
 // all alphabet card store in cardContainer
 let cardContainer = document.querySelector(".card-container");
 let dots = document.querySelectorAll(".dot")
+let Gellarybutton = document.querySelector(".button-Gellary")
+let effect = 0;
+Gellarybutton.addEventListener("click", function () {
+  if (effect === 0) {
+    Gellarybutton.style.backgroundColor = "#1375E4"
+    // Gellarybutton.textContent = "Gellary"
+    effect = 1;
+  }
+  else {
+    Gellarybutton.style.backgroundColor = "#569cec;"
+    effect = 0;
+  }
+})
 let alphabet;
 // 6 card different digining are being stored in the pattern
 let pattern = ["print1", "print2", "print3", "print4", "print5", "print6",]
-let soundArray = ["Apple", "Ball", "Cat", "Dog", "Elephant", "Fish", "Giraffe", "Horse", "igloo", "Joker", "King", "lion", "Monkey", "Nose", "Octopus", "Pen", "Queen", "Rabbit", "Snack", "Tiger", "Umbrella", "Ven", "Bettermelon", "X-ray", "Yak", "Zebra"]
+let soundArray = ["Apple", "Ball", "Cat", "Dog", "Elephant", "Fish", "Goat", "Horse", "igloo", "Joker", "Kite", "lion", "Monkey", "Nose", "Octopus", "Pig", "Queen", "Rocket", "Snake", "Tiger", "Umbrella", "Van", "Bettermelon", "X-ray", "Yak", "Zebra"]
 // Alphabet letters are stored in variable i
 // Different 6  disignin pattern are stored in variable j
 // this for loop use make to alphabet card
@@ -43,6 +56,8 @@ for (let i = 65, k = 0, j = 0; i <= 90; i++, k++, j++) {
     let msg = new SpeechSynthesisUtterance();
     msg.text = soundArray[k];
     window.speechSynthesis.speak(msg);
+
+
 
   })
   let images = document.createElement("img")
