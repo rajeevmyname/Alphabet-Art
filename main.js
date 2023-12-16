@@ -2,15 +2,28 @@
 let cardContainer = document.querySelector(".card-container");
 let dots = document.querySelectorAll(".dot")
 let Gellarybutton = document.querySelector(".button-Gellary")
-let effect = 0;
+// let SubmitButton = document.querySelector(".button-submit")
+let click = 0;
 Gellarybutton.addEventListener("click", function () {
-  if (effect === 0) {
+  if (click === 0) {
     Gellarybutton.style.backgroundColor = "#1375E4"
     // Gellarybutton.textContent = "Gellary"
+    click = 1;
+  }
+  else {
+    Gellarybutton.style.backgroundColor = "#59cdFF"
+    click = 0;
+  }
+})
+let SubmitButton = document.querySelector(".button-submit")
+let effect = 0;
+SubmitButton.addEventListener("click", function () {
+  if (effect === 0) {
+    SubmitButton.style.backgroundColor = "#1375E4"
     effect = 1;
   }
   else {
-    Gellarybutton.style.backgroundColor = "#569cec;"
+    SubmitButton.style.backgroundColor = "#59cdFF"
     effect = 0;
   }
 })
@@ -56,9 +69,6 @@ for (let i = 65, k = 0, j = 0; i <= 90; i++, k++, j++) {
     let msg = new SpeechSynthesisUtterance();
     msg.text = soundArray[k];
     window.speechSynthesis.speak(msg);
-
-
-
   })
   let images = document.createElement("img")
   // imageArray[i -65] this is use for change value of i

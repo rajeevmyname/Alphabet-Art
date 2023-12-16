@@ -5,8 +5,7 @@
 /* this is use for footer icon */
 body {
   margin: 0;
-  background-color: rgb(245, 232, 234);
-  /* text-align: center; */
+  background-image: url('images/Background Pattern.png');
 
 }
 
@@ -153,7 +152,9 @@ button.button-Gellary:active {
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
-  border-radius: 24.63px;
+  border-radius: 24.74px;
+  border: 0px, 0px, 6.18px, 0px;
+
 }
 
 .filpped {
@@ -172,6 +173,16 @@ button.button-Gellary:active {
   font-family: 'Mochiy Pop One';
   font-weight: 400;
 
+}
+
+@media only screen and (min-width: 425px) {
+  .card-container {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .text {
+    font-size: 10em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -284,46 +295,51 @@ button.button-Gellary:active {
 
 /* this is used for deffrent background disignin front-card */
 .print1 {
-  background: linear-gradient(45deg, rgb(247, 188, 80) 25%, transparent 25%), linear-gradient(315deg, rgb(247, 188, 80) 25%, transparent 25%), linear-gradient(45deg, transparent 24%, #dec51f 25%, #dec51f 45%, transparent 45%), linear-gradient(315deg, transparent 24%, #dec51f 25%, #dec51f 45%, transparent 45%);
-  background-size: 2em 2em;
-  background-color: rgb(247, 188, 80);
-  color: #FF8A00;
+  background: url(images/frontimages/pattern1.svg);
+  color: #da790b;
+  background-color: #FFB800;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .print2 {
-  background: repeating-linear-gradient(135deg, #8b6ea2 0, #8b6ea2 23%, transparent 0, transparent 50%);
-  background-size: 2em 2em;
+  background: url(images/frontimages/pattern2.svg);
   background-color: #bb7ffa;
   color: #8030D4;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .print3 {
-  background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
-  ;
-  background-size: 2em 2em;
+  background: url(images/frontimages/pattern3.svg);
+  background-color: #76bafa;
   color: #016de9;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .print4 {
-  background: radial-gradient(circle at center, #e59de0, #e59de0 10%, transparent 10%, transparent 20%, #e59de0 20%, #e59de0 30%, transparent 30%, transparent 40%, #e59de0 40%, #e59de0 50%, transparent 50%, transparent 60%, #e59de0 60%, #e59de0 70%, transparent 70%, transparent 80%, #e59de0 80%, #e59de0 90%, transparent 90%);
-  background-size: 7em 7em;
+  background: url(images/frontimages/pattern4.svg);
   background-color: rgb(253, 125, 165);
   color: #DA2D65;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .print5 {
-  background: linear-gradient(135deg, #fa6f38 25%, transparent 25%), linear-gradient(45deg, #fa6f38 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
-  ;
-  background-size: 2em 2em;
+  background: url(images/frontimages/pattern5.svg);
   background-color: #fa6f38;
   color: #D83400;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .print6 {
-  background: linear-gradient(45deg, #4fd7b7 25%, transparent 25%), linear-gradient(315deg, #4fd7b7 25%, transparent 25%), linear-gradient(45deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%), linear-gradient(315deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%);
-  background-size: 2em 2em;
+  background: url(images/frontimages/pattern6.svg);
   background-color: #4fd7b7;
   color: #007352;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .submit-container {
@@ -350,7 +366,7 @@ button.button-submit {
 button.button-submit:hover {
   cursor: pointer;
   background-color: #5b9ae1;
-  color: #1375E4;
+  color: #4d4f52;
 }
 
 button.button-submit:active {
@@ -368,53 +384,59 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   color: #ffffff;
-  margin-left: 10px;
+  letter-spacing: 0.05em;
   list-style: none;
-  padding: 10px;
+  padding: 5px;
 
 }
 
 .fa {
   background-color: #ffffff;
-  font-size: 1.8em;
+  font-size: 2em;
   text-align: center;
-  padding: 3px;
+  padding: 7px;
   border-radius: 21%;
-  margin-left: 25px;
+  margin-left: 40px;
   height: 30px;
+  margin: 0px 7px 0px 0px;
   width: 30px;
+  text-decoration: none;
 }
 
 .follow-us {
   color: #ffffff;
   font-size: 2em;
-  margin-left: 25px;
   padding: 40px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-logo-img {
   height: auto;
-  max-width: 70px;
+  max-width: 80px;
   border-radius: 40px;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .footer-logo-div {
   height: auto;
   max-width: 70px;
   border-radius: 40%;
-  margin-left: 35px;
+  margin-left: 20px;
+
+}
+
+.sajhe-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-left: 20px;
+  padding: 20px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .footer-sajhe-link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.2em;
-  margin-left: 25px;
-  padding: 20px 0 0 0;
-  font-family: Arial, Helvetica, sans-serif;
-
+  padding: 20px 0px 0px 0px;
 }
 
 .footer-logo-div {
@@ -422,10 +444,11 @@ footer {
 }
 
 .footer-item {
-  margin-left: 40px;
+  margin-left: 35px;
 
 }
 
 .foorter-ul {
-  margin-left: 0px;
+  margin-left: 35px;
+  padding: 10px 0px 0px 0px;
 }
