@@ -1,76 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
+
 body {
     margin: 0;
+    background-image:url(assest/bodyBackgroungImage/backgroundImg.png) ;
 
 }
 
-.headerLogo {
+
+.logo {
+    width: auto;
+    max-height: 120px;
+}
+
+nav {
+    display: flex;
+    background-color: #1375E4;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.navItems{
     text-align: center;
 }
 
-.logo {
-    width: 400px;
-    height: 100px;
+.navItems >img {
+    max-width: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
-.navImage {
-    height: 70px;
-    width: 70px;
-    border-radius: 50px;
-}
 
-.nav-bar {
-    display: flex;
-    background-color: #1375E4;
-    height: 160px;
-    width: 100%;
-    justify-content: space-around;
-}
 
-.img {
-    height: 70px;
-    width: 70px;
-    margin: 10px;
-    /* border-radius: 50px; */
-
-}
-
-.nav-text {
+.navItems >p {
     font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: -3px;
+    margin-bottom: 5px;
     color: #ffff;
-    margin-top: 18px;
 }
 
-/* .nav-items:hover .nav-text{
+/* navItems:hover navText{
     border: dotted 2px #3990f4;
 } */
 
-.nav-items:hover {
-    border: 5px solid #3990f4;
+.navItems:hover {
+    cursor: pointer;
+    background-color: #BF6800;
 
 }
-.nav-items:hover .img{
-    border: dotted #3990f4;
-}
-.nav-items:hover .nav-text{
-    border: dotted #3990f4;
+
+.carouselContainer {
+    align-items: center;
 }
 
-/* .nav-items :hover .img{
-    border: dotted 2px #3990f4;
+.carouselContainer >img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
-.nav-items:hover{
-   border: 2px dotted #3990f4;
-} */
 
+.dotContainer {
+    text-align: center;
+    margin-top: -30px;
+}
+
+.dot {
+    height: 7.7px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb2b2;
+    border-radius: 50%;
+    display: inline-block;
+}
+#dot3{
+    background-color: black;
+}
 
 .container {
+    width: 80%;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(9, 190px);
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
-    background-color: #f8f6f4;
+    grid-template-columns: repeat(2, minmax(150px, 300px));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
 
 }
 
@@ -80,169 +94,153 @@ body {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
+    /* box-shadow: 0px 8px 10px 0px; */
+    border-radius: 10%;
     box-shadow: 0px 8px 10px 0px;
-    border-radius: 24.74px;
+    
 
 }
 
 
 .frontCard {
-    height: 190px;
-    width: 150px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 24.74px;
-    border: 0px, 0px, 6.18px, 0px;
+    border-radius: 10%;
+    /* background:  #FFB800; */
 
 
+}
+
+.backcardImageText {
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+   font-family: 'Mochiy Pop One';
+    
 }
 
 .backCard {
-    height: 190px;
-    width: 150px;
+    min-height: 210px;
+    width: 100%;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    border-radius: 24.74px;
-    border: 0px, 0px, 6.18px, 0px;
+    border-radius: 10%;
+    position: relative;
+    background-color: #ffff;
 
 }
+.iconContainer{
+    display: flex;
+    justify-content: space-around;
+   }
 
 .image {
     width: 100%;
-    height: 100%;
-    border-radius: 24.74px;
+    height: 80%;
+    border-radius: 10%;
+
 }
 
-@media(max-width: 600px) {
-    .container {
-        grid-template-columns: repeat(2, 150px);
-    }
+.text {
+    font-size: 7em;
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
 }
 
-/* .footerContainer {
-        width: 100%;
-        height:328px;
-        gap: 32px
-    }
-     */
 
 
-/* .footerText {
-        /* Name: Mobile/Body/Medium; */
-/* font-family: Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0.0025em;
-        text-align: left;
-        color: rgba(255, 255, 255, 1); */
-
-
-/* .logoImage{
-        height: 40px;
-        width: 40px;
-        border-radius: 30px;
-    } */
-
-@media(max-width: 360px) {
-    .container {
-        grid-template-columns: repeat(1, 150px);
-    }
-}
 
 .card.flipped {
     transform: rotateY(180deg);
 }
 
-.text {
-    font-family: 'Mochiy Pop One';
-    font-size: 100px;
-
-
-}
 
 .cardDesign1 {
+    background-image: url(assest/svgPattern/pattern1.svg);
+   background-color: #FFB800;
+   color:  #FF8A00;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom: 5px solid #FF8A00;
 
-    /* radial-gradient  use to design card background*/
-    background: linear-gradient(45deg, rgb(247, 183, 66) 25%, transparent 25%),
-        linear-gradient(315deg, rgb(247, 183, 66) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%),
-        linear-gradient(315deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%);
-    background-size: 3em 3em;
-    background-color: rgb(247, 183, 66);
-    opacity: 1;
-    color: #BF6800;
 
 }
 
 .cardDesign2 {
-    background: repeating-linear-gradient(135deg, #8657b8 0, #8657b8 22%, transparent 0, transparent 50%);
-    background-size: 3em 3em;
-    background-color: #A55FEF;
-    opacity: 1;
-    color: rgb(81, 29, 136)
+   background-image: url(assest/svgPattern/pattern2.svg);
+   background-color:#A55FEF;
+   color:#8030D4;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom: 5px solid #9030D4;
+
+
 }
 
 .cardDesign3 {
-    background: linear-gradient(135deg, #59AFFF 20%, transparent 20%, transparent 80%, #59AFFF 80%),
-        linear-gradient(45deg, #59AFFF 40%, #adeffd 40%, #adeffd 60%, #adeffd 60%, #59AFFF 60%),
-        linear-gradient(135deg, #59AFFF 20%, #adeffd 20%, #adeffd 80%, #59AFFF 80%);
-    background-size: 3em 3em;
-    background-color: #59AFFF;
-    opacity: 1;
-    color: rgba(31, 122, 224, 1)
+   background-image: url(assest/svgPattern/pattern3.svg);
+   background-color: #59AFFF;
+   color: #1F7AE0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom: 5px solid #1F7AE0;
+
+   
 }
 
 .cardDesign4 {
-    background: radial-gradient(circle at center, #f1a4bd, #f1a4bd 10%, transparent 20%, transparent 20%, #f1a4bd 20%, #f1a4bd 30%, transparent 30%, transparent 40%, #f1a4bd 40%, #f1a4bd 50%, transparent 50%, transparent 60%, #f1a4bd 60%, #f1a4bd 70%, transparent 70%, transparent 80%, #f1a4bd 80%, #f1a4bd 90%, transparent 90%);
-    background-size: 13em 13em;
-    background-color: #F36291;
-    opacity: 0.8;
-    color: rgb(182, 13, 67)
+    background-image:url(assest/svgPattern/pattern4.svg) ;
+    background-color:  #F36291;
+    color: #DA2D65;
+    background-repeat: no-repeat;
+   background-size: cover;
+    border-bottom: 5px solid  #DA2D65;
+
+
 }
 
 .cardDesign5 {
-    background: linear-gradient(135deg, #f37f51 25%, transparent 25%),
-        linear-gradient(45deg, #f37f51 25%, transparent 25%),
-        linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%),
-        linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
-    background-size: 3em 3em;
-    background-color: #f37f51;
-    opacity: 1;
-    color: rgba(216, 52, 0, 1)
+    background-image:url(assest/svgPattern/pattern5.svg) ;
+    background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom: 5px solid #D83400;
+   background-color: #FF8A00;
+   color: #D83400;
+
 }
 
 .cardDesign6 {
-    background: linear-gradient(45deg, #1BB486 25%, transparent 25%),
-        linear-gradient(45deg, transparent 24%, #36E1AE 15%, #36E1AE 45%, transparent 45%),
-        linear-gradient(315deg, transparent 24%, #36E1AE 15%, #36E1AE 45%, transparent 45%),
-        linear-gradient(45deg, transparent 24%, #36E1AE 15%, #36E1AE 45%, transparent 45%),
-        linear-gradient(315deg, transparent 24%, #36E1AE 15%, #36E1AE 45%, transparent 45%);
-
-    background-size: 3em 3em;
-    background-color: #1BB486;
-    opacity: 1;
-    color: rgba(0, 115, 82, 1)
-}
+    background-image: url(assest/svgPattern/pattern6.svg);
+    background-repeat: no-repeat;
+   background-size: cover;
+   border-bottom: 5px solid #007352;
+   background-color:  #2ACA9B;
+   color: #007352;
+   }
 
 
 footer {
     background: rgba(19, 117, 228, 1);
-    height: 600px;
+
 }
 
 .fa {
     background: #ffff;
     color: blue;
-    padding: 10px;
+    padding: 9px;
     font-size: 1.5em;
     width: 20px;
     height: 20px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 4px;
+    margin:  3px;
     border-radius: 10px;
 }
 
@@ -251,30 +249,22 @@ footer {
 }
 
 
-.footerContainer {
-    position: relative;
-    left: 50px;
-    top: 50px;
-    width: 400px;
-    height: Hug (432px);
-    gap: 10px;
-}
 
 .footerContainer1 {
-    margin-top: 20px;
+    padding-top: 25px;
+    margin-left: 43px;
+
 }
 
-.footerContainer2 {
-    margin-top: 48px;
+.ulText >li{
+    list-style: none;
+    padding: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
 }
 
-.footerContainer3 {
-    margin-top: 50px;
-}
-
-
-
-.footerText {
+.footerContainer1 >p {
     /* Name: Mobile/Body/Medium; */
     /* font-family: Roboto; */
     font-size: 1.2rem;
@@ -287,8 +277,121 @@ footer {
 
 }
 
-.logoImage {
-    height: 80px;
-    width: 80px;
+.footerContainer2 >img {
+    height: 55px;
+    width: 55px;
     border-radius: 40px;
+    margin-left:40px ;
+}
+.footerContainer2 >a{
+    margin-left: 37px;
+    color: white;
+    font-size: 1.2em;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .text {
+        font-size: 12em;
+    }
+    .backcardImageText {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0;
+        border-radius: 20%;
+        font-size: 1.5em;
+        font-family: 'Mochiy Pop One';
+        
+    }
+    .backCard{
+        min-height: 400px;
+        width: 100%;
+    }
+    
+}
+
+
+@media (min-width:1025px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .text {
+        font-size: 15em;
+    }
+    .backcardImageText {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0;
+        border-radius: 20%;
+        font-size: 1.8em;
+        font-family: 'Mochiy Pop One';
+        
+    }
+    .backCard{
+        min-height: 380px;
+        width: 100%;
+    }
+   
+}
+
+@media (min-width:1281px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 50px;
+    }
+
+    .text {
+        font-size: 14em;
+    }
+    .backcardImageText {
+        position: absolute;
+        top: 76%;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0;
+        border-radius: 20%;
+        font-size: 1.7em;
+        font-family: 'Mochiy Pop One';
+        
+    }
+    .backCard{
+        min-height: 450px;
+        width: 100%;
+    }
+ 
+}
+@media (min-width:1440px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 50px;
+    }
+
+    .text {
+        font-size: 18em;
+    }
+    .backcardImageText {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0;
+        border-radius: 20%;
+        font-size: 2em;
+        font-family: 'Mochiy Pop One';
+        
+    }
+    .backCard{
+        min-height: 500px;
+        width: 100%;
+    }
+ 
 }
