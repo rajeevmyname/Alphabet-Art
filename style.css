@@ -8,7 +8,6 @@ body {
     margin: 0;
     background-image: url('images/Background\ Pattern.png');
     background-repeat: repeat;
-
 }
 
 header {
@@ -31,15 +30,14 @@ header {
     background-color: #004CA1;
 }
 
-/* top  right  bottom  left */
-.nav-img {
+
+.nav-divs > img{
     border-radius: 50%;
     margin: 10px 0 0 0;
     max-width: 60px;
 }
 
-
-.nav-text {
+.nav-divs p{
     font-family: 'Mochiy Pop One';
     color: #ffff;
     margin-top: 0;
@@ -53,20 +51,19 @@ header {
 
 .carousel-img {
     width: 100%;
-    max-height: 300px;
+    max-height: 250px;
     object-fit: cover;
+    min-height: 249px;
 }
-
 
 .dot-container {
     text-align: center;
     margin-top: -30px;
 }
 
-#dot-2 {
+#dot3 {
     background-color: black;
 }
-
 
 .dot {
     display: inline-block;
@@ -102,7 +99,6 @@ header {
     cursor: pointer;
 }
 
-
 .front-div {
     position: absolute;
     border-radius: 24px;
@@ -120,30 +116,50 @@ header {
     font-size: 6em;
     margin-top: 4px;
     font-family: 'Mochiy Pop One';
-
 }
 
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+
 .back-div {
-    background-color: #ffff;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-
     border-radius: 24px;
     border: 0px 0px 6.18px 0px;
     /* position: relative; */
+    background-color: #ffff;
+}
+
+.back-img-text {
+    position: absolute;
+    transform: translateX(-50%);
+    margin-top: 70%;
+    left: 50%;
+    font-size: 1em;
+    font-family: 'Mochiy Pop One';
+    letter-spacing: 0.03em;
+    background-color: #ffff;
 }
 
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 770px) {
     .main-container {
         grid-template-columns: repeat(3, minmax(220px, 1fr));
     }
 
     .text {
         font-size: 11em;
+    }
+
+    .backImgicon-div {
+        margin-bottom: 0;
+
     }
 
     .fa {
@@ -184,75 +200,116 @@ header {
 } */
 
 
-.card.flipped {
-    transform: rotateY(180deg);
-}
+/* .backImgicon-div { */
+/* margin-top: -25px; */
+/* display: flex;
+justify-content: space-evenly; */
+/* align-items: center; */
+/* position: relative; */
+/* } */
 
-.back-img-text {
+
+.like_img {
+    height: 10%;
+    width: 10%;
     position: absolute;
-    transform: translateX(-50%);
-    margin: 0;
-    left: 50%;
-    font-size: 1em;
-    font-family: 'Mochiy Pop One';
-    letter-spacing: 0.03em;
-    background-color: #ffff;
+    top: 85%;
+    left: 20%;
 }
 
-/* .like_img{
-    height: 3px;
-    width: 3px;
-} */
+.expend_img {
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+}
+
+.share_img {
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    top: 85%;
+    left: 75%;
+}
+
+.heart-img {
+    height: 10%;
+    width: 10%;
+}
+
+.carouselBottom-text {
+    font-family: 'Mochiy Pop One';
+    font-size: 0.8em;
+    color: #1375E4;
+    width: 100%;
+}
+
+.gallery-btn {
+    font-family: 'Mochiy Pop One';
+    font-size: 13px;
+    background-color: #367DCA;
+    color: #ffff;
+    border-radius: 12px;
+    padding: 16px 8px 16px 8px;
+    /* margin-right: -10%; */
+}
 
 
-/* this is used for diffrent background designin front card   */
-.print1 {
-    background: linear-gradient(45deg, rgb(247, 183, 66) 25%, transparent 25%), linear-gradient(315deg, rgb(247, 183, 66) 25%, transparent 25%), linear-gradient(45deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%), linear-gradient(315deg, transparent 24%, #f3dc47 25%, #f3dc47 45%, transparent 45%);
-    background-size: 4em 4em;
-    /* background-color: #f1a24d; */
-    background-color: rgb(247, 183, 66);
+.pattern1 {
+    background: url(images/PatternsFile/pattern1.svg);
+    background-color: #FFB800;
+    /* background-size: 200%; */
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #FF8A00;
 }
 
-.print2 {
-    background: repeating-linear-gradient(135deg, #8a67a7 0, #8a67a7 23%, transparent 0, transparent 50%);
-    background-size: 4em 4em;
+.pattern2 {
+    background: url(images/PatternsFile/pattern2.svg);
     background-color: #ae73ec;
-    color: #520575;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #8030D4;
 }
 
-.print3 {
-    background: linear-gradient(135deg, #76bafa 20%, transparent 20%, transparent 80%, #76bafa 80%), linear-gradient(45deg, #76bafa 40%, #bcd7f1 40%, #bcd7f1 60%, #bcd7f1 60%, #76bafa 60%), linear-gradient(135deg, #76bafa 20%, #bcd7f1 20%, #bcd7f1 80%, #76bafa 80%);
-    ;
-    background-size: 4em 4em;
-    color: #016de9;
+.pattern3 {
+    /* x y width height  */
+    background: url(images/PatternsFile/pattern3.svg);
+    background-color: #59AFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1375E4;
 }
 
-.print4 {
-    background: radial-gradient(circle at center, #e59de0, #e59de0 10%, transparent 10%, transparent 20%, #e59de0 20%, #e59de0 30%, transparent 30%, transparent 40%, #e59de0 40%, #e59de0 50%, transparent 50%, transparent 60%, #e59de0 60%, #e59de0 70%, transparent 70%, transparent 80%, #e59de0 80%, #e59de0 90%, transparent 90%);
-    background-size: 19em 19em;
+.pattern4 {
+    background: url(images/PatternsFile/pattern4.svg);
     background-color: rgb(240, 140, 171);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #DA2D65;
 }
 
-.print5 {
-    background: linear-gradient(135deg, #f37f51 25%, transparent 25%), linear-gradient(45deg, #f37f51 25%, transparent 25%), linear-gradient(135deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%), linear-gradient(45deg, transparent 24%, #faa07d 25%, #faa07d 45%, transparent 45%);
-    ;
-    background-size: 3em 3em;
-    background-color: #f37f51;
+.pattern5 {
+    background: url(images/PatternsFile/pattern5.svg);
+    background-color: #f8683c;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #D83400;
+
 }
 
-.print6 {
-    background: linear-gradient(45deg, #4fd7b7 25%, transparent 25%), linear-gradient(315deg, #4fd7b7 25%, transparent 25%), linear-gradient(45deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%), linear-gradient(315deg, transparent 24%, #64f7f3 25%, #64f7f3 45%, transparent 45%);
-    background-size: 4em 4em;
-    background-color: #4fd7b7;
+.pattern6 {
+    background: url(images/PatternsFile/pattern6.svg);
+    background-color: #1BB486;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #007352;
 }
 
+
 .imgClass {
-    margin-top: 15px;
-    height: 80%;
+    height: 75%;
     width: 100%;
     border-radius: 24px;
 }
@@ -299,31 +356,33 @@ header {
     opacity: 0.6;
 }
 
-.footer-text {
+.footer-text-ul li{
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.05em;
     color: #ffff;
     list-style: none;
     padding: 5px;
 }
-
-.sajhe-logo {
+    
+.footer-sajheLogo-div img{
     border-radius: 50%;
     /* top  right  bottom  left */
     margin: 10px 0px 15px 37px;
-}
 
-.sajhe-web {
-    text-decoration: none;
-    color: #ffff;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.05em;
 }
 
 .sajhe-web-divs {
     padding: 0 0 40px 0;
     margin-left: 45px;
 }
+
+.sajhe-web-divs a{
+    text-decoration: none;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
 
 .sajhe-web:hover {
     opacity: 0.9;
