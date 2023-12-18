@@ -1,96 +1,131 @@
-// all alphabet card store in cardContainer
-let cardContainer = document.querySelector(".card-container");
-let dots = document.querySelectorAll(".dot")
-let Gellarybutton = document.querySelector(".button-Gellary")
-// let SubmitButton = document.querySelector(".button-submit")
-let click = 0;
-Gellarybutton.addEventListener("click", function () {
-  if (click === 0) {
-    Gellarybutton.style.backgroundColor = "#1375E4"
-    // Gellarybutton.textContent = "Gellary"
-    click = 1;
-  }
-  else {
-    Gellarybutton.style.backgroundColor = "#59cdFF"
-    click = 0;
-  }
-})
-let SubmitButton = document.querySelector(".button-submit")
-let effect = 0;
-SubmitButton.addEventListener("click", function () {
-  if (effect === 0) {
-    SubmitButton.style.backgroundColor = "#1375E4"
-    effect = 1;
-  }
-  else {
-    SubmitButton.style.backgroundColor = "#59cdFF"
-    effect = 0;
-  }
-})
-let alphabet;
-// 6 card different digining are being stored in the pattern
-let pattern = ["print1", "print2", "print3", "print4", "print5", "print6",]
-let soundArray = ["Apple", "Ball", "Cat", "Dog", "Elephant", "Fish", "Goat", "Horse", "igloo", "Joker", "Kite", "lion", "Monkey", "Nose", "Octopus", "Pig", "Queen", "Rocket", "Snake", "Tiger", "Umbrella", "Van", "Bettermelon", "X-ray", "Yak", "Zebra"]
-// Alphabet letters are stored in variable i
-// Different 6  disignin pattern are stored in variable j
-// this for loop use make to alphabet card
-for (let i = 65, k = 0, j = 0; i <= 90; i++, k++, j++) {
-  if (j > 5)
-    j = 0;
-  // this is use for make alphabet
-  alphabet = String.fromCharCode(i);
-  // The entire display of the frint card is being stored in the frontDiv
-  let frontDiv = document.createElement("div");
-  // the entire back disigning of the back card is the being stored in the backDiv
-  let backDivs = document.createElement("div");
-  // the entire all fliping item stored in the flipcontainer
-  let flipcontainer = document.createElement("div")
-  let text = document.createElement("p")
-  text.classList.add("text")
-  text.innerHTML = alphabet;
-  frontDiv.appendChild(text)
-  frontDiv.classList.add("front-div");
-  backDivs.classList.add("back-div");
-  flipcontainer.classList.add("flip-div")
-  cardContainer.appendChild(frontDiv);
-  // this is used to set class and frontcard
-  frontDiv.classList.add(pattern[j])
-  cardContainer.appendChild(flipcontainer)
-  flipcontainer.appendChild(frontDiv);
-  flipcontainer.appendChild(backDivs);
-  // this is for when click on the front card the card will flip and the back card show
-  let backImgtext = document.createElement("p")
-  backImgtext.classList.add("backImgtext")
-  backImgtext.innerHTML = soundArray[k];
-  backDivs.appendChild(backImgtext)
+//All words
+let words = ["Alligator","Bee","Cat",
+             "Dinosaur","Elephant","Fox",
+             "Giraffe","House","Igloo",
+             "Jellyfish","King","Ladybug",
+             "Mountains","Ninja","Octopus",
+             "Pirate","Queen","Rainbow",
+             "Strawberry", "Tree", "Unicorn",
+             "Volcano","Watermelon","Xylophone",
+             "Yo-yo","Zebra"]
 
-  flipcontainer.addEventListener("click", () => {
-    flipcontainer.classList.toggle("filpped")
-    let msg = new SpeechSynthesisUtterance();
-    msg.text = soundArray[k];
-    window.speechSynthesis.speak(msg);
-  })
-  let images = document.createElement("img")
-  // imageArray[i -65] this is use for change value of i
-  images.setAttribute("src", `images/Alphabetimages/${alphabet.toLocaleLowerCase()}.png`)
-  images.setAttribute("class", "imgClass")
-  backDivs.appendChild(images);
+//Set up text to speech
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[7];
+
+// Add Alphabet Cards
+let container = document.querySelector(".container");
+for(let i=65; i<=90; i++){
+    let alphabet = String.fromCharCode(i);
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+    container.appendChild(card);
+
+    //backcard
+    let backCard = document.createElement("div");
+    let alphabetText = document.createElement("p");
+    alphabetText.innerText = alphabet;
+
+    backCard.classList.add("backCard");
+    backCard.appendChild(alphabetText);
+    card.appendChild(backCard);
+
+    //frontcard
+    let frontCard = document.createElement("div");
+    frontCard.classList.add("frontCard");
+    card.appendChild(frontCard);
+        //alphabet image
+    let imgContainer = document.createElement("div");
+    let alphabetImg = document.createElement("img");
+    alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
+    imgContainer.appendChild(alphabetImg);
+    frontCard.appendChild(imgContainer);
+        //word for the alphabet
+    let word = document.createElement("p");
+    word.innerText = words[i - 65];
+    frontCard.appendChild(word);
+        //div containing icons at the bottom of each card
+    let faIcons = document.createElement("div");
+    faIcons.classList.add("fa-icons");
+    frontCard.appendChild(faIcons);
+        //Heart Icon           
+    let likeIcon = document.createElement("i");
+    likeIcon.classList.add("fa-regular", "fa-heart");
+    faIcons.appendChild(likeIcon);
+        //Flip Icon
+    let flipIcon = document.createElement("i");
+    flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left");
+    faIcons.appendChild(flipIcon);
+        //Share Icon
+    let shareIcon = document.createElement("i");
+    shareIcon.classList.add("fa-solid", "fa-share-from-square");
+    faIcons.appendChild(shareIcon);
+    
+    //Show front card on click
+    card.addEventListener("click", () => {
+        card.classList.add("flipped");
+        msg.text = words[i-65];
+        window.speechSynthesis.speak(msg);
+    })
+
+    //Flip back on click
+    flipIcon.addEventListener("click",(event)=>{
+        card.classList.remove("flipped");
+        event.stopPropagation();
+    })
+
+    //Color the heart red when user clicks like
+    likeIcon.addEventListener("click",(event)=>{
+        likeIcon.classList.toggle("fa-solid");
+        likeIcon.style.color = "red";
+        event.stopPropagation();
+    })
+
+    //heart beat on hover
+    likeIcon.addEventListener("mouseover",(event)=>{
+        likeIcon.classList.add("fa-bounce");
+        event.stopPropagation();
+    })
+    likeIcon.addEventListener("mouseleave",(event)=>{
+        likeIcon.classList.remove("fa-bounce");
+        event.stopPropagation();
+    })
+
 }
-let crouselImg = document.querySelector(".crousel-img");
-let i = 0;
-let crouselArray = [
-  "images/crouselimages/children1.jpg",
-  "images/crouselimages/children2.jpg",
-  "images/crouselimages/children3.jpg"
-]
-autoplay = setInterval(function () {
-  i++;
-  let selecteDotId = "#dot" + i;
-  let selecteDot = document.querySelector(selecteDotId);
-  dots.forEach(dot => dot.style.backgroundColor = "white");
-  selecteDot.style.backgroundColor = "black";
-  if (i > 2)
-    i = 0;
-  crouselImg.setAttribute("src", crouselArray[i])
-}, 1200);
 
+// Give design background to back of each alphabet card
+let allBackCards = document.querySelectorAll(".backCard");
+let patterns = ["pattern1", "pattern2", "pattern3",
+                "pattern4", "pattern5", "pattern6"];
+
+let j = 0;                
+allBackCards.forEach((backCard)=>{
+    if(j>5)
+        j=0;
+    backCard.classList.add(patterns[j]);
+    j++;
+})
+
+
+// Carousel
+let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers","https://placehold.co/375x187/green/white?text=Workshop","https://placehold.co/375x187/purple/white?text=Contest"];
+let carouselImg = document.querySelector(".carousel img");
+let i = 0;
+
+let dots = document.querySelectorAll(".dot");
+
+setInterval(function(){
+    //move images every 4 seconds
+    i++;
+    if(i>2)
+        i=0;
+    carouselImg.src = carouselImages[i];
+
+    //color dots corresponding to the image
+    let currentDotId = "#dot" + i;
+    let currentDot = document.querySelector(currentDotId);
+    dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
+    currentDot.style.backgroundColor = "white";
+},4000)

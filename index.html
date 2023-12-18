@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Alphabet-Art</title>
+    <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
+    <title>Alphabet Art</title>
 </head>
-
 <body>
     <header>
-        <img src="images/WhatsApp Image 2023-12-04 at 12.22.31 PM.jpeg" class="logo-img">
+        <!-- <Logo/> -->
+        <div class="logo">
+            <img src="https://placehold.co/250x100/red/white?text=Logo" alt="Logo">
+        </div>
+        
+        <!-- <NavigationMenu/> -->
         <nav>
-            <!--this is for menu bar-->
-            <div class="nav-item">
-                <img src="images/workshop.jpeg" class="nav-images">
-
-                <p class="nav-text">Workshop</p>
+            <div>
+                <img src="./assets/navImages/sticker.png" alt="Stickers">
+                <p>Stickers</p>
             </div>
-            <div class="nav-item">
-
-                <img src="images/contest.jpeg" class="nav-images">
-
-                <p class="nav-text">Contest</p>
+            <div>
+                <img src="./assets/navImages/workshop.png" alt="Workshop">
+                <p>Workshop</p>
             </div>
-            <div class="nav-item">
-
-                <img src="images/stickers.jpeg" class="nav-images">
-                <p class="nav-text">Stickers</p>
+            <div>
+                <img src="./assets/navImages/contest.png" alt="Contest">
+                <p>Contest</p>
             </div>
         </nav>
     </header>
-    <div class="crousel-container">
-        <img src="images/crouselimages/children1.jpg" class="crousel-img" height="350px" width="100%">
-    </div>
-    <div class="dot-container">
-        <span class="dot" id="dot1"></span>
-        <span class="dot" id="dot2"></span>
-        <span class="dot" id="dot3"></span>
-    </div>
-    <div class="Gallery-container">
-        <button class="button-Gellary">Gellary</button>
-    </div>
-
-    <!-- this is for contain all aphabet divs by using javaScript -->
-    <section class="card-container"></section>
-    <div class="submit-container">
-        <button class="button-submit">Submit entry</button>
-    </div>
-    <footer>
-
-        <div class="footer-item ">
-            <p class="follow-us">Follow Us</p>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-twitter"></a>
+    <!-- <Carousel/> -->
+    <div class="carousel">
+        <img src="https://placehold.co/400x200/orange/white?text=Stickers" alt="Carousel Images">
+        <div class="dots">
+            <span id="dot0" class="dot"></span>
+            <span id="dot1" class="dot"></span>
+            <span id="dot2" class="dot"></span>
         </div>
-        <ul class="foorter-ul">
-            <li class="footer-text">Contect us</li>
-            <li class="footer-text">Careers</li>
-            <li class="footer-text">Terms of use</li>
-            <li class="footer-text">Privacy policy</li>
-            <li class="footer-text">Make a donation</li>
-        </ul>
-        <div class="footer-logo-div">
-            <img src="images/sajhe_sapne_logo.jpeg" class="footer-logo-img">
-            <div class="footer-sajhe-link">
-                <a href="https://sajhesapne.org/about" class="sajhe-link">www.sajhesapne.org</a>
-            </div>
+    </div>
+
+    <!-- Gallery Button -->
+    <div class="gallery">
+        <button class="pushable">
+            <span class="front">Gallery</span>
+        </button>
+    </div>
+
+    <!-- <AlphabetCards/> -->
+    <div class="container">        
+    </div>
+
+    <!-- Submit Your Art Button -->
+    <div class="call-to-action">
+        <button class="pushable">
+            <span class="front">Submit Your Art</span>
+        </button>
+    </div>
+
+    <!-- <Footer/> -->
+    <footer>
+        <div class="social-media">
+            <p>Follow Us</p>
+            <ul>
+                <li><img src="./assets/social/fb.png" alt="Facebook"></li>
+                <li><img src="./assets/social/insta.png" alt="Instagram"></li>
+                <li><img src="./assets/social/you.png" alt="Youtube"></li>
+                <li><img src="./assets/social/in.png" alt="LinkedIn"></li>
+                <li><img src="./assets/social/x.png" alt="X"></li>
+            </ul>
+        </div>
+        <div class="links">
+            <ul>
+                <li>Contact Us</li>
+                <li>Terms Of Use</li>
+                <li>Report A Bug</li>
+                <li>Hire a Sapnewaali</li>
+                <li>Make a Donation</li>
+            </ul>
         </div>
     </footer>
-</body>
-<script src="main.js"></script>
 
+    <script type="module" src="main.js"></script>
+</body>
 </html>
