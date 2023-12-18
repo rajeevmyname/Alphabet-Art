@@ -6,57 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alphabet-Art</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Mochiy Pop One' rel='stylesheet'>
-    <!---Call to font-family(Mochiy Pop One)-->
+
 </head>
 
 <body>
+
     <header>
-        <img class="logo" src="images/logo-img/logo.jpg">
+        <img class="logo" src="images/logo-img/logo.jpg"> <!---This is used for Alphabet logo-->
+        <nav class="nav-bar"> <!---This is for Nav-bar-->
 
-        <div class="nav-bar"> <!---This is for menu-bar-->
-
-            <div class="nav-items" id="item-1">
-                <div class="img-box">
-                    <img class="nav-img" src="images/logo-img/image 65.png">
-                </div>
+            <div class="nav-items" id="workshop">
+                <img class="nav-img" src="images/logo-img/image 65.png">
                 <p class="nav-text">Workshop</p>
             </div>
 
-            <div class="nav-items" id="item-2">
-                <div class="img-box">
-                    <img class="nav-img" src="images/logo-img/contest.png">
-                </div>
+            <div class="nav-items" id="contest">
+                <img class="nav-img" src="images/logo-img/contest.png">
                 <p class="nav-text">Contest</p>
             </div>
 
-            <div class="nav-items" id="item-3">
-                <div class="img-box">
-                    <img class="nav-img" src="images/logo-img/stickers.png">
-                </div>
+            <div class="nav-items" id="stickers">
+                <img class="nav-img" src="images/logo-img/stickers.png">
                 <p class="nav-text">Stickers</p>
             </div>
-        </div>
+
+        </nav>
     </header>
 
     <div class="carousel">
-        <img class="carousel-img" src="images/carousel-img/img-A.PNG">
+        <img class="carousel-img" src="images/carousel-img/img-A.PNG"> <!--This is used for carouseling images-->
+        <div class="dot-container">
+            <span class="dot" id="dot-1"></span>
+            <span class="dot" id="dot-2"></span>
+            <span class="dot" id="dot-3"></span>
+        </div>
     </div>
+
     <div class="main-container"> <!--In this Container we will add our alphabet cards from javaScript-->
     </div>
-    <div class="container"></div>
-    <footer>
-        <div class="footerContainer">
-            <div class="footerContainer1">
-                <p class="footerText">Follow us</p>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="https://in.linkedin.com/company/sajhe-sapne" class="fa fa-linkedin"></a>
-                <a href="https://www.youtube.com/channel/UC2YOf3houhn92YC2JsNhHxw?app=desktop"
-                    class="fa fa-youtube"></a>
-                <a href="https://www.instagram.com/sapnewaali/" class="fa fa-instagram"></a>
 
-            </div>
-            <script src="main.js"></script>
+    <footer class="main-footer"> <!--This is used to footer-->
+        <div class="footer-icons-div"> <!--This is for footer icons with URL-->
+            <p>Follow Us</p>
+            <a href="https://www.facebook.com/hashtag/sajhesapne/?locale=hi_IN" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/sapnewaali/" class="fa fa-instagram"></a>
+            <a href="https://www.youtube.com/channel/UC2YOf3houhn92YC2JsNhHxw" class="fa fa-youtube-play"></a>
+            <a href="https://in.linkedin.com/company/sajhe-sapne" class='fab fa-linkedin-in'></a>
+            <a href="https://twitter.com/sajhesapne?lang=en" class="fa fa-twitter"></a>
+        </div>
+  
+        <ul class="footer-text">
+            <li>Contact Us</li>
+            <li>Careers</li>
+            <li>Term of use</li>
+            <li>Privacy Policy</li>
+            <li>Make a donation</li>
+        </ul>
+
+        <div class="footer-logo-div">
+            <img id="sajhe-logo" src="images/logo-img/sajhe sapne logo.jpeg">
+            <a href="https://sajhesapne.org/about">www.SajheSapne.org</a>
+        </div>
+
+    </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
