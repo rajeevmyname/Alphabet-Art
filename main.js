@@ -1,122 +1,131 @@
-// Make a container in which all Alphabet divs will appear
-var container = document.querySelector(".main-container");
+//All words
+let words = ["Alligator","Bee","Cat",
+             "Dinosaur","Elephant","Fox",
+             "Giraffe","House","Igloo",
+             "Jellyfish","King","Ladybug",
+             "Mountains","Ninja","Octopus",
+             "Pirate","Queen","Rainbow",
+             "Strawberry", "Tree", "Unicorn",
+             "Volcano","Watermelon","Xylophone",
+             "Yo-yo","Zebra"]
 
-let carouselImg = document.querySelector(".carousel-img")
-var dots = document.querySelectorAll(".dot")
+//Set up text to speech
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+msg.voice = voices[7];
 
-// make a var for store aphabets
-let alphabet;
-let i = 0;
+// Add Alphabet Cards
+let container = document.querySelector(".container");
+for(let i=65; i<=90; i++){
+    let alphabet = String.fromCharCode(i);
 
-let carouselImgArr = ["images/carouselimges/img-1.jpeg", "images/carouselimges/img-2.jpeg", "images/carouselimges/img-3.jpeg"]
-// this  carouselImg array for carousel images
+    let card = document.createElement("div");
+    card.classList.add("card");
+    container.appendChild(card);
 
-let pattern = ["pattern1", "pattern2", "pattern3", "pattern4", "pattern5", "pattern6"]
-// Make a pattern array in which store classes for background styling in front-div
+    //backcard
+    let backCard = document.createElement("div");
+    let alphabetText = document.createElement("p");
+    alphabetText.innerText = alphabet;
 
-let soundArry = ["apple", "ball", "cat", "dog", "elephant", "fish", "goat", "horse", "igloo", "joker", "kite",
-    "lion", "monkey", "nose", "octopus", "pig", "queen", "rocket", "snake", "tiger", "umbrella", "van", "watermelon", "xray",
-    "yak", "zebra"]
+    backCard.classList.add("backCard");
+    backCard.appendChild(alphabetText);
+    card.appendChild(backCard);
 
-
-setInterval(function () {      //this autoplay for carousel images 
-    i++;
-    let selectedDotId = "#dot" + i;
-    let selectedDot = document.querySelector(selectedDotId);
-
-    dots.forEach(dot => dot.style.backgroundColor = "white");
-    selectedDot.style.backgroundColor = "black";
-
-    if (i >= 3)
-        i = 0;
-    carouselImg.setAttribute("src", carouselImgArr[i]);
-}, 1200);
-//console.log(carouselImg)
-
-
-//This "For loop" used to making alphabet divs, and changing background design with alphabet divs, and changeing image
-// i var for make alphabets 
-// j variable for pattern array
-for (let i = 65, k = 0, j = 0; i <= 90; k++, i++, j++) {
-
-    if (j > 5)
-        j = 0
-
-    // Number 65-90 to make alphabet a to z
-    alphabet = String.fromCharCode(i);
-
-    // Make a container in which will be front and back both card and append flipcontainer to container
-    let flipContainer = document.createElement("div")
-    flipContainer.classList.add("card")
-
-    container.appendChild(flipContainer)
-
-    // Creat divs who will make by loop 
-    let frontDiv = document.createElement("div");
-    frontDiv.classList.add("front-div")
-
-    // Add classes in the pattern array in front-div
-    frontDiv.classList.add(pattern[j])
-
-    // make a paragraph tag for style alphabet etxt
-    let text = document.createElement("p")
-    text.classList.add("text")
-    text.innerHTML = alphabet
-    frontDiv.appendChild(text)
-
-    let backDivs = document.createElement("div");
-    backDivs.classList.add("back-div");
-
-    // Append front and back divs in flipcontainer
-    flipContainer.appendChild(frontDiv);
-    flipContainer.appendChild(backDivs)
-
-    //When we will click any abphabet then show back side of the card
-    flipContainer.addEventListener("click", () => {
-        flipContainer.classList.toggle("flipped");
-        var msg = new SpeechSynthesisUtterance();
-        msg.text = soundArry[k];
+    //frontcard
+    let frontCard = document.createElement("div");
+    frontCard.classList.add("frontCard");
+    card.appendChild(frontCard);
+        //alphabet image
+    let imgContainer = document.createElement("div");
+    let alphabetImg = document.createElement("img");
+    alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
+    imgContainer.appendChild(alphabetImg);
+    frontCard.appendChild(imgContainer);
+        //word for the alphabet
+    let word = document.createElement("p");
+    word.innerText = words[i - 65];
+    frontCard.appendChild(word);
+        //div containing icons at the bottom of each card
+    let faIcons = document.createElement("div");
+    faIcons.classList.add("fa-icons");
+    frontCard.appendChild(faIcons);
+        //Heart Icon           
+    let likeIcon = document.createElement("i");
+    likeIcon.classList.add("fa-regular", "fa-heart");
+    faIcons.appendChild(likeIcon);
+        //Flip Icon
+    let flipIcon = document.createElement("i");
+    flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left");
+    faIcons.appendChild(flipIcon);
+        //Share Icon
+    let shareIcon = document.createElement("i");
+    shareIcon.classList.add("fa-solid", "fa-share-from-square");
+    faIcons.appendChild(shareIcon);
+    
+    //Show front card on click
+    card.addEventListener("click", () => {
+        card.classList.add("flipped");
+        msg.text = words[i-65];
         window.speechSynthesis.speak(msg);
     })
 
-    // when wi will click then ring words sound
-    let backImgText = document.createElement("p")
-    backImgText.classList.add("back-img-text")
-    backImgText.innerHTML = soundArry[k]
-    backDivs.appendChild(backImgText)
+    //Flip back on click
+    flipIcon.addEventListener("click",(event)=>{
+        card.classList.remove("flipped");
+        event.stopPropagation();
+    })
 
-    // when we will click any alphabet then flip cell and show back image
-    let images = document.createElement("img")
+    //Color the heart red when user clicks like
+    likeIcon.addEventListener("click",(event)=>{
+        likeIcon.classList.toggle("fa-solid");
+        likeIcon.style.color = "red";
+        event.stopPropagation();
+    })
 
-    // Add imges in the back-div of the cards and we added images by using link from images folder > ${alphabet.toLocaleLowerCase()}>
-    images.setAttribute("src", `images/alphabetImges/${soundArry[k]}.png`)
-    images.setAttribute("class", "imgClass")
-    backDivs.appendChild(images)
-
-    let backImgIconDiv = document.createElement("div");
-    let iconImg1 = document.createElement("img");
-    let iconImg2 = document.createElement("img");
-    let iconImg3 = document.createElement("img")
-
-    iconImg1.src = "images/backImgIcons/likeIcon.png"
-    iconImg2.src = "images/backImgIcons/expendIcon.png"
-    iconImg3.src = "images/backImgIcons/shareIcon.png"
-
-    backDivs.appendChild(backImgIconDiv)
-    backImgIconDiv.appendChild(iconImg1)
-    backImgIconDiv.appendChild(iconImg2)
-    backImgIconDiv.appendChild(iconImg3)
-
-    backImgIconDiv.setAttribute("class", "backImgicon-div")
-    iconImg1.setAttribute("class", "like_img")
-    iconImg2.setAttribute("class", "expend_img")
-    iconImg3.setAttribute("class", "share_img")
-
-    iconImg1.addEventListener("click", () => {
-        iconImg1.style.backgroundColor = "red";
-        iconImg1.src = "images/backImgIcons/redHeartIcon.png"
+    //heart beat on hover
+    likeIcon.addEventListener("mouseover",(event)=>{
+        likeIcon.classList.add("fa-bounce");
+        event.stopPropagation();
+    })
+    likeIcon.addEventListener("mouseleave",(event)=>{
+        likeIcon.classList.remove("fa-bounce");
+        event.stopPropagation();
     })
 
 }
 
+// Give design background to back of each alphabet card
+let allBackCards = document.querySelectorAll(".backCard");
+let patterns = ["pattern1", "pattern2", "pattern3",
+                "pattern4", "pattern5", "pattern6"];
 
+let j = 0;                
+allBackCards.forEach((backCard)=>{
+    if(j>5)
+        j=0;
+    backCard.classList.add(patterns[j]);
+    j++;
+})
+
+
+// Carousel
+let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers","https://placehold.co/375x187/green/white?text=Workshop","https://placehold.co/375x187/purple/white?text=Contest"];
+let carouselImg = document.querySelector(".carousel img");
+let i = 0;
+
+let dots = document.querySelectorAll(".dot");
+
+setInterval(function(){
+    //move images every 4 seconds
+    i++;
+    if(i>2)
+        i=0;
+    carouselImg.src = carouselImages[i];
+
+    //color dots corresponding to the image
+    let currentDotId = "#dot" + i;
+    let currentDot = document.querySelector(currentDotId);
+    dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
+    currentDot.style.backgroundColor = "white";
+},4000)

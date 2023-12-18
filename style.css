@@ -1,390 +1,408 @@
-@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
-/* this link is for alphabet font weight  */
+@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* *{
+    border: 1px solid red;
+} */
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-/* This link is for footer social media icons */
-
-body {
-    margin: 0;
-    background-image: url('images/Background\ Pattern.png');
-    background-repeat: repeat;
+body{
+  margin: 0;
+  background-image: url(./assets/bg_small.png);
 }
 
-header {
-    text-align: center;
-}
-
-.img-logo {
-    max-height: 100px;
-    width: 60%;
-}
-
-.nav-bar {
-    display: flex;
-    width: 100%;
-    background-color: #1375E4;
-    justify-content: space-evenly;
-}
-
-.nav-divs:hover {
-    background-color: #004CA1;
-}
-
-
-.nav-divs > img{
-    border-radius: 50%;
-    margin: 10px 0 0 0;
-    max-width: 60px;
-}
-
-.nav-divs p{
-    font-family: 'Mochiy Pop One';
-    color: #ffff;
-    margin-top: 0;
-    font-size: 0.9em;
-    text-align: center;
-}
-
-.carousel-div {
-    align-items: center;
-}
-
-.carousel-img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    min-height: 249px;
-}
-
-.dot-container {
-    text-align: center;
-    margin-top: -30px;
-}
-
-#dot3 {
-    background-color: black;
-}
-
-.dot {
-    display: inline-block;
-    height: 7.7px;
-    width: 8px;
-    margin: 0 2px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: #bbb2b2;
-}
-
-.main-container {
-    margin: auto;
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(2, minmax(150px, 350px));
-    /* for 3 make columns in container  */
-    grid-template-rows: repeat(2, 1fr);
-    /*  for make rows  */
-    gap: 15px;
-    padding: 20px;
-    width: 80%;
-}
-
-.card {
-    position: relative;
-    transition: transform 1s;
-    /* flip card in during 1 second  */
-    transform-style: preserve-3d;
-    /* for showing back-face */
-    border-radius: 24px;
-    box-shadow: 0px 5px 6px 0px;
+/* Logo */
+.logo img{
+    display: block;
+    margin: 10px auto;
     cursor: pointer;
 }
 
-.front-div {
-    position: absolute;
-    border-radius: 24px;
-    border: 0px 0px 6.18px 0px;
+/* Navigation Menu */
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1375E4;
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+nav div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    /* margin: 5px auto; */
+}
+
+nav div img{
+    border-radius: 50%;
+}
+
+nav div p{
+    margin: 0;
+}
+
+/* Carousel */
+.carousel img{
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.dots span{
+    display: inline-flex;
+    width: 5px;
+    height: 5px;
+    margin: 0 3px;
+    background-color: #59AFFF;
+    border-radius: 50%;
+}
+
+#dot0{
+    background-color: white;
+}
+
+/* 3D button */
+.gallery{
+    width: 80%;
+    display: flex;
+    flex-direction:row-reverse;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.call-to-action{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.pushable{
+    background: #1375E4;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.front{
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+  }
+/* Alphabet Cards */
+.container{
+    display: grid;
+    gap: 25px;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, minmax(150px, 300px));
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 30px;
+}
+
+.backCard{
+    backface-visibility: hidden;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
-    text-align: center;
+    position: absolute;
+    border-radius: 10%;
+    display: flex;
     justify-content: center;
-    border: 0px 0px 6.18px 0px;
+    align-items: center;
+    /* border: 5px solid black; */
 }
 
-
-.text {
-    font-size: 6em;
-    margin-top: 4px;
+.backCard p{
+    text-align: center;
+    font-size: 5em;
     font-family: 'Mochiy Pop One';
+    margin: auto;
+    text-shadow: 0px 4px 0px rgb(0,0,0,0.45);
 }
 
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-
-.back-div {
+.frontCard{
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    border-radius: 24px;
-    border: 0px 0px 6.18px 0px;
-    /* position: relative; */
-    background-color: #ffff;
+    border-radius: 10%;
+    box-shadow: 0px 6px 30px 5px lightblue;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.back-img-text {
-    position: absolute;
-    transform: translateX(-50%);
-    margin-top: 70%;
-    left: 50%;
-    font-size: 1em;
-    font-family: 'Mochiy Pop One';
-    letter-spacing: 0.03em;
-    background-color: #ffff;
+.frontCard div{
+  margin: 6px 6px 0px 6px;
 }
 
+.frontCard img{
+  width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 10%;
+  /* border: 1px solid red; */
+}
 
+.frontCard p{
+  color: #1F7AE0;
+  font-family: 'Mochiy Pop One';
+  text-align: center;
+  font-size: 1.2em;
+  margin: 6px;
+}
 
-@media only screen and (min-width: 770px) {
-    .main-container {
-        grid-template-columns: repeat(3, minmax(220px, 1fr));
-    }
-
-    .text {
-        font-size: 11em;
-    }
-
-    .backImgicon-div {
-        margin-bottom: 0;
-
-    }
-
-    .fa {
-        padding: 10px;
-        font-size: 30px;
-        width: 30px;
-        text-align: center;
-        text-decoration: none;
-        background-color: #ffffff;
-        color: blue;
-        border-radius: 10px;
-        margin: 0px 7px 0px 0px;
-    }
-
+.fa-icons::before{
+  display: none;
+}
+.fa-icons{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1em;
+  padding-bottom: 10px;
+  --fa-animation-iteration-count: 1;
+  color:#1F7AE0;
 
 }
 
-/* @media only screen and (min-width: 1440px) {
-    .main-container {
-        grid-template-columns: repeat(3, minmax(220px, 1fr));
-    }
-
-    .text {
-        font-size: 17em;
-    }
-
+.card{
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 10%;
 }
 
-@media only screen and (min-width: 2000px) {
-    .main-container {
-        grid-template-columns: repeat(3, minmax(220px, 1fr));
-    }
-
-    .text {
-        font-size: 25em;
-    }
-
-} */
-
-
-/* .backImgicon-div { */
-/* margin-top: -25px; */
-/* display: flex;
-justify-content: space-evenly; */
-/* align-items: center; */
-/* position: relative; */
-/* } */
-
-
-.like_img {
-    height: 10%;
-    width: 10%;
-    position: absolute;
-    top: 85%;
-    left: 20%;
+.card.flipped{
+    transform: rotateY(180deg);
 }
-
-.expend_img {
-    height: 10%;
-    width: 10%;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-}
-
-.share_img {
-    height: 10%;
-    width: 10%;
-    position: absolute;
-    top: 85%;
-    left: 75%;
-}
-
-.heart-img {
-    height: 10%;
-    width: 10%;
-}
-
-.carouselBottom-text {
-    font-family: 'Mochiy Pop One';
-    font-size: 0.8em;
-    color: #1375E4;
-    width: 100%;
-}
-
-.gallery-btn {
-    font-family: 'Mochiy Pop One';
-    font-size: 13px;
-    background-color: #367DCA;
-    color: #ffff;
-    border-radius: 12px;
-    padding: 16px 8px 16px 8px;
-    /* margin-right: -10%; */
-}
-
-
+/* Design patterns for back of alphabet cards */
 .pattern1 {
-    background: url(images/PatternsFile/pattern1.svg);
+    background-image: url(./assets/designPatterns/pattern1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #FFB800;
-    /* background-size: 200%; */
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-bottom: 5px solid #BF6800;
     color: #FF8A00;
-}
-
-.pattern2 {
-    background: url(images/PatternsFile/pattern2.svg);
-    background-color: #ae73ec;
-    background-size: cover;
+  }
+  .pattern2 {
+    background-image: url(./assets/designPatterns/pattern2.svg);
     background-repeat: no-repeat;
+    background-size: 250%;
+    background-color: #A55FEF;
+    border-bottom: 5px solid #60249F;
     color: #8030D4;
-}
-
-.pattern3 {
-    /* x y width height  */
-    background: url(images/PatternsFile/pattern3.svg);
+  }
+  
+  .pattern3 {
+    background-image: url(./assets/designPatterns/pattern3.svg);
+    background-repeat: no-repeat;
+    background-size: 200%;
     background-color: #59AFFF;
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-bottom: 5px solid #1375E4;
     color: #1375E4;
-}
-
-.pattern4 {
-    background: url(images/PatternsFile/pattern4.svg);
-    background-color: rgb(240, 140, 171);
-    background-size: cover;
+  }
+  
+  .pattern4 {
+    background-image: url(./assets/designPatterns/pattern4.svg);
     background-repeat: no-repeat;
+    background-size: 250%;
+    background-color: #F36291;
+    border-bottom: 5px solid #DA2D65;
     color: #DA2D65;
-}
-
-.pattern5 {
-    background: url(images/PatternsFile/pattern5.svg);
-    background-color: #f8683c;
-    background-size: cover;
+  }
+  
+  .pattern5 {
+    background-image: url(./assets/designPatterns/pattern5.svg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F26335;
+    border-bottom: 5px solid #DA2D65;
     color: #D83400;
-
-}
-
-.pattern6 {
-    background: url(images/PatternsFile/pattern6.svg);
-    background-color: #1BB486;
-    background-size: cover;
+  }
+  
+  .pattern6 {
+    background-image: url(./assets/designPatterns/pattern6.svg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #36E1AE;
+    border-bottom: 3px solid #1BB486;
     color: #007352;
-}
-
-
-.imgClass {
-    height: 75%;
-    width: 100%;
-    border-radius: 24px;
-}
-
-.footer-container {
+  }
+  
+/* Footer */
+footer{
     background-color: #1375E4;
-    height: auto;
-}
-
-.follow-us {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.003em;
-    color: #ffff;
+    color: white;
     font-size: 20px;
-    /* top  right  bottom  left */
-    margin-left: 40px;
-    padding: 40px 0 0 0;
+    font-family: Roboto;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
 }
 
-.fa {
-    padding: 5px;
-    font-size: 20px;
-    width: 23px;
-    min-height: 23px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #ffffff;
-    color: blue;
-    border-radius: 5px;
-    margin: 0px 7px 0px 0px;
+.social-media, .links{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
 }
 
-.footer-icons-div {
-    margin-left: 43px;
-    margin-bottom: 25px;
-    padding: 0;
+.social-media{
+    padding-top: 10px;
 }
 
-.footer-text-ul {
-    margin-top: 0px;
-}
-
-.fa:hover {
-    opacity: 0.6;
-}
-
-.footer-text-ul li{
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.05em;
-    color: #ffff;
+.social-media ul{
     list-style: none;
-    padding: 5px;
+    padding-left: 0;
+    display: flex;
+    margin-top: -10px;
 }
-    
-.footer-sajheLogo-div img{
+
+.social-media ul li{
+    margin-right: 5px;
+}
+
+.social-media ul li img{
     border-radius: 50%;
-    /* top  right  bottom  left */
-    margin: 10px 0px 15px 37px;
-
 }
 
-.sajhe-web-divs {
-    padding: 0 0 40px 0;
-    margin-left: 45px;
+.links ul{
+    list-style: none;
+    padding-left: 0;
 }
 
-.sajhe-web-divs a{
-    text-decoration: none;
-    color: #ffff;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.05em;
+.links ul li{
+    margin-bottom: 15px;
 }
 
 
-.sajhe-web:hover {
-    opacity: 0.9;
-    color: blue;
-}
+/* Media query to change grid count and text size for different screen sizes */
+@media (min-width:320px)  {
+    .container{
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+    .backCard p{
+      font-size: 6.5em;
+    }
+    .fa-icons{
+      font-size: 1.2em;
+    }
+    body{
+      background-image: url(./assets/bg_small.png);
+    }
+   }
+   @media (min-width:481px)  {
+    .container{
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+    .backCard p{
+      font-size: 9em;
+    }
+    .fa-icons{
+      font-size: 1.5em;
+    }
+    body{
+      background-image: url(./assets/bg_small.png);
+    }
+    .frontCard p{
+      font-size: 25px;
+    }
+   }
+   @media (min-width:641px)  {
+    .container{
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+    .backCard p{
+      font-size: 13em;
+    }
+    body{
+      background-image: url(./assets/bg_medium.png);
+    }
+    .fa-icons{
+      font-size: 1.7em;
+    }
+    .frontCard p{
+      font-size: 25px;
+    }
+   }
+   @media (min-width:961px)  {
+    .container{
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    .backCard p{
+      font-size: 12em;
+    }
+    body{
+      background-image: url(./assets/bg_medium.png);
+    }
+    .fa-icons{
+      font-size: 1.7em;
+      padding-bottom: 10px;
+    }
+    .frontCard p{
+      font-size: 25px;
+    }
+   }
+   @media (min-width:1025px) {
+    .container{
+      grid-template-columns: repeat(3, minmax(330px, 1fr));
+    }
+    .backCard p{
+      font-size: 13em;
+    }
+    body{
+      background-image: url(./assets/bg_large.png);
+    }
+    .fa-icons{
+      font-size: 2em;
+      padding-bottom: 15px;
+    }
+    .frontCard p{
+      font-size: 30px;
+    }
+   }
+   @media (min-width:1281px) {
+    .container{
+      grid-template-columns: repeat(3, minmax(400px, 1fr));
+      gap: 50px;
+    }
+    .backCard p{
+      font-size: 16em;
+    }
+    body{
+      background-image: url(./assets/bg_large.png);
+    }
+    .fa-icons{
+      font-size: 2em;
+      padding-top: 5px;
+      padding-bottom: 20px;
+    }
+    .frontCard p{
+      font-size: 35px;
+    }
+   }
