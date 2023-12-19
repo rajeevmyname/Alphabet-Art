@@ -4,20 +4,20 @@
     border: 1px solid red;
 } */
 
-body{
-  margin: 0;
-  background-image: url(./assets/bg_small.png);
+body {
+    margin: 0;
+    background-image: url(./assets/bg_small.png);
 }
 
 /* Logo */
-.logo img{
+.logo img {
     display: block;
     margin: 10px auto;
     cursor: pointer;
 }
 
 /* Navigation Menu */
-nav{
+nav {
     display: flex;
     justify-content: space-evenly;
     background-color: #1375E4;
@@ -27,7 +27,7 @@ nav{
     color: #FFFFFF;
 }
 
-nav div{
+nav div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,28 +38,28 @@ nav div{
     /* margin: 5px auto; */
 }
 
-nav div img{
+nav div img {
     border-radius: 50%;
 }
 
-nav div p{
+nav div p {
     margin: 0;
 }
 
 /* Carousel */
-.carousel img{
+.carousel img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
 }
 
-.dots{
+.dots {
     display: flex;
     justify-content: center;
     margin-top: -20px;
 }
 
-.dots span{
+.dots span {
     display: inline-flex;
     width: 5px;
     height: 5px;
@@ -68,20 +68,20 @@ nav div p{
     border-radius: 50%;
 }
 
-#dot0{
+#dot0 {
     background-color: white;
 }
 
 /* 3D button */
-.gallery{
+.gallery {
     width: 80%;
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     margin: auto;
     margin-top: 30px;
 }
 
-.call-to-action{
+.call-to-action {
     width: 80%;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ nav div p{
     margin-top: 30px;
 }
 
-.pushable{
+.pushable {
     background: #1375E4;
     border-radius: 12px;
     border: none;
@@ -98,7 +98,7 @@ nav div p{
     outline-offset: 4px;
 }
 
-.front{
+.front {
     display: block;
     padding: 12px 30px;
     border-radius: 12px;
@@ -112,9 +112,10 @@ nav div p{
 
 .pushable:active .front {
     transform: translateY(-2px);
-  }
+}
+
 /* Alphabet Cards */
-.container{
+.container {
     display: grid;
     gap: 25px;
     width: 85%;
@@ -125,7 +126,7 @@ nav div p{
     margin-top: 30px;
 }
 
-.backCard{
+.backCard {
     backface-visibility: hidden;
     width: 100%;
     height: 100%;
@@ -137,15 +138,15 @@ nav div p{
     /* border: 5px solid black; */
 }
 
-.backCard p{
+.backCard p {
     text-align: center;
     font-size: 5em;
     font-family: 'Mochiy Pop One';
     margin: auto;
-    text-shadow: 0px 4px 0px rgb(0,0,0,0.45);
+    text-shadow: 0px 4px 0px rgb(0, 0, 0, 0.45);
 }
 
-.frontCard{
+.frontCard {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -158,49 +159,51 @@ nav div p{
     justify-content: space-around;
 }
 
-.frontCard div{
-  margin: 6px 6px 0px 6px;
+.frontCard div {
+    margin: 6px 6px 0px 6px;
 }
 
-.frontCard img{
-  width: 100%;
-  display: block;
-  margin: auto;
-  border-radius: 10%;
-  /* border: 1px solid red; */
+.frontCard img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10%;
+    /* border: 1px solid red; */
 }
 
-.frontCard p{
-  color: #1F7AE0;
-  font-family: 'Mochiy Pop One';
-  text-align: center;
-  font-size: 1.2em;
-  margin: 6px;
+.frontCard p {
+    color: #1F7AE0;
+    font-family: 'Mochiy Pop One';
+    text-align: center;
+    font-size: 1.2em;
+    margin: 6px;
 }
 
-.fa-icons::before{
-  display: none;
+.fa-icons::before {
+    display: none;
 }
-.fa-icons{
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1em;
-  padding-bottom: 10px;
-  --fa-animation-iteration-count: 1;
-  color:#1F7AE0;
+
+.fa-icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1em;
+    padding-bottom: 10px;
+    --fa-animation-iteration-count: 1;
+    color: #1F7AE0;
 
 }
 
-.card{
+.card {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
     border-radius: 10%;
 }
 
-.card.flipped{
+.card.flipped {
     transform: rotateY(180deg);
 }
+
 /* Design patterns for back of alphabet cards */
 .pattern1 {
     background-image: url(./assets/designPatterns/pattern1.svg);
@@ -209,54 +212,55 @@ nav div p{
     background-color: #FFB800;
     border-bottom: 5px solid #BF6800;
     color: #FF8A00;
-  }
-  .pattern2 {
+}
+
+.pattern2 {
     background-image: url(./assets/designPatterns/pattern2.svg);
     background-repeat: no-repeat;
     background-size: 250%;
     background-color: #A55FEF;
     border-bottom: 5px solid #60249F;
     color: #8030D4;
-  }
-  
-  .pattern3 {
+}
+
+.pattern3 {
     background-image: url(./assets/designPatterns/pattern3.svg);
     background-repeat: no-repeat;
     background-size: 200%;
     background-color: #59AFFF;
     border-bottom: 5px solid #1375E4;
     color: #1375E4;
-  }
-  
-  .pattern4 {
+}
+
+.pattern4 {
     background-image: url(./assets/designPatterns/pattern4.svg);
     background-repeat: no-repeat;
     background-size: 250%;
     background-color: #F36291;
     border-bottom: 5px solid #DA2D65;
     color: #DA2D65;
-  }
-  
-  .pattern5 {
+}
+
+.pattern5 {
     background-image: url(./assets/designPatterns/pattern5.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #F26335;
     border-bottom: 5px solid #DA2D65;
     color: #D83400;
-  }
-  
-  .pattern6 {
+}
+
+.pattern6 {
     background-image: url(./assets/designPatterns/pattern6.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #36E1AE;
     border-bottom: 3px solid #1BB486;
     color: #007352;
-  }
-  
+}
+
 /* Footer */
-footer{
+footer {
     background-color: #1375E4;
     color: white;
     font-size: 20px;
@@ -266,143 +270,173 @@ footer{
     width: 100%;
 }
 
-.social-media, .links{
+.social-media,
+.links {
     width: 80%;
     margin: auto;
     margin-top: 25px;
 }
 
-.social-media{
+.social-media {
     padding-top: 10px;
 }
 
-.social-media ul{
+.social-media ul {
     list-style: none;
     padding-left: 0;
     display: flex;
     margin-top: -10px;
 }
 
-.social-media ul li{
+.social-media ul li {
     margin-right: 5px;
 }
 
-.social-media ul li img{
+.social-media ul li img {
     border-radius: 50%;
 }
 
-.links ul{
+.links ul {
     list-style: none;
     padding-left: 0;
 }
 
-.links ul li{
+.links ul li {
     margin-bottom: 15px;
 }
 
 
 /* Media query to change grid count and text size for different screen sizes */
-@media (min-width:320px)  {
-    .container{
-      grid-template-columns: repeat(2, minmax(150px, 1fr));
+@media (min-width:320px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
     }
-    .backCard p{
-      font-size: 6.5em;
+
+    .backCard p {
+        font-size: 6.5em;
     }
-    .fa-icons{
-      font-size: 1.2em;
+
+    .fa-icons {
+        font-size: 1.2em;
     }
-    body{
-      background-image: url(./assets/bg_small.png);
+
+    body {
+        background-image: url(./assets/bg_small.png);
     }
-   }
-   @media (min-width:481px)  {
-    .container{
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
+}
+
+@media (min-width:481px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
-    .backCard p{
-      font-size: 9em;
+
+    .backCard p {
+        font-size: 9em;
     }
-    .fa-icons{
-      font-size: 1.5em;
+
+    .fa-icons {
+        font-size: 1.5em;
     }
-    body{
-      background-image: url(./assets/bg_small.png);
+
+    body {
+        background-image: url(./assets/bg_small.png);
     }
-    .frontCard p{
-      font-size: 25px;
+
+    .frontCard p {
+        font-size: 25px;
     }
-   }
-   @media (min-width:641px)  {
-    .container{
-      grid-template-columns: repeat(2, minmax(300px, 1fr));
+
+}
+
+@media (min-width:641px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
-    .backCard p{
-      font-size: 13em;
+
+    .backCard p {
+        font-size: 13em;
     }
-    body{
-      background-image: url(./assets/bg_medium.png);
+
+    body {
+        background-image: url(./assets/bg_medium.png);
     }
-    .fa-icons{
-      font-size: 1.7em;
+
+    .fa-icons {
+        font-size: 1.7em;
     }
-    .frontCard p{
-      font-size: 25px;
+
+    .frontCard p {
+        font-size: 25px;
     }
-   }
-   @media (min-width:961px)  {
-    .container{
-      grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+@media (min-width:961px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
-    .backCard p{
-      font-size: 12em;
+
+    .backCard p {
+        font-size: 12em;
     }
-    body{
-      background-image: url(./assets/bg_medium.png);
+
+    body {
+        background-image: url(./assets/bg_medium.png);
     }
-    .fa-icons{
-      font-size: 1.7em;
-      padding-bottom: 10px;
+
+    .fa-icons {
+        font-size: 1.7em;
+        padding-bottom: 10px;
     }
-    .frontCard p{
-      font-size: 25px;
+
+    .frontCard p {
+        font-size: 25px;
     }
-   }
-   @media (min-width:1025px) {
-    .container{
-      grid-template-columns: repeat(3, minmax(330px, 1fr));
+}
+
+@media (min-width:1025px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(330px, 1fr));
     }
-    .backCard p{
-      font-size: 13em;
+
+    .backCard p {
+        font-size: 13em;
     }
-    body{
-      background-image: url(./assets/bg_large.png);
+
+    body {
+        background-image: url(./assets/bg_large.png);
     }
-    .fa-icons{
-      font-size: 2em;
-      padding-bottom: 15px;
+
+    .fa-icons {
+        font-size: 2em;
+        padding-bottom: 15px;
     }
-    .frontCard p{
-      font-size: 30px;
+
+    .frontCard p {
+        font-size: 30px;
     }
-   }
-   @media (min-width:1281px) {
-    .container{
-      grid-template-columns: repeat(3, minmax(400px, 1fr));
-      gap: 50px;
+}
+
+@media (min-width:1281px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
+        gap: 50px;
     }
-    .backCard p{
-      font-size: 16em;
+
+    .backCard p {
+        font-size: 16em;
     }
-    body{
-      background-image: url(./assets/bg_large.png);
+
+    body {
+        background-image: url(./assets/bg_large.png);
     }
-    .fa-icons{
-      font-size: 2em;
-      padding-top: 5px;
-      padding-bottom: 20px;
+
+    .fa-icons {
+        font-size: 2em;
+        padding-top: 5px;
+        padding-bottom: 20px;
     }
-    .frontCard p{
-      font-size: 35px;
+
+    .frontCard p {
+        font-size: 35px;
     }
-   }
+}
