@@ -114,7 +114,8 @@ allBackCards.forEach((backCard) => {
 
 
 // Carousel
-let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers",
+let carouselImages = [
+    "https://placehold.co/375x187/orange/white?text=Stickers",
     "https://placehold.co/375x187/green/white?text=Workshop",
     "https://placehold.co/375x187/purple/white?text=Contest"];
 let carouselImg = document.querySelector(".carousel img");
