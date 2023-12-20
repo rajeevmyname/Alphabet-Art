@@ -254,7 +254,13 @@ nav div p{
     border-bottom: 3px solid #1BB486;
     color: #007352;
   }
-  
+ 
+  .box p{
+    font-family:'Mochiy Pop One';
+    font-size: 1.5em;
+    color: #1375E4;
+    text-align: center;
+  }
 /* Footer */
 footer{
     background-color: #1375E4;
