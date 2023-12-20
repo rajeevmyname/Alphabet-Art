@@ -28,13 +28,13 @@ for(let i=65; i<=90; i++){
     let alphabetText = document.createElement("p");
     alphabetText.innerText = alphabet;
 
-    backCard.classList.add("backCard");
+    backCard.classList.add("back-card");
     backCard.appendChild(alphabetText);
     card.appendChild(backCard);
 
     //frontcard
     let frontCard = document.createElement("div");
-    frontCard.classList.add("frontCard");
+    frontCard.classList.add("front-card");
     card.appendChild(frontCard);
         //alphabet image
     let imgContainer = document.createElement("div");
