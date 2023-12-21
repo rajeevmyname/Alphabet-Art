@@ -133,7 +133,6 @@ nav div p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 5px solid black; */
 }
 
 .backCard p {
@@ -303,6 +302,16 @@ footer {
   margin-bottom: 15px;
 }
 
+.links ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.social-media img:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
 
 /* Media query to change grid count and text size for different screen sizes */
 @media (min-width:320px) {
