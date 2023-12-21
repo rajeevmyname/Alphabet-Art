@@ -367,6 +367,9 @@ footer {
   .frontCard p {
     font-size: 25px;
   }
+  nav div img {
+    min-height: 90px;
+  }
 }
 
 @media (min-width:961px) {
