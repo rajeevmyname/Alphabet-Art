@@ -92,7 +92,6 @@ for(let i=65; i<=90; i++){
         likeIcon.classList.remove("fa-bounce");
         event.stopPropagation();
     })
-
 }
 
 // Give design background to back of each alphabet card
