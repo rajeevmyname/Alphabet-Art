@@ -5,16 +5,11 @@
 } */
 
 body {
-body {
   margin: 0;
   background-image: url(./assets/bg_small.png);
 }
 
 /* Logo */
-.logo img {
-  display: block;
-  margin: 10px auto;
-  cursor: pointer;
 .logo img {
   display: block;
   margin: 10px auto;
@@ -30,25 +25,8 @@ nav {
   font-weight: 400;
   font-size: 1em;
   color: #FFFFFF;
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #1375E4;
-  font-family: 'Mochiy Pop One';
-  font-weight: 400;
-  font-size: 1em;
-  color: #FFFFFF;
 }
 
-nav div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  /* margin: 5px auto; */
 nav div {
   display: flex;
   flex-direction: column;
@@ -62,12 +40,8 @@ nav div {
 
 nav div img {
   border-radius: 50%;
-nav div img {
-  border-radius: 50%;
 }
 
-nav div p {
-  margin: 0;
 nav div p {
   margin: 0;
 }
@@ -77,16 +51,8 @@ nav div p {
   width: 100%;
   max-height: 350px;
   object-fit: cover;
-.carousel img {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
 }
 
-.dots {
-  display: flex;
-  justify-content: center;
-  margin-top: -20px;
 .dots {
   display: flex;
   justify-content: center;
@@ -100,17 +66,8 @@ nav div p {
   margin: 0 3px;
   background-color: #59AFFF;
   border-radius: 50%;
-.dots span {
-  display: inline-flex;
-  width: 5px;
-  height: 5px;
-  margin: 0 3px;
-  background-color: #59AFFF;
-  border-radius: 50%;
 }
 
-#dot0 {
-  background-color: white;
 #dot0 {
   background-color: white;
 }
@@ -122,20 +79,8 @@ nav div p {
   flex-direction: row-reverse;
   margin: auto;
   margin-top: 30px;
-.gallery {
-  width: 80%;
-  display: flex;
-  flex-direction: row-reverse;
-  margin: auto;
-  margin-top: 30px;
 }
 
-.call-to-action {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 30px;
 .call-to-action {
   width: 80%;
   display: flex;
@@ -151,25 +96,8 @@ nav div p {
   padding: 0;
   cursor: pointer;
   outline-offset: 4px;
-.pushable {
-  background: #1375E4;
-  border-radius: 12px;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 4px;
 }
 
-.front {
-  display: block;
-  padding: 12px 30px;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  background: #59CDFF;
-  font-family: 'Mochiy Pop One';
-  text-shadow: 0px 1px 0px #367DCA;
-  color: white;
-  transform: translateY(-6px);
 .front {
   display: block;
   padding: 12px 30px;
@@ -186,13 +114,10 @@ nav div p {
   transform: translateY(-2px);
 }
 
-  transform: translateY(-2px);
-}
-
 /* Alphabet Cards */
 .container {
   display: grid;
-  gap: 25px;
+  gap: 15px;
   width: 85%;
   margin: auto;
   justify-content: space-around;
@@ -206,18 +131,13 @@ nav div p {
   width: 100%;
   height: 100%;
   position: absolute;
-  border-radius: 10%;
+  border-radius: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 5px solid black; */
 }
 
-.backCard p {
-  text-align: center;
-  font-size: 5em;
-  font-family: 'Mochiy Pop One';
-  margin: auto;
-  text-shadow: 0px 4px 0px rgb(0, 0, 0, 0.45);
 .backCard p {
   text-align: center;
   font-size: 5em;
@@ -227,24 +147,22 @@ nav div p {
 }
 
 .frontCard {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    border-radius: 10%;
-    box-shadow: 0px 16px 24px 2px #1F7AE024;
-    /* border: 1px solid white; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 8%;
+  box-shadow: 0px 6px 30px 5px lightblue;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.frontCard div {
 .frontCard div {
   margin: 6px 6px 0px 6px;
 }
 
-.frontCard img {
 .frontCard img {
   width: 100%;
   display: block;
@@ -254,7 +172,6 @@ nav div p {
 }
 
 .frontCard p {
-.frontCard p {
   color: #1F7AE0;
   font-family: 'Mochiy Pop One';
   text-align: center;
@@ -263,11 +180,8 @@ nav div p {
 }
 
 .fa-icons::before {
-.fa-icons::before {
   display: none;
 }
-
-.fa-icons {
 
 .fa-icons {
   display: flex;
@@ -276,15 +190,9 @@ nav div p {
   padding-bottom: 10px;
   --fa-animation-iteration-count: 1;
   color: #1F7AE0;
-  color: #1F7AE0;
 
 }
 
-.card {
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  border-radius: 10%;
 .card {
   position: relative;
   transition: transform 1s;
@@ -294,10 +202,7 @@ nav div p {
 
 .card.flipped {
   transform: rotateY(180deg);
-.card.flipped {
-  transform: rotateY(180deg);
 }
-
 
 /* Design patterns for back of alphabet cards */
 .pattern1 {
@@ -341,7 +246,7 @@ nav div p {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #F26335;
-  border-bottom: 5px solid #DA2D65;
+  border-bottom: 5px solid #D83400;
   color: #D83400;
 }
 
@@ -350,7 +255,8 @@ nav div p {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #36E1AE;
-  border-bottom: 3px solid #1BB486;
+  /* background-color: #1BB486;  */
+  border-bottom: 5px solid #007352;
   color: #007352;
 }
 
@@ -363,21 +269,8 @@ footer {
   margin-top: 20px;
   position: absolute;
   width: 100%;
-footer {
-  background-color: #1375E4;
-  color: white;
-  font-size: 20px;
-  font-family: Roboto;
-  margin-top: 20px;
-  position: absolute;
-  width: 100%;
 }
 
-.social-media,
-.links {
-  width: 80%;
-  margin: auto;
-  margin-top: 25px;
 .social-media,
 .links {
   width: 80%;
@@ -387,15 +280,8 @@ footer {
 
 .social-media {
   padding-top: 10px;
-.social-media {
-  padding-top: 10px;
 }
 
-.social-media ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  margin-top: -10px;
 .social-media ul {
   list-style: none;
   padding-left: 0;
@@ -405,12 +291,8 @@ footer {
 
 .social-media ul li {
   margin-right: 5px;
-.social-media ul li {
-  margin-right: 5px;
 }
 
-.social-media ul li img {
-  border-radius: 20%;
 .social-media ul li img {
   border-radius: 20%;
 }
@@ -418,13 +300,8 @@ footer {
 .links ul {
   list-style: none;
   padding-left: 0;
-.links ul {
-  list-style: none;
-  padding-left: 0;
 }
 
-.links ul li {
-  margin-bottom: 15px;
 .links ul li {
   margin-bottom: 15px;
 }
@@ -438,6 +315,27 @@ footer {
 .social-media img:hover{
   cursor: pointer;
   opacity: 0.9;
+}
+
+.sajhe-link-logo {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+  font-family: Roboto;
+}
+
+.sajhe-link-logo img {
+  width: 15%;
+  height: 15%;
+  border-radius: 8%;
+  max-height: 100px;
+  max-width: 100px;
+  margin-top: 20px;
+}
+
+.sajhe-link-logo a {
+  color: #ffff;
+  text-decoration: none;
 }
 
 /* Media query to change grid count and text size for different screen sizes */
@@ -552,7 +450,7 @@ footer {
 @media (min-width:1281px) {
   .container {
     grid-template-columns: repeat(3, minmax(400px, 1fr));
-    gap: 50px;
+    gap: 20px;
   }
 
   .backCard p {
