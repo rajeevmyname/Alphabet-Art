@@ -5,6 +5,7 @@
 } */
 
 body {
+body {
   margin: 0;
   background-image: url(./assets/bg_small.png);
 }
@@ -14,9 +15,21 @@ body {
   display: block;
   margin: 10px auto;
   cursor: pointer;
+.logo img {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
 /* Navigation Menu */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1375E4;
+  font-family: 'Mochiy Pop One';
+  font-weight: 400;
+  font-size: 1em;
+  color: #FFFFFF;
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -36,12 +49,25 @@ nav div {
   margin-bottom: 5px;
   cursor: pointer;
   /* margin: 5px auto; */
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  /* margin: 5px auto; */
 }
 
 nav div img {
   border-radius: 50%;
+nav div img {
+  border-radius: 50%;
 }
 
+nav div p {
+  margin: 0;
 nav div p {
   margin: 0;
 }
@@ -51,8 +77,16 @@ nav div p {
   width: 100%;
   max-height: 350px;
   object-fit: cover;
+.carousel img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
 .dots {
   display: flex;
   justify-content: center;
@@ -66,13 +100,28 @@ nav div p {
   margin: 0 3px;
   background-color: #59AFFF;
   border-radius: 50%;
+.dots span {
+  display: inline-flex;
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  background-color: #59AFFF;
+  border-radius: 50%;
 }
 
+#dot0 {
+  background-color: white;
 #dot0 {
   background-color: white;
 }
 
 /* 3D button */
+.gallery {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  margin-top: 30px;
 .gallery {
   width: 80%;
   display: flex;
@@ -87,8 +136,21 @@ nav div p {
   justify-content: center;
   margin: auto;
   margin-top: 30px;
+.call-to-action {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
 }
 
+.pushable {
+  background: #1375E4;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
 .pushable {
   background: #1375E4;
   border-radius: 12px;
@@ -108,9 +170,22 @@ nav div p {
   text-shadow: 0px 1px 0px #367DCA;
   color: white;
   transform: translateY(-6px);
+.front {
+  display: block;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  background: #59CDFF;
+  font-family: 'Mochiy Pop One';
+  text-shadow: 0px 1px 0px #367DCA;
+  color: white;
+  transform: translateY(-6px);
 }
 
 .pushable:active .front {
+  transform: translateY(-2px);
+}
+
   transform: translateY(-2px);
 }
 
@@ -143,6 +218,12 @@ nav div p {
   font-family: 'Mochiy Pop One';
   margin: auto;
   text-shadow: 0px 4px 0px rgb(0, 0, 0, 0.45);
+.backCard p {
+  text-align: center;
+  font-size: 5em;
+  font-family: 'Mochiy Pop One';
+  margin: auto;
+  text-shadow: 0px 4px 0px rgb(0, 0, 0, 0.45);
 }
 
 .frontCard {
@@ -159,17 +240,20 @@ nav div p {
 }
 
 .frontCard div {
+.frontCard div {
   margin: 6px 6px 0px 6px;
 }
 
 .frontCard img {
+.frontCard img {
   width: 100%;
   display: block;
   margin: auto;
-  border-radius: 10%;
+  border-radius: 8%;
   /* border: 1px solid red; */
 }
 
+.frontCard p {
 .frontCard p {
   color: #1F7AE0;
   font-family: 'Mochiy Pop One';
@@ -179,8 +263,11 @@ nav div p {
 }
 
 .fa-icons::before {
+.fa-icons::before {
   display: none;
 }
+
+.fa-icons {
 
 .fa-icons {
   display: flex;
@@ -188,6 +275,7 @@ nav div p {
   font-size: 1em;
   padding-bottom: 10px;
   --fa-animation-iteration-count: 1;
+  color: #1F7AE0;
   color: #1F7AE0;
 
 }
@@ -197,11 +285,19 @@ nav div p {
   transition: transform 1s;
   transform-style: preserve-3d;
   border-radius: 10%;
+.card {
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 10%;
 }
 
 .card.flipped {
   transform: rotateY(180deg);
+.card.flipped {
+  transform: rotateY(180deg);
 }
+
 
 /* Design patterns for back of alphabet cards */
 .pattern1 {
@@ -267,8 +363,21 @@ footer {
   margin-top: 20px;
   position: absolute;
   width: 100%;
+footer {
+  background-color: #1375E4;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto;
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
 }
 
+.social-media,
+.links {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
 .social-media,
 .links {
   width: 80%;
@@ -278,8 +387,15 @@ footer {
 
 .social-media {
   padding-top: 10px;
+.social-media {
+  padding-top: 10px;
 }
 
+.social-media ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-top: -10px;
 .social-media ul {
   list-style: none;
   padding-left: 0;
@@ -289,8 +405,12 @@ footer {
 
 .social-media ul li {
   margin-right: 5px;
+.social-media ul li {
+  margin-right: 5px;
 }
 
+.social-media ul li img {
+  border-radius: 20%;
 .social-media ul li img {
   border-radius: 20%;
 }
@@ -298,8 +418,13 @@ footer {
 .links ul {
   list-style: none;
   padding-left: 0;
+.links ul {
+  list-style: none;
+  padding-left: 0;
 }
 
+.links ul li {
+  margin-bottom: 15px;
 .links ul li {
   margin-bottom: 15px;
 }
