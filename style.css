@@ -152,7 +152,8 @@ nav div p {
   backface-visibility: hidden;
   transform: rotateY(180deg);
   border-radius: 8%;
-  box-shadow: 0px 6px 30px 5px lightblue;
+  /* box-shadow: 0px 6px 30px 5px lightblue; */
+  box-shadow: 0px 16px 24px 2px #1F7AE024;
   /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
