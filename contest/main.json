@@ -1,4 +1,16 @@
-{
+[{
     "name":"Ayush",
-    "age":"5years"
+    "age":"5years",
+    "src":"https://placehold.co/600x400"
+},
+{
+    "name":"Meenu",
+    "age":"7years",
+    "src":"https://placehold.co/600x400"
+},
+{
+    "name":"Shruti",
+    "age":"8years",
+    "src":"https://placehold.co/600x400"
 }
+]
