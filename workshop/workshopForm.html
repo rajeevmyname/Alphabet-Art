@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Workshop form</title>
     <link rel="stylesheet" href="workshopform.css">
 </head>
 
@@ -14,37 +14,65 @@
     </header>
     <p>Art Workshop > Billing details </p>
     <div class="workshop-img"></div>
-    <hr>
+    <!-- <hr> -->
 
-    <form action="" class="workshop-form">
+    <form class="form">
+        <div class="row">
+            <div class="input-group">
+                <label for="Name">Name*</label>
+                <input type="text" id="Name" placeholder="your name" required />
+            </div>
 
-        <label for="name" class="lable-text">Name</label><br>
-        <input id="name" class="input-div" type="text" placeholder="Name" required><br><br>
+            <div class="input-group">
+                <label for="Surname">Surname*</label>
+                <input type="text" id="Surname" placeholder="Surname" required />
+            </div>
+        </div>
 
-        <label for="Surname" class="lable-text">Surname</label><br>
-        <input id="Surname" class="input-div" type="text" placeholder="Surname" required><br><br>
+        <div class="row">
+            <div class="input-group">
+                <label for="Email-id">Email-id*</label>
+                <input type="email" id="Email-id" placeholder="@gmail.com" required />
+            </div>
 
-        <label for="EmailId" class="lable-text">Email Id</label><br>
-        <input id="EmailId" class="input-div" type="text" placeholder="@gmail.com" required><br><br>
+            <div class="input-group">
+                <label for="Phone number">Phone number*</label>
+                <input type="number" id="number" placeholder="+91" required />
+            </div>
+        </div>
 
-        <label for="phonNumber" class="lable-text">Phone number</label><br>
-        <input id="phonNumber" class="input-div" type="number" placeholder="+91" required><br><br>
+        <div class="row">
+            <div class="input-group">
+                <label for="Address*">Address 1*</label>
+                <input type="text" id="Address1" placeholder="Address" />
+            </div>
+        </div>
 
-        <label for="Address1" class="lable-text">Address 1</label><br>
-        <textarea id="Address1" class="input-div" placeholder="Address"></textarea><br><br>
+        <div class="row">
+            <div class="input-group">
+                <label for="Address*">Address 2*</label>
+                <input type="text" id="Address2" placeholder="Address" />
+            </div>
+        </div>
 
-        <label for="Address2" class="lable-text">Address 2</label><br>
-        <textarea id="Address2" class="input-div" placeholder="Address"></textarea><br><br>
+        <div class="form-body">
+            <div class="row">
+                <div class="input-group">
+                    <label for="State">State</label>
+                    <input type="text" id="state" placeholder="State">
 
-        <label for="state" class="lable-text">State</label><br>
-        <input id="state" class="input-div" type="text" placeholder="State" required><br><br>
+                </div>
+                <div class="input-group">
+                    <label for="City">City</label>
+                    <input type="text" id="city" placeholder="City">
 
-        <label for="city" class="lable-text">City</label><br>
-        <input id="city" class="input-div" type="text" placeholder="City" required><br><br>
-
-        <label for="pincode" class="lable-text">Pincode</label><br>
-        <input id="pincode" class="input-div" type="number" placeholder="Pincode" required><br><br>
-
+                </div>
+                <div class="input-group">
+                    <label for="pincode">Pincode*</label>
+                    <input type="number" id="pincode" placeholder="Enter pincode" />
+                </div>
+            </div>
+        </div>
     </form>
     <footer id="footer">
         <script async src="../footer.js"></script>

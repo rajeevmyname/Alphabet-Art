@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
+@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
+
+* {
+  margin: 0;
+}
 
 /*----------------------------Header*/
 /* Logo */
@@ -40,7 +46,7 @@ nav div p {
   margin: 0;
 }
 
-p{
+p {
   padding: 10px;
   width: 80%;
   margin: auto;
@@ -56,45 +62,92 @@ p{
   border-radius: 10px;
 }
 
-
-/*------------------------- Form*/
-
-hr {
-  color: #1375E4;
-  width: 80%;
-  margin: auto;
-}
-
-.workshop-form {
+/*===========================================<form>=============================*/
+.form {
   font-family: 'Inter';
-  font-size: 14px;
-  font-weight: 600;
-  width: 80%;
-  margin: auto;
 }
 
-#Address1~#ddress1 {
-  resize: none;
-  overflow: hidden;
-  /* height: auto; */
+.row {
+  display: flex;
 }
 
-.lable-text {
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+}
+
+
+
+label {
   color: #1375E4;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.input-div {
-  border: 1.5px solid #8BC7FF;
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 95%;
+  font-size: 13px;
+  height: 34px;
+  /* padding-left: 20px;
+  padding-right: 30px; */
   border-radius: 5px;
-  color: #1375E4;
-  width: 170px;
+}
+input{
+  border: 1.5px solid #8BC7FF;
   width: 80%;
-  padding: 8px;
+
 }
 
 ::placeholder {
   color: #8BC7FF;
 }
+
+@media only screen and (max-width:600px) {
+
+  .row {
+    flex-direction: column;
+  }    
+}
+
+
+/*===========================================</form>=============================*/
+
+/*------------------------- Form*/
+/* .workshop-form {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 600;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.form-divs label {
+  color: #1375E4;
+}
+
+
+.form-divs input {
+  display: inline-block;
+  border: 1.5px solid #8BC7FF;
+  border-radius: 5px;
+  color: #1375E4;
+  padding: 8px;
+}
+
+
+.workshop-form div {
+  display: inline;
+  margin: 1px;
+  border: 2px solid black;
+}
+ */
 
 /*---------------------- footer  */
 footer {
