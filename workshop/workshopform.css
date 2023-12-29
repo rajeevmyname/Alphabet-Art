@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  margin: 0;
+}
+
+/*----------------------------Header*/
+/* Logo */
+.logo img {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1375E4;
+  font-family: 'Mochiy Pop One';
+  font-weight: 400;
+  font-size: 1em;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  /* margin: 5px auto; */
+}
+
+nav div img {
+  border-radius: 50%;
+}
+
+nav div p {
+  margin: 0;
+}
+
+.nav-blow-text {
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  color: #8C97A4;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.workshop-img {
+  background-color: pink;
+  height: 150px;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+hr {
+  width: 80%;
+  margin: auto;
+  border:1px solid #8BC7FF;
+}
+
+/*===========================================<form>=============================*/
+.form {
+  font-family: 'Inter';
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  gap: 10px;
+}
+
+label {
+  color: #1375E4;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+input {
+  border: 1.5px solid #8BC7FF;
+  font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 98%;
+  font-size: 14px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+::placeholder {
+  color: #8BC7FF;
+}
+
+@media only screen and (max-width:668px) {
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+#city {
+  width: 92%;
+}
+
+#pincode {
+  width: 92%;
+}
+
+.city-pin-div {
+  display: flex;
+}
+
+.make-payment {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.pushable {
+  width: 100%;
+  background: #1375E4;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.makePayment-btn {
+  display: block;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: #59CDFF;
+  font-family: 'Mochiy Pop One';
+  text-shadow: 0px 1px 0px #367DCA;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .makePayment-btn {
+  transform: translateY(-2px);
+}
+
+.sapnewaalis-div {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.sapnewaalis-div a {
+  color: #1375E4;
+  font-family: 'Mochiy Pop One';
+  font-weight: 400;
+  font-size: 1em;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+}
+
+.sapnewaalis-div a i {
+  color: red;
+}
+
+/*---------------------- footer  */
+footer {
+  background-color: #1375E4;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto;
+  margin-top: 8px;
+  position: absolute;
+  width: 100%;
+}
+
+footer p {
+  padding: 10px 0 25px 0;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.social-media,
+.links {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.social-media {
+  padding-top: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-top: -10px;
+}
+
+.social-media ul li {
+  margin-right: 5px;
+}
+
+.social-media ul li img {
+  border-radius: 20%;
+}
+
+.links ul {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+}
+
+.links ul li {
+  margin-bottom: 15px;
+}
+
+.links ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.social-media img:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
