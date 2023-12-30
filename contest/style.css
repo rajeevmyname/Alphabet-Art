@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
+
+body {
+  margin: auto;
+}
+
+.content {
+  margin: auto;
+  width: 80%;
+}
+
+.logo img {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1375E4;
+  font-family: 'Mochiy Pop One';
+  font-weight: 400;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  /* margin: 5px auto; */
+}
+
+nav div img {
+  border-radius: 50%;
+}
+
+nav div p {
+  margin: 0;
+}
+
+.art-contest {
+  font-family: 'Mochiy Pop One';
+  color: #1375E4;
+}
+
+.Workshop-img {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.description {
+  color: #1375E4;
+  margin-top: 10px;
+}
+
+.artwork-container p {
+  font-family: 'Mochiy Pop One';
+  color: #1375E4;
+}
+
+
+.profile-img {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.cardContainer {
+  display: flex;
+}
+
+.card {
+  margin: auto;
+}
+
+.user-profile {
+  display: flex;
+}
+
+.user-profile .user-name {
+  margin-top: 0px;
+}
+
+.user-profile div {
+  margin-left: 5px;
+}
+
+.cardContainer .alphabet-art {
+  height: 180px;
+  width: 100px;
+}
+
+.submit-button {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.pushable {
+  background-color: #1375E4;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.font {
+  display: block;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  background-color: #59CDFF;
+  font-family: 'Mochiy Pop One';
+  text-shadow: 0px 1px 0px #367CDA;
+  color: white;
+  transform: translateY(-6px);
+}
+
+/* Footer */
+footer {
+  background-color: #1375E4;
+  color: white;
+  font-size: 20px;
+  font-family: Roboto;
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.social-media,
+.links {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.social-media {
+  padding-top: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-top: -10px;
+}
+
+.social-media ul li {
+  margin-right: 5px;
+}
+
+.social-media ul li img {
+  border-radius: 20%;
+}
+
+.links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.links ul li {
+  margin-bottom: 15px;
+}
+
+.links ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.social-media img:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
