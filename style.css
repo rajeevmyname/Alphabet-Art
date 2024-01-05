@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 @import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
 body {
     margin: 0;
 }
@@ -13,7 +14,6 @@ h1 {
     font-weight: 100;
     color: #8C97A4;
     font-family: Roboto;
-    margin-left: 10%;
     font-size: 20px;
 }
 
@@ -22,12 +22,14 @@ hr {
     margin: auto;
     border: 2px solid #8BC7FF;
 }
+
 /* Logo */
 .logo img {
     display: block;
     margin: 10px auto;
     cursor: pointer;
 }
+
 /* Navigation Menu */
 nav {
     display: flex;
@@ -39,6 +41,7 @@ nav {
     color: #FFFFFF;
     margin-bottom: 30px;
 }
+
 nav div {
     display: flex;
     flex-direction: column;
@@ -48,16 +51,20 @@ nav div {
     margin-bottom: 5px;
     cursor: pointer;
 }
+
 nav div img {
     border-radius: 50%;
 }
+
 nav div p {
     margin: 0;
 }
+
 .product-div {
     width: 80%;
     margin: auto;
 }
+
 .product-photo {
     display: flex;
     justify-content: center;
@@ -68,27 +75,31 @@ nav div p {
     border-radius: 5px;
     background-color: #8BC7FF;
     color: #1375E4;
-    font-family: Mochiy Pop One;
+    font-family: 'Mochiy Pop One';
     font-weight: 400;
     margin-bottom: 20px;
 }
+
 .form {
     font-family: inter;
     background-color: white;
     width: 80%;
     margin: auto;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 10px;
 }
+
 .input-group {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="number"] {
@@ -98,12 +109,15 @@ input[type="number"] {
     border-radius: 5px;
     background-color: white;
 }
+
 input {
     border: 2px solid #8BC7FF;
 }
+
 ::placeholder {
     color: #8BC7FF;
 }
+
 .Make-payment {
     width: 80%;
     display: flex;
@@ -111,6 +125,7 @@ input {
     margin: auto;
     margin-top: 30px;
 }
+
 .pushable {
     width: 100%;
     margin: auto;
@@ -121,6 +136,7 @@ input {
     cursor: pointer;
     outline-offset: 4px;
 }
+
 .Make-payments {
     display: block;
     padding: 12px 30px;
@@ -132,26 +148,31 @@ input {
     color: white;
     transform: translateY(-6px);
 }
+
 label {
     /* font-family: inter; */
     font-size: 20px;
     font-weight: 600;
     color: #1375E4;
 }
+
 .fas {
     color: red;
 }
+
 .sapne-waali {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .sapne-waali a {
     font-family: 'Mochiy Pop One';
     color: #1375E4;
     margin-top: 5%;
     font-size: 18px;
 }
+
 footer {
     background-color: #1375E4;
     color: white;
@@ -161,27 +182,33 @@ footer {
     position: absolute;
     width: 100%;
 }
+
 .social-media,
 .links {
     width: 80%;
     margin: auto;
     margin-top: 25px;
 }
+
 .social-media {
     padding-top: 10px;
 }
+
 .social-media ul {
     list-style: none;
     padding-left: 0;
     display: flex;
     margin-top: -10px;
 }
+
 .social-media ul li {
     margin-right: 5px;
 }
+
 .social-media ul li img {
     border-radius: 20%;
 }
+
 .links ul {
     list-style: none;
     padding-left: 0;
@@ -191,27 +218,34 @@ footer {
 .links ul li {
     margin-bottom: 15px;
 }
+
 .links ul li:hover {
     cursor: pointer;
     text-decoration: underline;
     opacity: 0.9;
 }
+
 .social-media img:hover {
     cursor: pointer;
     opacity: 0.9;
 }
+
 @media only screen and (max-width:600px) {
+
     .row {
         flex-direction: column;
     }
 }
+
 .cityPin {
     display: flex;
     gap: 15px;
 }
+
 #city {
     width: 100%;
 }
+
 #pincode {
     width: 100%;
 }
