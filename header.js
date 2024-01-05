@@ -1,7 +1,7 @@
 let nav = 
 `<!-- <Logo/> -->
 <div class="logo">
-    <img src="https://placehold.co/250x100/red/white?text=Logo" alt="Logo">
+    <img src="../assets/logo.png" alt="Logo">
 </div>
 <!-- <NavigationMenu/> -->
 <nav>
