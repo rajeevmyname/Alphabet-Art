@@ -11,9 +11,10 @@ body {
 
 /* Logo */
 .logo img {
-  display: block;
-  margin: 10px auto;
+  max-width: 285px;
   cursor: pointer;
+  display: block;
+  margin: auto;
 }
 
 /* Navigation Menu */
@@ -503,6 +504,9 @@ td{
   footer #tag {
     font-size: 18px;
   }
+  .logo img{
+    max-width: 336px;
+  }
 }
 
 @media (min-width:961px) {
@@ -633,5 +637,8 @@ td{
 
   footer #tag {
     font-size: 20px;
+  }
+  .logo img{
+    max-width: 386px;
   }
 }
