@@ -320,6 +320,7 @@ footer a:hover {
 .links ul {
   list-style: none;
   padding-left: 0;
+  display: inline-block;
 }
 
 .links ul li {
