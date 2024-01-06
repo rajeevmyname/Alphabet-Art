@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+    margin: 0;
+}
+.sticker-div{
+    width: 80%;
+    margin: auto;
+}
+
+#h1 {
+    font-weight: 100;
+    color: #8C97A4;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #8BC7FF;
+}
+
+.product-div {
+    width: 80%;
+    margin: auto;
+}
+
+.product-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 163px;
+    height: 160px;
+    border-radius: 12px;
+    border-radius: 5px;
+    background-color: #8BC7FF;
+    color: #1375E4;
+    font-family: 'Mochiy Pop One';
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.form {
+    font-family: inter;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    font-size: 18px;
+    height: 34px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input {
+    border: 2px solid #8BC7FF;
+}
+
+::placeholder {
+    color: #8BC7FF;
+}
+
+.Make-payment {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.pushable {
+    width: 100%;
+    margin: auto;
+    background: #1375E4;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.Make-payments {
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
+}
+
+label {
+    /* font-family: inter; */
+    font-size: 20px;
+    font-weight: 600;
+    color: #1375E4;
+}
+
+.fas {
+    color: red;
+}
+
+.sapne-waali {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sapne-waali a {
+    font-family: 'Mochiy Pop One';
+    color: #1375E4;
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+@media only screen and (max-width:600px) {
+
+    .row {
+        flex-direction: column;
+    }
+}
+
+.cityPin {
+    display: flex;
+    gap: 15px;
+}
+
+#city {
+    width: 100%;
+}
+
+#pincode {
+    width: 100%;
+}
