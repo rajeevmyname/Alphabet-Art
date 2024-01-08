@@ -350,6 +350,9 @@ footer {
   body {
     background-image: url(./assets/bg_small.png);
   }
+  #emptyImg{
+    min-height: 90px;
+  }
 }
 
 @media (min-width:481px) {
@@ -371,6 +374,9 @@ footer {
 
   .frontCard p {
     font-size: 25px;
+  }
+  #emptyImg{
+    min-height: 200px;
   }
 }
 
@@ -464,5 +470,8 @@ footer {
 
   .frontCard p {
     font-size: 35px;
+  }
+  #emptyImg{
+    min-height: 500px;
   }
 }
