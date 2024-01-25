@@ -11,11 +11,11 @@ let footerContent =
     <div class="social-media">
         <span>Follow Us</span>
     <ul>
-        <li><img src="../assets/social/fb.png" alt="Facebook"></li>
-        <li><img src="../assets/social/insta.png" alt="Instagram"></li>
-        <li><img src="../assets/social/you.png" alt="Youtube"></li>
-        <li><img src="../assets/social/in.png" alt="LinkedIn"></li>
-        <li><img src="../assets/social/x.png" alt="X"></li>
+        <li><img src="./assets/social/fb.png" alt="Facebook"></li>
+        <li><img src="./assets/social/insta.png" alt="Instagram"></li>
+        <li><img src="./assets/social/you.png" alt="Youtube"></li>
+        <li><img src="./assets/social/in.png" alt="LinkedIn"></li>
+        <li><img src="./assets/social/x.png" alt="X"></li>
     </ul>
     </div>
     <div class="links">
