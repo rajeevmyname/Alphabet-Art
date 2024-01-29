@@ -14,7 +14,7 @@ var msg = new SpeechSynthesisUtterance();
 
 // Add Alphabet Cards
 let container = document.querySelector(".container");
-for(let i=65; i<=90; i++){
+for (let i = 65; i <= 90; i++) {
     let alphabet = String.fromCharCode(i);
 
     let card = document.createElement("div");
@@ -34,21 +34,25 @@ for(let i=65; i<=90; i++){
     let frontCard = document.createElement("div");
     frontCard.classList.add("frontCard");
     card.appendChild(frontCard);
-        //alphabet image
+
+    //alphabet image
     let imgContainer = document.createElement("div");
     let alphabetImg = document.createElement("img");
     alphabetImg.src = `./assets/alphabet_images/${alphabet}.png`;
     imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
-        //word for the alphabet
+
+    //word for the alphabet
     let word = document.createElement("p");
     word.innerText = words[i - 65];
     frontCard.appendChild(word);
-        //div containing icons at the bottom of each card
+
+    //div containing icons at the bottom of each card
     let faIcons = document.createElement("div");
     faIcons.classList.add("fa-icons");
     frontCard.appendChild(faIcons);
-        //Heart Icon           
+
+    //Heart Icon     
     let likeIcon = document.createElement("i");
     likeIcon.classList.add("fa-regular", "fa-heart");
     faIcons.appendChild(likeIcon);
@@ -60,7 +64,7 @@ for(let i=65; i<=90; i++){
     let shareIcon = document.createElement("i");
     shareIcon.classList.add("fa-solid", "fa-share-from-square");
     faIcons.appendChild(shareIcon);
-    
+
     //Show front card on click
     card.addEventListener("click", () => {
         card.classList.toggle("flipped");
@@ -83,18 +87,18 @@ for(let i=65; i<=90; i++){
     })
 
     //Color the heart red when user clicks like
-    likeIcon.addEventListener("click",(event)=>{
+    likeIcon.addEventListener("click", (event) => {
         likeIcon.classList.toggle("fa-solid");
         likeIcon.style.color = "red";
         event.stopPropagation();
     })
 
     //heart beat on hover
-    likeIcon.addEventListener("mouseover",(event)=>{
+    likeIcon.addEventListener("mouseover", (event) => {
         likeIcon.classList.add("fa-bounce");
         event.stopPropagation();
     })
-    likeIcon.addEventListener("mouseleave",(event)=>{
+    likeIcon.addEventListener("mouseleave", (event) => {
         likeIcon.classList.remove("fa-bounce");
         event.stopPropagation();
     })
@@ -118,12 +122,12 @@ for(let i=65; i<=90; i++){
 // Give design background to back of each alphabet card
 let allBackCards = document.querySelectorAll(".backCard");
 let patterns = ["pattern1", "pattern2", "pattern3",
-                "pattern4", "pattern5", "pattern6"];
+    "pattern4", "pattern5", "pattern6"];
 
-let j = 0;                
-allBackCards.forEach((backCard)=>{
-    if(j>5)
-        j=0;
+let j = 0;
+allBackCards.forEach((backCard) => {
+    if (j > 5)
+        j = 0;
     backCard.classList.add(patterns[j]);
     j++;
 })
