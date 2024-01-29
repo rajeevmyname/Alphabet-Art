@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sticker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
+
+  <title>Buy Stickers</title>
+  <!-- <link rel="stylesheet" href="../style.css"> -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <H1>STICKERS</H1>
+    <header>
+        <!-- <Logo/> -->
+        <div class="logo" onclick="window.location='../index.html'">
+            <img src="../assets/Logo.png" alt="Logo">
+        </div>
+        <!-- <NavigationMenu/> -->
+        <nav>
+            <div style="background-color: #004CA1" onclick="window.location='../stickers/index.html'">
+                <img src="../assets/navImages/sticker.png" alt="Stickers">
+                <p>Stickers</p>
+            </div>
+            <div onclick="window.location='../workshop/index.html'">
+                <img src="../assets/navImages/workshop.png" alt="Workshop">
+                <p>Workshop</p>
+            </div>
+            <div onclick="window.location='../contest/index.html'">
+                <img src="../assets/navImages/contest.png" alt="Contest">
+                <p>Contest</p>
+            </div>
+        </nav>
+    </header>
     
+    <!-- Sticker Tag -->
+    <div class="sticker">
+        <h1>STICKERS!!!</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="sticker-images">
+            <div class="preview-image">
+                <img src="https://placehold.co/200x200/aqua/png?text=Sticker-1" id="images" alt="Alphabet Art Sticker Preview">
+            </div> 
+            <div class="image-container">
+                <div class="sticker-image">
+                    <img src="https://placehold.co/600x600/aqua/png?text=Sticker-1" alt="Nature" onclick="myFunction(this)">
+                </div>
+                <div class="sticker-image"> 
+                    <img  src="https://placehold.co/600x600/red/png?text=Sticker-2" alt="Snow" onclick="myFunction(this)">
+                </div>
+                <div class="sticker-image"> 
+                    <img src="https://placehold.co/600x600/green/png?text=Sticker-3" alt="Mountains" onclick="myFunction(this)">
+                </div>
+                <div class="sticker-image">
+                    <img  src="https://placehold.co/600x600/blue/png?text=Sticker-4" alt="Nature" onclick="myFunction(this)">
+                </div>
+            </div>
+        </div>
+
+        <div class="sticker-info">
+            <h2>Alphabet Art Stickers</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Iste, officiis dignissimos odio,
+                porro est delectus eligendi rem architecto quos.
+            </p>
+            <h3>Rs. 500.00</h3>
+            <hr>
+
+            <form>
+                <label for="quantity">Quantity</label>
+                <button class="button">-</button>
+                <input id="quantity" value="1" readonly>
+                <button class="button">+</button>
+            </form>
+            <table>
+                <tr>
+                    <th class="table-heading">Details</th>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>: 8cm * 8cm</td>
+                </tr>
+                <tr>
+                    <td>Quality</td>
+                    <td>: 120 GSM matte finish</td>
+                </tr>
+                <tr>
+                    <td>Net unit</td>
+                    <td>: 36 stickers</td>
+                </tr>
+                <tr>
+                    <td>Set</td>
+                    <td>: 1 set</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  <div class="call-to-action">
+    <button class="pushable-button" onclick="window.location='./buy.html'">
+      <span class="front">Proceed</span>
+    </button>
+    <p>Lorem ipsum dolor sit amet numquam! Et.Temporibus earum sed reiciendis quidem accusamus dolorum in officiis
+      recusandae numquam! Et.</p>
+  </div>
+   <!-- <Footer/> -->
+   <footer>
+        <div id="tag">
+            <a href="https://sajhesapne.org/">
+                <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
+            </a>
+        </div>
+    
+        <div id="footer-links">
+            <div class="social-media">
+                <span>Follow Us</span>
+                <ul>
+                    <li onclick="window.location='https://facebook.com'"><img src="../assets/social/fb.png" alt="Facebook"></li>
+                    <li onclick="window.location='https://instagram.com'"><img src="../assets/social/insta.png" alt="Instagram"></li>
+                    <li onclick="window.location='https://youtube.com'"><img src="../assets/social/you.png" alt="Youtube"></li>
+                    <li onclick="window.location='https://linkedin.com'"><img src="../assets/social/in.png" alt="LinkedIn"></li>
+                    <li onclick="window.location='https://twitter.com'"><img src="../assets/social/x.png" alt="X"></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <a href="mailto:artabc0026@gmail.com">
+                        <li>Contact Us</li>
+                    </a>
+                    <a href="./termsofuse.html">
+                        <li>Terms Of Use</li>
+                    </a>
+                    <a href="mailto:artabc0026@gmail.com">
+                        <li>Report A Bug</li>
+                    </a>
+                    <a href="https://sajhesapne.org/">
+                        <li>Hire a Sapnewaali</li>
+                    </a>
+                    <a href="https://sajhesapne.org/">
+                        <li>Donate to Sajhe Sapne</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  <script src="main.js"></script>
 </body>
+
 </html>

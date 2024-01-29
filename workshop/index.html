@@ -1,12 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
     <title>workshop</title>
-</head>
-<body>
-    <H1>WORKSHOP</H1>
+  </head>
+  <body>
+    <header>
+      <!-- <Logo/> -->
+      <div class="logo" onclick="window.location='../index.html'">
+          <img src="../assets/Logo.png" alt="Logo">
+      </div>
+      <!-- <NavigationMenu/> -->
+      <nav>
+          <div onclick="window.location='../stickers/index.html'">
+              <img src="../assets/navImages/sticker.png" alt="Stickers">
+              <p>Stickers</p>
+          </div>
+          <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
+              <img src="../assets/navImages/workshop.png" alt="Workshop">
+              <p>Workshop</p>
+          </div>
+          <div onclick="window.location='../contest/index.html'">
+              <img src="../assets/navImages/contest.png" alt="Contest">
+              <p>Contest</p>
+          </div>
+      </nav>
+    </header>
     
-</body>
+    <div class="content">
+      <div class="art-workshop-details">
+        <h1>Alphabet Art Workshop</h1>
+        <p>
+          Debitis unde nisi, rerum nihil animi porro quas odit consequuntur
+          consectetur sapiente, natus tempore. Voluptatem recusandae assumenda ex,
+          obcaecati non totam, ab voluptate facere animi blanditiis, est iure
+          mollitia accusamus suscipit quo aliquid dignissimos pariatur incidunt!
+          Rerum cumque, voluptatem cum facilis culpa tenetur laboriosam
+          praesentium aspernatur beatae expedita explicabo hic sed odio ipsum
+          dolor asperiores dolorum temporibus consectetur voluptate perspiciatis
+          debitis unde nisi, rerum nihil animi porro quas odit consequuntur
+          consectetur sapiente, natus tempore. Voluptatem recusandae assumenda ex,
+          obcaecati non totam, ab voluptate facere animi blanditiis, est iure
+          mollitia accusamus suscipit quo aliquid dignissimos pariatur incidunt!
+          Rerum cumque, voluptatem cum facilis culpa tenetur laboriosam
+          praesentium aspernatur beatae expedita explicabo hic sed odio ipsum
+          dolor asperiores dolorum temporibus consectetur voluptate perspiciatis
+        </p>
+
+        <div class="workshop-images">
+          <div class="image-gallery">
+            <!-- /<img src="https://placehold.co/600x400/orange/white?text=Workshop Image" alt="Art workshop" /> -->
+            <img src="https://placehold.co/400x400" id="item1">
+            <img src="https://placehold.co/800x200" id="item2">
+            <img src="https://placehold.co/400x200" id="item3">
+            <img src="https://placehold.co/400x200" id="item4">
+          </div>
+          <p>Workshop photo description</p>
+        </div>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nisi
+          odit aliquam voluptate qui quo atque possimus reprehenderit modi
+          repellat eaque dolore non optio laudantium, cum magni saepe. Eum neque
+          natus quas consectetur quam dicta veritatis cumque magni sit facere,
+          aliquam quo repudiandae soluta possimus ab enim velit illo nostrum
+          eligendi exercitationem esse modi accusamus. Quidem, neque? Impedit ea
+          numquam fuga modi atque natus sunt doloremque fugit est, sapiente
+          veritatis. Quos, pariatur nobis perferendis esse corporis voluptatibus
+          qui fugit est incidunt quia assumenda, totam adipisci iusto vel
+          cupiditate eum doloremque a facere omnis expedita asperiores amet
+          dignissimos tempore nemo! Dolores illo distinctio temporibus soluta, est
+          mollitia autem iure minus consequatur doloribus, excepturi corrupti
+          assumenda neque vitae dolorum fugiat hic voluptatem beatae accusantium o
+          dolorum excepturi numquam odio. Aliquam amet odit accusantium!
+        </p>
+      </div>
+
+      <div class="upcoming-workshops">
+        <h1>Upcoming workshops</h1>
+        <div id="table-div" style="overflow-x:auto;">
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Workshop</th>
+              <th>Fees</th>
+              <th>RSVP</th>
+            </tr>
+            <tr>
+              <td>13 December 2023</td>
+              <td>Alphabet Art</td>
+              <td>INR 2500</td>
+              <td>
+                <div class="call-to-action">
+                  <button class="pushable">
+                      <span class="register">Register</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>17 December 2023</td>
+              <td>Craft workshop</td>
+              <td>INR 2500</td>
+              <td>
+                <div class="call-to-action">
+                  <button class="pushable">
+                      <span class="register">Register</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div id="tag">
+          <a href="https://sajhesapne.org/">
+              <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
+          </a>
+      </div>
+
+      <div id="footer-links">
+          <div class="social-media">
+              <span>Follow Us</span>
+              <ul>
+                  <li onclick="window.location='https://facebook.com'"><img src="../assets/social/fb.png" alt="Facebook"></li>
+                  <li onclick="window.location='https://instagram.com'"><img src="../assets/social/insta.png" alt="Instagram"></li>
+                  <li onclick="window.location='https://youtube.com'"><img src="../assets/social/you.png" alt="Youtube"></li>
+                  <li onclick="window.location='https://linkedin.com'"><img src="../assets/social/in.png" alt="LinkedIn"></li>
+                  <li onclick="window.location='https://twitter.com'"><img src="../assets/social/x.png" alt="X"></li>
+              </ul>
+          </div>
+          <div class="links">
+              <ul>
+                  <a href="mailto:artabc0026@gmail.com">
+                      <li>Contact Us</li>
+                  </a>
+                  <a href="./termsofuse.html">
+                      <li>Terms Of Use</li>
+                  </a>
+                  <a href="mailto:artabc0026@gmail.com">
+                      <li>Report A Bug</li>
+                  </a>
+                  <a href="https://sajhesapne.org/">
+                      <li>Hire a Sapnewaali</li>
+                  </a>
+                  <a href="https://sajhesapne.org/">
+                      <li>Donate to Sajhe Sapne</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,13 +1,13 @@
 //All words
-let words = ["Alligator","Bee","Cat",
-             "Dinosaur","Elephant","Fox",
-             "Giraffe","House","Igloo",
-             "Jellyfish","King","Ladybug",
-             "Mountains","Ninja","Octopus",
-             "Pirate","Queen","Rainbow",
-             "Strawberry", "Tree", "Unicorn",
-             "Volcano","Watermelon","Xylophone",
-             "Yo-yo","Zebra"]
+let words = ["Alien","Butterfly","Cat",
+             "Dinosaur","Eagle","Flower",
+             "Giraffe","Hammer","Ice",
+             "Jellyfish","Keys","Lamp",
+             "Mountains","Ninja","Omelette",
+             "Pirate","Queen","Rabbit",
+             "Snowman", "Tree", "Unicorn",
+             "Volcano","Watermelon","X-Ray",
+             "Yak","Zebra"]
 
 //Set up text to speech
 var msg = new SpeechSynthesisUtterance();
@@ -37,7 +37,7 @@ for(let i=65; i<=90; i++){
         //alphabet image
     let imgContainer = document.createElement("div");
     let alphabetImg = document.createElement("img");
-    alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
+    alphabetImg.src = `./assets/alphabet_images/${alphabet}.png`;
     imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
         //word for the alphabet
@@ -105,25 +105,3 @@ allBackCards.forEach((backCard)=>{
     backCard.classList.add(patterns[j]);
     j++;
 })
-
-
-// Carousel
-let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers","https://placehold.co/375x187/green/white?text=Workshop","https://placehold.co/375x187/purple/white?text=Contest"];
-let carouselImg = document.querySelector(".carousel img");
-let i = 0;
-
-let dots = document.querySelectorAll(".dot");
-
-setInterval(function(){
-    //move images every 4 seconds
-    i++;
-    if(i>2)
-        i=0;
-    carouselImg.src = carouselImages[i];
-
-    //color dots corresponding to the image
-    let currentDotId = "#dot" + i;
-    let currentDot = document.querySelector(currentDotId);
-    dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
-    currentDot.style.backgroundColor = "white";
-},4000)
