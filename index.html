@@ -10,22 +10,21 @@
 <body>
     <header>
             <!-- <Logo/> -->
-        <div class="logo">
+        <div class="logo" onclick="window.location='./index.html'">
             <img src="./assets/Logo.png" alt="Logo">
         </div>
         <!-- <NavigationMenu/> -->
         <nav>
-            <div>
-                <a href="./stickers/index.html">
-                    <img src="./assets/navImages/sticker.png" alt="Stickers"></a>
-                    <p>Stickers</p>
+            <div onclick="window.location='./stickers/index.html'">
+                <img src="./assets/navImages/sticker.png" alt="Stickers">
+                <p>Stickers</p>
             </div>
-            <div>
-                <a href="./workshop/index.html"><img src="./assets/navImages/workshop.png" alt="Workshop"></a>
+            <div onclick="window.location='./workshop/index.html'">
+                <img src="./assets/navImages/workshop.png" alt="Workshop">
                 <p>Workshop</p>
             </div>
-            <div>
-                <a href="./contest/index.html"><img src="./assets/navImages/contest.png" alt="Contest"></a>
+            <div onclick="window.location='./contest/index.html'">
+                <img src="./assets/navImages/contest.png" alt="Contest">
                 <p>Contest</p>
             </div>
         </nav>
@@ -33,7 +32,7 @@
    
     <!-- Gallery Button -->
     <div class="gallery">
-        <button class="pushable">
+        <button class="pushable" onclick="window.location='./gallery/index.html'">
             <span class="front">Gallery</span>
         </button>
     </div>
@@ -51,7 +50,7 @@
             <span class="front">Submit Your Art</span>
         </button>
     </div>
-
+    
     <!-- <Footer/> -->
     <footer>
         <div id="tag">
@@ -64,24 +63,33 @@
             <div class="social-media">
                 <span>Follow Us</span>
             <ul>
-                <li><img src="./assets/social/fb.png" alt="Facebook"></li>
-                <li><img src="./assets/social/insta.png" alt="Instagram"></li>
-                <li><img src="./assets/social/you.png" alt="Youtube"></li>
-                <li><img src="./assets/social/in.png" alt="LinkedIn"></li>
-                <li><img src="./assets/social/x.png" alt="X"></li>
+                <li onclick="window.location='https://facebook.com'"><img src="./assets/social/fb.png" alt="Facebook"></li>
+                <li onclick="window.location='https://instagram.com'"><img src="./assets/social/insta.png" alt="Instagram"></li>
+                <li onclick="window.location='https://youtube.com'"><img src="./assets/social/you.png" alt="Youtube"></li>
+                <li onclick="window.location='https://linkedin.com'"><img src="./assets/social/in.png" alt="LinkedIn"></li>
+                <li onclick="window.location='https://twitter.com'"><img src="./assets/social/x.png" alt="X"></li>
             </ul>
             </div>
             <div class="links">
             <ul>
-                <li>Contact Us</li>
-                <li>Terms Of Use</li>
-                <li>Report A Bug</li>
-                <li>Hire a Sapnewaali</li>
-                <li>Make a Donation</li>
+                <a href="mailto:artabc0026@gmail.com">
+                    <li>Contact Us</li>
+                </a>
+                <a href="./termsofuse.html">
+                    <li>Terms Of Use</li>
+                </a>
+                <a href="mailto:artabc0026@gmail.com">
+                    <li>Report A Bug</li>
+                </a>
+                <a href="https://sajhesapne.org/">
+                    <li>Hire a Sapnewaali</li>
+                </a>
+                <a href="https://sajhesapne.org/">
+                    <li>Donate to Sajhe Sapne</li>
+                </a>
             </ul>
             </div>
         </div>
-    
     </footer>
         
     <script type="module" src="main.js"></script>

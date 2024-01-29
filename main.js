@@ -56,28 +56,34 @@ for (let i = 65; i <= 90; i++) {
     let likeIcon = document.createElement("i");
     likeIcon.classList.add("fa-regular", "fa-heart");
     faIcons.appendChild(likeIcon);
-
-    //Flip Icon
-    let flipIcon = document.createElement("i");
-    flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left");
-    faIcons.appendChild(flipIcon);
-
-    //Share Icon
+        //Sound Icon
+    let soundIcon = document.createElement("i");
+    soundIcon.classList.add("fa-solid", "fa-volume-high");
+    faIcons.appendChild(soundIcon);
+        //Share Icon
     let shareIcon = document.createElement("i");
     shareIcon.classList.add("fa-solid", "fa-share-from-square");
     faIcons.appendChild(shareIcon);
 
     //Show front card on click
     card.addEventListener("click", () => {
-        card.classList.add("flipped");
-        msg.text = words[i - 65];
-        window.speechSynthesis.speak(msg);
+        card.classList.toggle("flipped");
+        if(card.classList.contains("flipped")) {
+            msg.text = words[i-65];
+            window.speechSynthesis.speak(msg);
+        }
     })
 
-    //Flip back on click
-    flipIcon.addEventListener("click", (event) => {
-        card.classList.remove("flipped");
-        event.stopPropagation();
+    // Animate star icon on click
+    soundIcon.addEventListener("click",(event)=>{
+        soundIcon.classList.add("fa-beat");
+        window.speechSynthesis.speak(msg);
+        event.stopPropagation(); 
+    })
+
+    soundIcon.addEventListener("mouseleave",(event)=>{
+        soundIcon.classList.remove("fa-beat");
+        event.stopPropagation(); 
     })
 
     //Color the heart red when user clicks like
@@ -94,6 +100,20 @@ for (let i = 65; i <= 90; i++) {
     })
     likeIcon.addEventListener("mouseleave", (event) => {
         likeIcon.classList.remove("fa-bounce");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("mouseover",(event)=>{
+        shareIcon.classList.add("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("mouseleave",(event)=>{
+        shareIcon.classList.remove("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("click",(event)=>{
         event.stopPropagation();
     })
 

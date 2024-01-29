@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop form</title>
+    <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./submit.css">
+</head>
+
+<body>
+    <header>
+        <!-- <Logo/> -->
+        <div class="logo" onclick="window.location='../index.html'">
+            <img src="../assets/Logo.png" alt="Logo">
+        </div>
+        <!-- <NavigationMenu/> -->
+        <nav>
+            <div onclick="window.location='../stickers/index.html'">
+                <img src="../assets/navImages/sticker.png" alt="Stickers">
+                <p>Stickers</p>
+            </div>
+            <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
+                <img src="../assets/navImages/workshop.png" alt="Workshop">
+                <p>Workshop</p>
+            </div>
+            <div onclick="window.location='../contest/index.html'">
+                <img src="../assets/navImages/contest.png" alt="Contest">
+                <p>Contest</p>
+            </div>
+        </nav>
+      </header>
+    
+    <p class="page-info">Art Workshop > Billing details </p>
+    
+    <div class="upload-artwork">
+        <label for="UploadArtwork">
+            <i class="fa-solid fa-file-arrow-up" style="color:#1375E4"></i>
+            <br>
+            Upload Your Photo
+        </label>
+        <input type="file" id="UploadArtwork">
+    </div>
+    <hr>
+
+    <form>
+        <div class="divs name-div">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name" required />
+        </div>
+
+        <div class="divs email-div">
+            <label for="email-id">Email-id</label>
+            <input type="email" id="email-id" placeholder="@gmail.com" required />
+        </div>
+
+        <div class="divs number-div">
+            <label for="Phone number">Phone number</label>
+            <input type="number" id="number" placeholder="+91" required />
+        </div>
+
+        <div class="divs add1-div">
+            <label for="address*">Address 1</label>
+            <input type="text" id="address1" placeholder="Address" />
+        </div>
+
+        <div class="divs add2-div">
+            <label for="address*">Address 2</label>
+            <input type="text" id="address2" placeholder="Address" />
+        </div>
+
+        <div class="divs state-div">
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="State">
+        </div>
+        <div class="divs city-div">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="City">
+        </div>
+
+        <div class="divs pincode-div">
+            <label for="pincode">Pincode</label>
+            <input type="number" id="pincode" placeholder="Pincode" />
+        </div>
+        <div class="make-payment">
+            <button class="pushable">
+                <span class="makePayment-btn">Submit</span>
+            </button>
+        </div>
+    </form>
+
+
+    <!-- Footer -->
+    <footer>
+        <div id="tag">
+            <a href="https://sajhesapne.org/">
+                <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
+            </a>
+        </div>
+  
+        <div id="footer-links">
+            <div class="social-media">
+                <span>Follow Us</span>
+                <ul>
+                    <li onclick="window.location='https://facebook.com'"><img src="../assets/social/fb.png" alt="Facebook"></li>
+                    <li onclick="window.location='https://instagram.com'"><img src="../assets/social/insta.png" alt="Instagram"></li>
+                    <li onclick="window.location='https://youtube.com'"><img src="../assets/social/you.png" alt="Youtube"></li>
+                    <li onclick="window.location='https://linkedin.com'"><img src="../assets/social/in.png" alt="LinkedIn"></li>
+                    <li onclick="window.location='https://twitter.com'"><img src="../assets/social/x.png" alt="X"></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <a href="mailto:artabc0026@gmail.com">
+                        <li>Contact Us</li>
+                    </a>
+                    <a href="./termsofuse.html">
+                        <li>Terms Of Use</li>
+                    </a>
+                    <a href="mailto:artabc0026@gmail.com">
+                        <li>Report A Bug</li>
+                    </a>
+                    <a href="https://sajhesapne.org/">
+                        <li>Hire a Sapnewaali</li>
+                    </a>
+                    <a href="https://sajhesapne.org/">
+                        <li>Donate to Sajhe Sapne</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

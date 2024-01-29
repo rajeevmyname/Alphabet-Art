@@ -66,7 +66,7 @@ nav div p {
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .pushable {
@@ -115,6 +115,7 @@ nav div p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   /* border: 5px solid black; */
 }
 
@@ -171,7 +172,7 @@ nav div p {
   padding-bottom: 10px;
   --fa-animation-iteration-count: 1;
   color: #1F7AE0;
-
+  cursor: pointer;
 }
 
 .card {
