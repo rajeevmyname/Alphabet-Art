@@ -72,8 +72,8 @@ for(let i=65; i<=90; i++){
         if (navigator.share) {
             navigator.share({
               title: 'Alphabet-Art',
-              url: url,
-            //   files: [`./assets/alphabet_images/${alphabet}.png`],
+            //   url: url,
+              files: [`./assets/alphabet_images/${alphabet}.png`],
               text: `${alphabet} for ${words[i - 65]} Click to see More Alphabet Art`
             })
           } else {
