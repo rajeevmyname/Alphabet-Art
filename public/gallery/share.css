@@ -3,6 +3,7 @@
 
 body {
     margin: 0;
+    background-image: url(../assets/bg_small.png);
 }
 
 /* Logo */
@@ -60,7 +61,7 @@ nav div p {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .pushable {
@@ -88,62 +89,21 @@ nav div p {
     transform: translateY(-2px);
 }
 
-/* Cards */
-h1{
-    font-family: "Mochiy Pop One";
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #1375E4;
-    margin: 0;
-}
 
-h2{
-    font-family: "Mochiy Pop One";
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: rgba(140, 151, 164, 1);
-    margin: 0;
-}
-
-.all-entries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
     margin: auto;
-    margin-top: 50px;
-    width: 80%;
+    margin-bottom: 50px;
 }
 
-.card {
-    display: inline-flex;
+.main {
     flex-direction: column;
     border-radius: 10%;
-    /* border: 1px solid red; */
     box-shadow: 0px 8.152173042297363px 40.7608642578125px 6.793477535247803px #1375E41F;
 }
 
-.card i{
-    font-size: 26px;
-    color: #1F7AE0;
-    cursor: pointer;
-    text-align: right;
-    margin: 0px 30px 20px 0px;
-}
-.title{
-    text-align: center;
-    font-family: Mochiy Pop One;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0.004em;
-    color: #1F7AE0;
-    margin: 12px;
-}
 .art {
     margin: 10px;
     text-align: center;
@@ -151,60 +111,57 @@ h2{
 
 .art img {
     border-radius: 10%;
+    margin-top: 10px;
     width: 100%;
-    ;
 }
-
 
 .profile {
     display: flex;
-    margin: 10px 20px;
-    /* margin-bottom: 10px; */
-    /* border: 1px solid blue; */
+    margin: 10px 30px;
 }
 
-.profile img {
+.profile-photo {
+    width: 150px;
+}
+
+.profile-photo img {
     border-radius: 50%;
     padding: 0px;
     margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .profile-info {
     display: flex;
     flex-direction: column;
     font-size: 14px;
-    margin-left: 10px;
-    /* margin-top: 5px; */
-    /* border: 1px solid orange */
 }
 
 .profile-info p {
-    padding: 0px;
-    margin: 7px;
-    margin-left: 15px;
-  
-}
-
-.name {
-    font-family: Mochiy Pop One;
-    font-size: 20px;
-    font-weight: 400;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-family: Roboto;
+    font-size: 16px;
+    /* font-weight: 400; */
     line-height: 24px;
     letter-spacing: 0.004em;
     text-align: left;
     color: #1F7AE0;
 }
 
-.age {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20px;
+.name {
+    font-family: Mochiy Pop One;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 14px;
+    letter-spacing: 0.004em;
     text-align: left;
     color: #1F7AE0;
     /* border: 1px solid red; */
-    margin: 0px;
+    margin-bottom: 5px;
 }
+
 
 .school {
     font-family: Roboto;
@@ -216,6 +173,19 @@ h2{
     margin: 0px;
     padding: 0px;
     /* border: 1px solid green; */
+}
+
+h2{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+    color: #1F7AE0;  
+}
+
+h2 a{
+    color: inherit;
 }
 
 /* Footer */
@@ -295,24 +265,55 @@ footer a:hover {
 }
 
 @media (min-width:481px) {
-    
-  }
-  
-  @media (min-width:641px) {  
-    footer #tag {
-      font-size: 18px;
+    body {
+        background-image: url(../assets/bg_medium.png);
     }
-  }
-  
-  @media (min-width:961px) {
-    footer #tag {
-      font-size: 20px;
+    .profile-info p {
+        margin-top: 5px;
+        font-size: 22px;
     }
-  }
-  
-  @media (min-width:1281px) {  
-    footer #tag {
-      font-size: 20px;
+
+}
+
+@media (min-width:641px) {
+    body {
+        background-image: url(../assets/bg_medium.png);
     }
-  }
-  
+    .profile-info p {
+        margin-top: 5px;
+        font-size: 22px;
+    }
+    footer #tag {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:961px) {
+    body {
+        background-image: url(../assets/bg_large.png);
+    }
+
+    .profile-info p {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    footer #tag {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1281px) {
+    body {
+        background-image: url(../assets/bg_large.png);
+    }
+
+    .profile-info p {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    footer #tag {
+        font-size: 20px;
+    }
+}

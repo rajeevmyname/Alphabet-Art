@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop form</title>
     <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./register.css">
 </head>
 
 <body>
@@ -17,12 +17,11 @@
         </div>
         <!-- <NavigationMenu/> -->
         <nav>
-            <div style="background-color: #004CA1"
-                 onclick="window.location='../stickers/index.html'">
+            <div onclick="window.location='../stickers/index.html'">
                 <img src="../assets/navImages/sticker.png" alt="Stickers">
                 <p>Stickers</p>
             </div>
-            <div onclick="window.location='../workshop/index.html'">
+            <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
                 <img src="../assets/navImages/workshop.png" alt="Workshop">
                 <p>Workshop</p>
             </div>
@@ -33,10 +32,15 @@
         </nav>
       </header>
     
-    <p class="page-info">Stickers > Billing details </p>
+    <p class="page-info">Art Workshop > Billing details </p>
     
     <div class="workshop-img">
-        <img src="https://placehold.co/200/pink/white?text=Product-photo" alt="Workshop Image">
+        <img src="https://placehold.co/600x400/pink/white?text=Workshop Image" alt="Workshop Image">
+    </div>
+    <div class="workshop-info">
+        <p id="date">Date</p>
+        <p id="type">Type</p>
+        <p id="fees">Fees</p>
     </div>
     <hr>
 
@@ -52,17 +56,17 @@
         </div>
 
         <div class="divs number-div">
-            <label for="Phone number">Phone number</label>
+            <label for="number">Phone number</label>
             <input type="number" id="number" placeholder="+91" required />
         </div>
 
         <div class="divs add1-div">
-            <label for="address*">Address 1</label>
+            <label for="address1">Address 1</label>
             <input type="text" id="address1" placeholder="Address" />
         </div>
 
         <div class="divs add2-div">
-            <label for="address*">Address 2</label>
+            <label for="address2">Address 2</label>
             <input type="text" id="address2" placeholder="Address" />
         </div>
 
@@ -127,6 +131,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="register.js"></script>
 </body>
 
 </html>

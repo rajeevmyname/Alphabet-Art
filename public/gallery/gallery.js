@@ -22,8 +22,5 @@ for(let i=0; i<data.length; i++){
 <i class="fa-solid fa-share-from-square"></i>`
 
 all_entries.appendChild(card);
-    
-    
-
-
 }
+

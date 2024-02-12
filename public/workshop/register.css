@@ -56,16 +56,33 @@ nav div p {
 }
 
 .workshop-img {
-  /* background-color: pink; */
+  background-color: pink;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.workshop-img img{
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+}
+
+.workshop-info {
+  background-color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
   width: 80%;
   margin: auto;
 }
 
-.workshop-img img{
-  /* width: 100%; */
-  border-radius: 10px;
-  max-height: 200px;
+.workshop-info p {
+  margin: 4px;
+  padding-top: 0px;
 }
+
 
 /*-----------------------form*/
 hr {

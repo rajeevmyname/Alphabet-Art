@@ -46,16 +46,16 @@
             </div> 
             <div class="image-container">
                 <div class="sticker-image">
-                    <img src="https://placehold.co/600x600/aqua/png?text=Sticker-1" alt="Nature" onclick="myFunction(this)">
+                    <img style="border: 2px solid yellow" src="https://placehold.co/600x600/aqua/png?text=Sticker-1" alt="Nature">
                 </div>
                 <div class="sticker-image"> 
-                    <img  src="https://placehold.co/600x600/red/png?text=Sticker-2" alt="Snow" onclick="myFunction(this)">
+                    <img  src="https://placehold.co/600x600/red/png?text=Sticker-2" alt="Snow">
                 </div>
                 <div class="sticker-image"> 
-                    <img src="https://placehold.co/600x600/green/png?text=Sticker-3" alt="Mountains" onclick="myFunction(this)">
+                    <img src="https://placehold.co/600x600/green/png?text=Sticker-3" alt="Mountains">
                 </div>
                 <div class="sticker-image">
-                    <img  src="https://placehold.co/600x600/blue/png?text=Sticker-4" alt="Nature" onclick="myFunction(this)">
+                    <img  src="https://placehold.co/600x600/blue/png?text=Sticker-4" alt="Nature">
                 </div>
             </div>
         </div>
@@ -71,9 +71,9 @@
 
             <form>
                 <label for="quantity">Quantity</label>
-                <button class="button">-</button>
+                <button id="decrement" class="button">-</button>
                 <input id="quantity" value="1" readonly>
-                <button class="button">+</button>
+                <button id="increment" class="button">+</button>
             </form>
             <table>
                 <tr>
@@ -99,7 +99,7 @@
         </div>
     </div>
   <div class="call-to-action">
-    <button class="pushable-button" onclick="window.location='./buy.html'">
+    <button class="pushable-button">
       <span class="front">Proceed</span>
     </button>
     <p>Lorem ipsum dolor sit amet numquam! Et.Temporibus earum sed reiciendis quidem accusamus dolorum in officiis

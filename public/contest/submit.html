@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop form</title>
     <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./register.css">
+    <link rel="stylesheet" href="./submit.css">
 </head>
 
 <body>
@@ -21,11 +21,11 @@
                 <img src="../assets/navImages/sticker.png" alt="Stickers">
                 <p>Stickers</p>
             </div>
-            <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
+            <div onclick="window.location='../workshop/index.html'">
                 <img src="../assets/navImages/workshop.png" alt="Workshop">
                 <p>Workshop</p>
             </div>
-            <div onclick="window.location='../contest/index.html'">
+            <div style="background-color: #004CA1" onclick="window.location='../contest/index.html'">
                 <img src="../assets/navImages/contest.png" alt="Contest">
                 <p>Contest</p>
             </div>
@@ -34,8 +34,14 @@
     
     <p class="page-info">Art Workshop > Billing details </p>
     
-    <div class="workshop-img">
-        <img src="https://placehold.co/600x400/pink/white?text=Workshop Image" alt="Workshop Image">
+    <div class="upload-artwork">
+        <label for="UploadArtwork">
+            <i class="fa-solid fa-file-arrow-up" style="color:#1375E4"></i>
+            <br>
+            Upload Your Photo
+        </label>
+        <input type="file" accept="image/*" id="UploadArtwork">
+        <img id="preview">
     </div>
     <hr>
 
@@ -80,7 +86,7 @@
         </div>
         <div class="make-payment">
             <button class="pushable">
-                <span class="makePayment-btn">Make payment</span>
+                <span class="makePayment-btn">Submit</span>
             </button>
         </div>
     </form>
@@ -126,6 +132,7 @@
             </div>
         </div>
     </footer>
+    <script src="./submit.js"></script>
 </body>
 
 </html>

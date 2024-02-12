@@ -93,6 +93,7 @@ body {
 
 .sticker-image {
     margin: auto;
+    cursor: pointer;
 }
 
 .sticker-image img {

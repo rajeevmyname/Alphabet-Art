@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop form</title>
     <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./submit.css">
+    <link rel="stylesheet" href="./form.css">
 </head>
 
 <body>
@@ -17,11 +17,12 @@
         </div>
         <!-- <NavigationMenu/> -->
         <nav>
-            <div onclick="window.location='../stickers/index.html'">
+            <div style="background-color: #004CA1"
+                 onclick="window.location='../stickers/index.html'">
                 <img src="../assets/navImages/sticker.png" alt="Stickers">
                 <p>Stickers</p>
             </div>
-            <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
+            <div onclick="window.location='../workshop/index.html'">
                 <img src="../assets/navImages/workshop.png" alt="Workshop">
                 <p>Workshop</p>
             </div>
@@ -32,15 +33,11 @@
         </nav>
       </header>
     
-    <p class="page-info">Art Workshop > Billing details </p>
+    <p class="page-info">Stickers > Billing details </p>
     
-    <div class="upload-artwork">
-        <label for="UploadArtwork">
-            <i class="fa-solid fa-file-arrow-up" style="color:#1375E4"></i>
-            <br>
-            Upload Your Photo
-        </label>
-        <input type="file" id="UploadArtwork">
+    <div class="workshop-img">
+        <img src="https://placehold.co/200/pink/white?text=Product-photo" alt="Workshop Image">
+        <p>Qty: 0</p>
     </div>
     <hr>
 
@@ -56,17 +53,17 @@
         </div>
 
         <div class="divs number-div">
-            <label for="Phone number">Phone number</label>
-            <input type="number" id="number" placeholder="+91" required />
+            <label for="phone-number">Phone number</label>
+            <input type="number" id="phone-number" placeholder="+91" required />
         </div>
 
         <div class="divs add1-div">
-            <label for="address*">Address 1</label>
+            <label for="address1">Address 1</label>
             <input type="text" id="address1" placeholder="Address" />
         </div>
 
         <div class="divs add2-div">
-            <label for="address*">Address 2</label>
+            <label for="address2">Address 2</label>
             <input type="text" id="address2" placeholder="Address" />
         </div>
 
@@ -85,7 +82,7 @@
         </div>
         <div class="make-payment">
             <button class="pushable">
-                <span class="makePayment-btn">Submit</span>
+                <span class="makePayment-btn">Make payment</span>
             </button>
         </div>
     </form>
@@ -131,6 +128,7 @@
             </div>
         </div>
     </footer>
+    <script src="buy.js"></script>
 </body>
 
 </html>
