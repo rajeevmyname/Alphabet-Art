@@ -67,7 +67,7 @@ for (let i = 65; i <= 90; i++) {
     tooltip.innerText = "Link Copied!!"
     shareIcon.appendChild(tooltip)
     shareIcon.addEventListener("click", () => {
-        let currentUrl = window.location.href;
+        let currentUrl = window.location.hostname;
         let url = currentUrl;
         if (navigator.share){
             fetch(`./assets/alphabet_images/${alphabet}.png`)
@@ -77,9 +77,9 @@ for (let i = 65; i <= 90; i++) {
                 // navigator.share({ files: [file] });
                 const shareData = {
                     files: [file],
-                    // url: url,
-                    text: `*${alphabet}* for *${words[i - 65]}* 
-                      Click to see More Alphabet Art`
+                    url: url,
+                    text: `*${alphabet}* for *${words[i - 65]}*
+                    Click to see more Alphabet Art`
                 }
                 navigator.share(shareData)
             })
