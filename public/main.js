@@ -69,31 +69,29 @@ for (let i = 65; i <= 90; i++) {
     shareIcon.addEventListener("click", () => {
         let currentUrl = window.location.href;
         let url = currentUrl;
-        fetch(`./assets/alphabet_images/${alphabet}.png`)
+        if (navigator.share){
+            fetch(`./assets/alphabet_images/${alphabet}.png`)
             .then(response => response.blob())
             .then(blob => {
-                const file = new File([blob], 'shared-image.jpg', { type: 'image/jpeg' });
+                const file = new File([blob], `art.png`, { type: 'image/png' });
                 // navigator.share({ files: [file] });
                 const shareData = {
                     files: [file],
-                    url: url,
+                    // url: url,
                     text: `*${alphabet}* for *${words[i - 65]}* 
                       Click to see More Alphabet Art`
                 }
-                if (navigator.canShare(shareData)) {
-                    navigator.share(shareData)
-                }
-                else {
-                    tooltip.style.visibility = "visible"
-                    setTimeout(() => {
-                        tooltip.style.visibility = "hidden"
-                    }, 1000)
-        
-                    navigator.clipboard.writeText(url)
-                }
+                navigator.share(shareData)
             })
-            .catch(error => console.error(error));
+        }
+        else {
+            tooltip.style.visibility = "visible"
+            setTimeout(() => {
+                tooltip.style.visibility = "hidden"
+            }, 1000)
 
+            navigator.clipboard.writeText(url)
+        }
     })
 
     //Show front card on click
