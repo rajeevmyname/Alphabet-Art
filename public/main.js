@@ -69,24 +69,26 @@ for(let i=65; i<=90; i++){
     shareIcon.addEventListener("click",() =>{
         let currentUrl = window.location.href;
         let url = currentUrl;
-        // const imageBlob = fetch(alphabetImg.src).then(response => response.blob());
+        fetch(alphabetImg.src).then(response => {
+            if (navigator.share) {
+                navigator.share({
+                  title: 'Alphabet-Art',
+                  url: url,
+                  files: [response.blob()],
+                  text: `*${alphabet}* for *${words[i - 65]}* 
+                  Click to see More Alphabet Art`
+                })
+              } else {
+                tooltip.style.visibility = "visible"
+                setTimeout(() =>{
+                    tooltip.style.visibility = "hidden"
+                },1000)
+                
+                navigator.clipboard.writeText(url) 
+              }
+        });
 
-        if (navigator.share) {
-            navigator.share({
-              title: 'Alphabet-Art',
-              url: url,
-              files: [alphabetImg],
-              text: `*${alphabet}* for *${words[i - 65]}* 
-              Click to see More Alphabet Art`
-            })
-          } else {
-            tooltip.style.visibility = "visible"
-            setTimeout(() =>{
-                tooltip.style.visibility = "hidden"
-            },1000)
-            
-            navigator.clipboard.writeText(url) 
-          }
+        
         
     })
 
