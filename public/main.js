@@ -67,14 +67,15 @@ for(let i=65; i<=90; i++){
     tooltip.innerText = "Link Copied!!"
     shareIcon.appendChild(tooltip)    
     shareIcon.addEventListener("click",() =>{
-        let currentUrl = window.location.href
-        let url = currentUrl + "?"+`q=${alphabet}`
+        let currentUrl = window.location.href;
+        let url = currentUrl;
+        const imageBlob = fetch(alphabetImg.src).then(response => response.blob());
 
         if (navigator.share) {
             navigator.share({
               title: 'Alphabet-Art',
-              url: './assets/alphabet_images/${alphabet}.png',
-            //   files: [`./assets/alphabet_images/${alphabet}.png`],
+              url: url,
+              files: [imageBlob],
               text: `*${alphabet}* for *${words[i - 65]}* 
               Click to see More Alphabet Art`
             })

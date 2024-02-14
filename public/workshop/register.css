@@ -145,7 +145,12 @@ input[type="number"] {
 
   .name-div {
     /* grid-row-start / grid-colomn-start / gride-row-end / grid-column-end */
-    grid-area: 1 / 1 / 2 / 7;
+    grid-area: 1 / 1 / 2 / 5;
+    width: 95%;
+  }
+
+  .age-div{
+    grid-area: 1 / 5 / 2 / 7;
   }
 
   .email-div {
@@ -196,6 +201,7 @@ input[type="number"] {
   #name {
     width: 97%;
   }
+
 
   #state {
     width: 85%;
