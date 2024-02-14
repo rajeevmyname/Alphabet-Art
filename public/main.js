@@ -69,13 +69,13 @@ for(let i=65; i<=90; i++){
     shareIcon.addEventListener("click",() =>{
         let currentUrl = window.location.href;
         let url = currentUrl;
-        const imageBlob = fetch(alphabetImg.src).then(response => response.blob());
+        // const imageBlob = fetch(alphabetImg.src).then(response => response.blob());
 
         if (navigator.share) {
             navigator.share({
               title: 'Alphabet-Art',
               url: url,
-              files: [imageBlob],
+              files: [alphabetImg],
               text: `*${alphabet}* for *${words[i - 65]}* 
               Click to see More Alphabet Art`
             })
