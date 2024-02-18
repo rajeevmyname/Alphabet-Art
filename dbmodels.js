@@ -31,11 +31,14 @@ const contestSchema = new mongoose.Schema({
     age: Number,
     email: String,
     phone: Number,
-    school: String,
     address: String,
+    school: String,
     state: String,
     city: String,
-    pincode: String
+    pincode: String,
+    profile_url: String,
+    art_url: String,
+    art_description: String
 })
 
 stickerSchema.set('toJSON', {

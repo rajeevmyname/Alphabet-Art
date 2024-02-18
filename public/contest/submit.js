@@ -1,4 +1,6 @@
 let artWork = document.querySelector("#UploadArtwork");
+let btn = document.querySelector(".pushable");
+console.log(btn);
 
 artWork.addEventListener("change", (event)=>{
     const input = event.target;
@@ -19,3 +21,9 @@ let image = document.getElementById('preview');
 image.addEventListener("click",()=>{
    artWork.click();
 })
+
+btn.addEventListener("click",(event)=>{
+    btn.disabled = true;
+    console.log("Hello");
+})
+

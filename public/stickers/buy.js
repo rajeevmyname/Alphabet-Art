@@ -2,38 +2,43 @@ const url = window.location.href;
 const paramString = url.split("?")[1];
 
 const queryString = new URLSearchParams(paramString);
-let queryObj= {};
+let queryObj = {};
 
 for (let pair of queryString.entries()) {
     queryObj[pair[0]] = pair[1];
 }
 
 let qty = document.querySelector(".workshop-img p");
-if(queryObj["q"])
+if (queryObj["q"])
     qty.innerText = `Quantity : ${queryObj["q"]}`
 else
     qty.innerText = `Quantity : 1`
 
 
-// const form = document.querySelector('form');
-// form.addEventListener('submit',(e)=>{
-//     e.preventDefault();
-//     const name = document.getElementById("name").value;
-//     const phone = document.getElementById("phone-number").value;
-//     const email = document.getElementById("email-id").value;
-//     const address1 = document.getElementById("address1").value;
-//     const address2 = document.getElementById("address2").value;
-//     const state = document.getElementById("state").value;
-//     const city = document.getElementById("city").value;
-//     const pincode = document.getElementById("pincode").value;
 
-//     const data = {name, email, phone, address1, address2, state, city, pincode};
-//     // console.log(data);
-//     fetch('/submit-sticker',{
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application.json',
-//         },
-//         body: JSON.stringify(data)
-//     })
-// })
+var btn = document.querySelector('.pushable');
+btn.addEventListener('click', function () {
+    var options = {
+        "key": "rzp_test_5JZb6rwNu8F2qa", // Replace with your Test API key
+        "amount": queryObj['q'] * 199 * 100, // Amount in paise
+        "currency": "INR",
+        "name": "Alphabet Arts",
+        "description": "A-Z Alphabet Art Stickers",
+        "image": "../assets/Logo.png",
+        "prefill":{
+            "name": document.querySelector("#name").value,
+            "email": document.querySelector('#email-id').value,
+            "contact": document.querySelector('#phone-number').value
+        },
+        "notes":{
+            "type": "stickers"
+        },
+        "handler": function (response) {
+            console.log("Hello success");
+            document.querySelector('form').submit();
+            window.location.replace(`./confirmation.html?id=${response.razorpay_payment_id}`);
+        }
+    };
+    var rzp = new Razorpay(options);
+    rzp.open();
+});

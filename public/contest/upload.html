@@ -35,20 +35,21 @@
 
     <div class="container">
         <p class="page-info">Stickers > Billing details </p>
-        <form>
+        <form action="/upload-art" method="post" enctype="multipart/form-data">
             <div class="upload-artwork">
                 <label for="UploadArtwork">
                     <i class="fa-solid fa-file-arrow-up" style="color:#1375E4"></i>
                     <br>
                     Upload Artwork
                 </label>
-                <input type="file" accept="image/*" id="UploadArtwork">
+                <input required name="art" type="file" accept="image/*" id="UploadArtwork">
                 <img id="preview">
             </div>
             <div>
-                <textarea 
+                <textarea
+                required
                 placeholder="Write about your art...."
-                name="art-description" id="art-description"></textarea>
+                name="description" id="art-description"></textarea>
             </div>
             <div class="call-to-action">
                 <button type="submit" class="pushable">
