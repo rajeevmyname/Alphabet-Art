@@ -9,12 +9,13 @@ let words = ["Alien", "Butterfly", "Cat",
     "Volcano", "Watermelon", "X-Ray",
     "Yak", "Zebra"]
 
-//Set up text to speech
-var msg = new SpeechSynthesisUtterance();
+
 
 // Add Alphabet Cards
 let container = document.querySelector(".container");
 for (let i = 65; i <= 90; i++) {
+    //Set up text to speech
+    let msg = new SpeechSynthesisUtterance();   
     let alphabet = String.fromCharCode(i);
 
     let card = document.createElement("div");
