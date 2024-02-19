@@ -16,8 +16,11 @@ else
 
 
 
-var btn = document.querySelector('.pushable');
+const btn = document.querySelector('.pushable');
+const form = document.querySelector('form');
+
 btn.addEventListener('click', function () {
+    console.log("Button is clicked");
     var options = {
         "key": "rzp_test_5JZb6rwNu8F2qa", // Replace with your Test API key
         "amount": queryObj['q'] * 199 * 100, // Amount in paise
@@ -25,12 +28,12 @@ btn.addEventListener('click', function () {
         "name": "Alphabet Arts",
         "description": "A-Z Alphabet Art Stickers",
         "image": "../assets/Logo.png",
-        "prefill":{
+        "prefill": {
             "name": document.querySelector("#name").value,
             "email": document.querySelector('#email-id').value,
             "contact": document.querySelector('#phone-number').value
         },
-        "notes":{
+        "notes": {
             "type": "stickers"
         },
         "handler": function (response) {
@@ -39,6 +42,11 @@ btn.addEventListener('click', function () {
             window.location.replace(`./confirmation.html?id=${response.razorpay_payment_id}`);
         }
     };
-    var rzp = new Razorpay(options);
-    rzp.open();
+    if (!form.checkValidity())
+        console.log("Form is not valid")
+    else {
+        var rzp = new Razorpay(options);
+        rzp.open();
+    }
+
 });

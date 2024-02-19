@@ -25,7 +25,7 @@ stickerImages.forEach((sticker)=>{
         stickerImages.forEach((sticker)=>{
             sticker.style.border = "none";
         })
-        sticker.style.border = "2px solid yellow";
+        sticker.style.border = "2px solid black";
     })
 })
 

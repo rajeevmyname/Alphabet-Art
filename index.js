@@ -78,7 +78,7 @@ app.post('/submit-workshop', (req, res) => {
     .then(result => {
       workshop.save().then(data => {
         mongoose.connection.close();
-        res.redirect(path.join('workshop', 'confirmation.html'));
+        // res.redirect(path.join('workshop', 'confirmation.html'));
       }).catch((error) => {
         res.send("Something went wrong", error);
       })
