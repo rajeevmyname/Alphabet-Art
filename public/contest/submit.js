@@ -1,5 +1,6 @@
 let artWork = document.querySelector("#UploadArtwork");
 let btn = document.querySelector(".pushable");
+const form = document.querySelector('form');
 console.log(btn);
 
 artWork.addEventListener("change", (event)=>{
@@ -23,7 +24,12 @@ image.addEventListener("click",()=>{
 })
 
 btn.addEventListener("click",(event)=>{
-    btn.disabled = true;
-    console.log("Hello");
+    if (!form.checkValidity())
+        console.log("Form is not valid")
+    else {
+        console.log("Button disabled");
+        btn.disabled = true;
+        document.querySelector('form').submit();
+    }
 })
 

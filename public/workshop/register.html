@@ -33,15 +33,15 @@
         </nav>
       </header>
     
-    <p class="page-info">Art Workshop > Billing details </p>
+    <p class="page-info">Art Workshop > Registration </p>
     
     <div class="workshop-img">
         <img src="https://placehold.co/600x400/pink/white?text=Workshop Image" alt="Workshop Image">
     </div>
     <div class="workshop-info">
         <p id="date">Date</p>
-        <p id="type">Type</p>
-        <p id="fees">Fees</p>
+        <!-- <p id="type">Type</p>
+        <p id="fees">Fees</p> -->
     </div>
     <hr>
 
@@ -89,6 +89,7 @@
             <label for="pincode">Pincode</label>
             <input name="pincode" type="number" id="pincode" placeholder="Pincode" />
         </div>
+        <input type="hidden" name="workshop_date" id="workshop_date">
         <div class="make-payment">
             <button class="pushable">
                 <span class="makePayment-btn">Make payment</span>
@@ -99,7 +100,7 @@
     <!-- Footer -->
     <footer>
         <div id="tag">
-            <a href="https://sajhesapne.org/">
+            <a target="_blank" href="https://sajhesapne.org/">
                 <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
             </a>
         </div>

@@ -38,13 +38,14 @@ btn.addEventListener('click', function () {
         },
         "handler": function (response) {
             console.log("Hello success");
-            document.querySelector('form').submit();
+            // document.querySelector('form').submit();
             window.location.replace(`./confirmation.html?id=${response.razorpay_payment_id}`);
         }
     };
     if (!form.checkValidity())
         console.log("Form is not valid")
     else {
+        // btn.disabled = true;
         var rzp = new Razorpay(options);
         rzp.open();
     }

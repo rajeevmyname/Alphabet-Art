@@ -11,17 +11,20 @@ for (let pair of queryString.entries()) {
 }
 
 const i = queryObj["w"];
+console.log(i);
 const date = workshops[i]["Date"];
-const type = workshops[i]["Workshop"];
-const fees = workshops[i]["Fees"];
+// const type = workshops[i]["Workshop"];
+// const fees = workshops[i]["Fees"];
 
-let dateP = document.querySelector("#date");
-let typeP = document.querySelector("#type");
-let feesP = document.querySelector("#fees");
+let dateP = document.querySelector("#workshop_date");
+let dateD = document.querySelector("#date");
+// let typeP = document.querySelector("#type");
+// let feesP = document.querySelector("#fees");
 
-dateP.textContent = date;
-typeP.textContent = type;
-feesP.textContent = fees;
+dateP.value = date;
+dateD.textContent = date;
+// typeP.textContent = type;
+// feesP.textContent = fees;
 
 const btn = document.querySelector('.pushable');
 const form = document.querySelector('form');

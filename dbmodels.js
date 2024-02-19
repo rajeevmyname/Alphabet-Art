@@ -23,7 +23,8 @@ const workshopSchema = new mongoose.Schema({
     address2: String,
     state: String,
     city: String,
-    pincode: String
+    pincode: String,
+    workshop_date: String
 })
 
 const contestSchema = new mongoose.Schema({

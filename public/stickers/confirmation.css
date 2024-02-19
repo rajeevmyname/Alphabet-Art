@@ -64,7 +64,7 @@ body {
 /* workshop image */
 .workshop-image img {
     border-radius: 10px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 /* payment Confirmation heading */
