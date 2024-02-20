@@ -1,0 +1,15 @@
+{
+  "name": "alphabet-art",
+  "version": "1.0.0",
+  "description": "Alphabet Art Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rajeevmyname.github.io/Alphabet-Art/"
+  },
+  "author": "Sapnewaalis",
+  "license": "ISC"
+}
