@@ -1,107 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <title>Alphabet Art</title>
-    <meta property="og:image" content="https://alphabet-art.onrender.com/assets/Logo.png" />
-  </head>
-  <body>
-    <header>
-      <!-- <Logo/> -->
-      <div class="logo" onclick="window.location='../index.html'">
-          <img src="../assets/Logo.png" alt="Logo">
-      </div>
-      <!-- <NavigationMenu/> -->
-      <nav>
-          <div onclick="window.location='../stickers/index.html'">
-              <img src="../assets/navImages/sticker.png" alt="Stickers">
-              <p>Stickers</p>
-          </div>
-          <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
-              <img src="../assets/navImages/workshop.png" alt="Workshop">
-              <p>Workshop</p>
-          </div>
-          <div onclick="window.location='../contest/index.html'">
-              <img src="../assets/navImages/contest.png" alt="Contest">
-              <p>Contest</p>
-          </div>
-      </nav>
-    </header>
-    
-    <div class="content">
-      <div class="art-workshop-details">
-        <h1>Alphabet Art Workshop</h1>
-        <p>
-         Join us for an exciting Alphabet Art Workshop where your child will transform letters into vibrant work of art!
-         The workshop will help your child unleash their imagination, develop fine motor skills and nurture a love for language.
-        </p>
-        <div class="content-image">
-          <img src="../assets/workshop.png" alt="Art workshop" />
-          <p>S for Scooby by Arushi</p>
-        </div>
-        <p>
-         The workshop is perfect for children in the age group 3-10 who enjoy learning and exploring thorugh art.
-        </p>
-      </div>
 
-      <div class="upcoming-workshops">
-        <h1>Upcoming workshops</h1>
-        <div id="table-div" style="overflow-x:auto;">
-          <table>
-            <tr>
-              <th>Date</th>
-              <th>Workshop</th>
-              <th>Fees</th>
-              <th>RSVP</th>
-            </tr>
-          </table>
-        </div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4RJR0X9JV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H4RJR0X9JV');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <title>Alphabet Art</title>
+  <meta property="og:image" content="https://alphabet-art.onrender.com/assets/Logo.png" />
+</head>
+
+<body>
+  <header>
+    <!-- <Logo/> -->
+    <div class="logo" onclick="window.location='../index.html'">
+      <img src="../assets/Logo.png" alt="Logo">
+    </div>
+    <!-- <NavigationMenu/> -->
+    <nav>
+      <div onclick="window.location='../stickers/index.html'">
+        <img src="../assets/navImages/sticker.png" alt="Stickers">
+        <p>Stickers</p>
+      </div>
+      <div style="background-color: #004CA1" onclick="window.location='../workshop/index.html'">
+        <img src="../assets/navImages/workshop.png" alt="Workshop">
+        <p>Workshop</p>
+      </div>
+      <div onclick="window.location='../contest/index.html'">
+        <img src="../assets/navImages/contest.png" alt="Contest">
+        <p>Contest</p>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="art-workshop-details">
+      <h1>Alphabet Art Workshop</h1>
+      <p>
+        Join us for an exciting Alphabet Art Workshop where your child will transform letters into vibrant work of art!
+        The workshop will help your child unleash their imagination, develop fine motor skills and nurture a love for
+        language.
+      </p>
+      <div class="content-image">
+        <img src="../assets/workshop.png" alt="Art workshop" />
+        <p>S for Scooby by Arushi</p>
+      </div>
+      <p>
+        The workshop is perfect for children in the age group 3-10 who enjoy learning and exploring thorugh art.
+      </p>
+    </div>
+
+    <div class="upcoming-workshops">
+      <h1>Upcoming workshops</h1>
+      <div id="table-div" style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Workshop</th>
+            <th>Fees</th>
+            <th>RSVP</th>
+          </tr>
+        </table>
       </div>
     </div>
-     <!-- <Footer/> -->
-     <footer>
-      <div id="tag">
-          <a target="_blank" href="https://sajhesapne.org/">
-              <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
-          </a>
+  </div>
+  <!-- <Footer/> -->
+  <footer>
+    <div id="tag">
+      <a target="_blank" href="https://sajhesapne.org/">
+        <span>Made with <i class="fa-solid fa-heart" style="color: #ff8787;"></i> by Sapnewaalis!</span>
+      </a>
+    </div>
+
+    <div id="footer-links">
+      <div class="social-media">
+        <span>Follow Us</span>
+        <ul>
+          <li onclick="window.open('https://www.facebook.com/profile.php?id=61556233544708&mibextid=ZbWKwL')"><img
+              src="../assets/social/fb.png" alt="Facebook"></li>
+          <li onclick="window.open('https://www.instagram.com/aforalphabetart?igsh=bmZjb3l1c24xMTJw')"><img
+              src="../assets/social/insta.png" alt="Instagram"></li>
+          <li onclick="window.open('https://youtube.com')"><img src="../assets/social/you.png" alt="Youtube"></li>
+          <li onclick="window.open('https://www.linkedin.com/company/a-for-alphabet-art/about')"><img
+              src="../assets/social/in.png" alt="LinkedIn"></li>
+          <li onclick="window.open('https://twitter.com')"><img src="../assets/social/x.png" alt="X"></li>
+        </ul>
       </div>
-      
-      <div id="footer-links">
-          <div class="social-media">
-              <span>Follow Us</span>
-          <ul>
-              <li onclick="window.open('https://www.facebook.com/profile.php?id=61556233544708&mibextid=ZbWKwL')"><img src="../assets/social/fb.png" alt="Facebook"></li>
-              <li onclick="window.open('https://www.instagram.com/aforalphabetart?igsh=bmZjb3l1c24xMTJw')"><img src="../assets/social/insta.png" alt="Instagram"></li>
-              <li onclick="window.open('https://youtube.com')"><img src="../assets/social/you.png" alt="Youtube"></li>
-              <li onclick="window.open('https://www.linkedin.com/company/a-for-alphabet-art/about')"><img src="../assets/social/in.png" alt="LinkedIn"></li>
-              <li onclick="window.open('https://twitter.com')"><img src="../assets/social/x.png" alt="X"></li>
-          </ul>
-          </div>
-          <div class="links">
-          <ul>
-              <a target="_blank" href="mailto:artabc0026@gmail.com">
-                  <li>Contact Us</li>
-              </a>
-              <!-- <a target="_blank" href="./termsofuse.html">
+      <div class="links">
+        <ul>
+          <a target="_blank" href="mailto:artabc0026@gmail.com">
+            <li>Contact Us</li>
+          </a>
+          <!-- <a target="_blank" href="./termsofuse.html">
                   <li>Terms Of Use</li>
               </a> -->
-              <a target="_blank" href="mailto:artabc0026@gmail.com">
-                  <li>Report A Bug</li>
-              </a>
-              <a target="_blank" href="https://sajhesapne.org/">
-                  <li>Hire a Sapnewaali</li>
-              </a>
-              <a target="_blank" href="https://sajhesapne.org/">
-                  <li>Donate to Sajhe Sapne</li>
-              </a>
-          </ul>
-          </div>
+          <a target="_blank" href="mailto:artabc0026@gmail.com">
+            <li>Report A Bug</li>
+          </a>
+          <a target="_blank" href="https://sajhesapne.org/">
+            <li>Hire a Sapnewaali</li>
+          </a>
+          <a target="_blank" href="https://sajhesapne.org/">
+            <li>Donate to Sajhe Sapne</li>
+          </a>
+        </ul>
       </div>
+    </div>
   </footer>
-    <script type="module" src="main.js"></script>
-  </body>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
