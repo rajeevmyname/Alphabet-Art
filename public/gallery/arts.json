@@ -1,65 +1,79 @@
 [
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/Wa.png",
+        "profile": "../assets/winningArt/p10.png",
+        "name": "Manisha Kumari",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/B.png",
+        "profile": "../assets/winningArt/p1.png",
+        "name": "Simran Lamba",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/We.png",
+        "profile": "../assets/winningArt/p2.png",
+        "name": "Pallavi Thakur",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/P.png",
+        "profile": "../assets/winningArt/p4.png",
+        "name": "Meenu Yadav",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/S.png",
+        "profile": "../assets/winningArt/p3.png",
+        "name": "Meenu Yadav",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/O.png",
+        "profile": "../assets/winningArt/p5.png",
+        "name": "Shivi Yadav",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/T.png",
+        "profile": "../assets/winningArt/p6.png",
+        "name": "Shruti Kumari",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/J.png",
+        "profile": "../assets/winningArt/p8.png",
+        "name": "Neha Kumari",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     },
     {
-        "art" : "https://placehold.co/350x350/D9EBFF/FFF?text=Art Work",
-        "profile": "https://placehold.co/80/1375E4/FFF?text=P",
-        "name": "Ayush Saxena",
-        "age" : 12,
-        "school": "P.A.S School"
+        "art" : "../assets/winningArt/H.png",
+        "profile": "../assets/winningArt/p9.png",
+        "name": "Shivani Yadav",
+        "age" : 19,
+        "school": "Sajhe Sapne"
+    },
+    {
+        "art" : "../assets/winningArt/Ch.png",
+        "profile": "../assets/winningArt/p7.png",
+        "name": "Neha Rao        ",
+        "age" : 19,
+        "school": "Sajhe Sapne"
+    },
+    {
+        "art" : "../assets/winningArt/C.png",
+        "profile": "../assets/winningArt/p11.png",
+        "name": "Muskan Kumari",
+        "age" : 19,
+        "school": "Sajhe Sapne"
     }
 ]

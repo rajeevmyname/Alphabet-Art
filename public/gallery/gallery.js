@@ -18,9 +18,9 @@ for(let i=0; i<data.length; i++){
         <p class="age">${data[i].age} years</p>
         <p class="school">${data[i].school}</p>
     </div>
-</div>
-<i class="fa-solid fa-share-from-square"></i>`
+</div>`
 
 all_entries.appendChild(card);
+
 }
 

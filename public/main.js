@@ -11,11 +11,29 @@ let words = ["Alien", "Butterfly", "Cat",
 
 
 
+const playSound = (alphabet) => {
+    const audioCtx = new AudioContext();
+    fetch(`assets/sounds/${alphabet}.mp3`)
+        .then(response => response.arrayBuffer())
+        .then(buffer => audioCtx.decodeAudioData(buffer))
+        .then(audioBuffer => {
+            // Create a source node
+            const source = audioCtx.createBufferSource();
+            source.buffer = audioBuffer;
+
+            // Connect the source to the audio output
+            source.connect(audioCtx.destination);
+
+            // Play the audio
+            source.start();
+        });
+
+}
 // Add Alphabet Cards
 let container = document.querySelector(".container");
 for (let i = 65; i <= 90; i++) {
     //Set up text to speech
-    let msg = new SpeechSynthesisUtterance();   
+    // let msg = new SpeechSynthesisUtterance();
     let alphabet = String.fromCharCode(i);
 
     let card = document.createElement("div");
@@ -95,15 +113,17 @@ Click to see Alphabet Art for *${alphabet}*`
     card.addEventListener("click", () => {
         card.classList.toggle("flipped");
         if (card.classList.contains("flipped")) {
-            msg.text = words[i - 65];
-            window.speechSynthesis.speak(msg);
+            playSound(alphabet);
+            // msg.text = words[i - 65];
+            // window.speechSynthesis.speak(msg);
         }
     })
 
     // Animate star icon on click
     soundIcon.addEventListener("click", (event) => {
         soundIcon.classList.add("fa-beat");
-        window.speechSynthesis.speak(msg);
+        playSound(alphabet);
+        // window.speechSynthesis.speak(msg);
         event.stopPropagation();
     })
 
