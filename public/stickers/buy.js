@@ -22,7 +22,7 @@ const form = document.querySelector('form');
 btn.addEventListener('click', function () {
     console.log("Button is clicked");
     var options = {
-        "key": "rzp_test_5JZb6rwNu8F2qa", // Replace with your Test API key
+        "key": "rzp_live_b2tkMvITMveY5v", // Replace with your Test API key
         "amount": queryObj['q'] * 199 * 100, // Amount in paise
         "currency": "INR",
         "name": "Alphabet Arts",

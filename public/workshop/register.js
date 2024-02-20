@@ -31,7 +31,7 @@ const form = document.querySelector('form');
 
 btn.addEventListener('click', function () {
     var options = {
-        "key": "rzp_test_5JZb6rwNu8F2qa", // Replace with your Test API key
+        "key": "rzp_live_b2tkMvITMveY5v", // Replace with your Test API key
         "amount": 499 * 100, // Amount in paise
         "currency": "INR",
         "name": "Alphabet Arts",
