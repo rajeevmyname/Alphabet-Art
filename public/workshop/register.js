@@ -17,12 +17,12 @@ const date = workshops[i]["Date"];
 // const fees = workshops[i]["Fees"];
 
 let dateP = document.querySelector("#workshop_date");
-let dateD = document.querySelector("#date");
+// let dateD = document.querySelector("#date");
 // let typeP = document.querySelector("#type");
 // let feesP = document.querySelector("#fees");
 
 dateP.value = date;
-dateD.textContent = date;
+// dateD.textContent = date;
 // typeP.textContent = type;
 // feesP.textContent = fees;
 
